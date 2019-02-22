@@ -38,7 +38,9 @@ def dump(*args, **kwargs):
 
 
 def warning():
-    print(WARNING_MESSAGE)
+    # ST 3176+ reloads icons/themes automatically
+    if int(sublime.version()) < 3176:
+        print(WARNING_MESSAGE)
 
 
 def message(*args, **kwargs):
