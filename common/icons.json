@@ -269,7 +269,29 @@
       }
     ]
   },
+  "file_type_c++": {
+    "color": "sky",
+    "syntaxes": [
+      {
+        "name": "C++",
+        "scope": "source.c++"
+      },
+      {
+        "name": "Objective C++",
+        "scope": "source.objc++"
+      }
+    ]
+  },
   "file_type_csharp": {
+    "color": "blue",
+    "syntaxes": [
+      {
+        "name": "C#",
+        "scope": "source.cs"
+      }
+    ]
+  },
+  "file_type_c#": {
     "color": "blue",
     "syntaxes": [
       {
