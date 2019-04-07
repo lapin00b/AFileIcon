@@ -69,6 +69,15 @@
       }
     ]
   },
+  "file_type_apache": {
+    "color": "yellow",
+    "syntaxes": [
+      {
+        "name": "Apache Conf",
+        "scope": "source.apacheconf"
+      }
+    ]
+  },
   "file_type_applescript": {
     "color": "graphite",
     "syntaxes": [
@@ -1095,15 +1104,6 @@
       {
         "name": "PowerShell",
         "scope": "source.powershell"
-      }
-    ]
-  },
-  "file_type_preferences": {
-    "color": "yellow",
-    "syntaxes": [
-      {
-        "name": "ApacheConf",
-        "scope": "source.apacheconf"
       }
     ]
   },
