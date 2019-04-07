@@ -1656,6 +1656,15 @@
     "color": "purple",
     "aliases": [
       {
+        "name": "Plain Text (Visual Studio)",
+        "extensions": [
+          "idl",
+          "sln"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.visualstudio"
+      },
+      {
         "name": "XML (Visual Studio)",
         "extensions": [
           "csproj",
