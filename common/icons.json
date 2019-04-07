@@ -1444,8 +1444,8 @@
         "linter": "json",
         "extensions": [
           ".no-sublime-package",
-          ".hidden-color-scheme",
-          ".hidden-theme",
+          "hidden-color-scheme",
+          "hidden-theme",
           "sublime-color-scheme",
           "sublime-commands",
           "sublime-menu",
