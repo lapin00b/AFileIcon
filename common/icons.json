@@ -1228,6 +1228,15 @@
       }
     ]
   },
+  "file_type_restructuredtext": {
+    "color": "sky",
+    "syntaxes": [
+      {
+        "name": "reStructuredText",
+        "scope": "text.restructuredtext"
+      }
+    ]
+  },
   "file_type_riot": {
     "color": "red",
     "syntaxes": [
