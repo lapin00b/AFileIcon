@@ -16,11 +16,6 @@
               {
                 "caption": "Revert to a Freshly Installed State",
                 "command": "afi_revert"
-              },
-              { "caption": "-" },
-              {
-                "caption": "Environment",
-                "command": "afi_environment"
               }
             ]
           }

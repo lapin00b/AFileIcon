@@ -4,10 +4,6 @@
     "command": "afi_clean"
   },
   {
-    "caption": "A File Icon: Environment",
-    "command": "afi_environment"
-  },
-  {
     "caption": "A File Icon: Revert to a Freshly Installed State",
     "command": "afi_revert"
   },
