@@ -69,6 +69,15 @@
       }
     ]
   },
+  "file_type_apache": {
+    "color": "yellow",
+    "syntaxes": [
+      {
+        "name": "Apache Conf",
+        "scope": "source.apacheconf"
+      }
+    ]
+  },
   "file_type_applescript": {
     "color": "graphite",
     "syntaxes": [
@@ -269,7 +278,29 @@
       }
     ]
   },
+  "file_type_c++": {
+    "color": "sky",
+    "syntaxes": [
+      {
+        "name": "C++",
+        "scope": "source.c++"
+      },
+      {
+        "name": "Objective C++",
+        "scope": "source.objc++"
+      }
+    ]
+  },
   "file_type_csharp": {
+    "color": "blue",
+    "syntaxes": [
+      {
+        "name": "C#",
+        "scope": "source.cs"
+      }
+    ]
+  },
+  "file_type_c#": {
     "color": "blue",
     "syntaxes": [
       {
@@ -1076,15 +1107,6 @@
       }
     ]
   },
-  "file_type_preferences": {
-    "color": "yellow",
-    "syntaxes": [
-      {
-        "name": "ApacheConf",
-        "scope": "source.apacheconf"
-      }
-    ]
-  },
   "file_type_premiere": {
     "color": "purple",
     "aliases": [
@@ -1444,8 +1466,8 @@
         "linter": "json",
         "extensions": [
           ".no-sublime-package",
-          ".hidden-color-scheme",
-          ".hidden-theme",
+          "hidden-color-scheme",
+          "hidden-theme",
           "sublime-color-scheme",
           "sublime-commands",
           "sublime-menu",
@@ -1466,6 +1488,15 @@
         ],
         "base": "source.yaml",
         "scope": "source.yaml.sublime"
+      }
+    ]
+  },
+  "file_type_svelte": {
+    "color": "orange",
+    "syntaxes": [
+      {
+        "name": "Svelte",
+        "scope": "text.html.svelte"
       }
     ]
   },
@@ -1633,6 +1664,15 @@
   "file_type_visualstudio": {
     "color": "purple",
     "aliases": [
+      {
+        "name": "Plain Text (Visual Studio)",
+        "extensions": [
+          "idl",
+          "sln"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.visualstudio"
+      },
       {
         "name": "XML (Visual Studio)",
         "extensions": [

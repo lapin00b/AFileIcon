@@ -2,11 +2,11 @@
 <plist version="1.0">
   <dict>
     <key>scope</key>
-    <string>source.apacheconf</string>
+    <string>source.c++, source.objc++</string>
     <key>settings</key>
     <dict>
       <key>icon</key>
-      <string>file_type_preferences</string>
+      <string>file_type_c++</string>
     </dict>
   </dict>
 </plist>

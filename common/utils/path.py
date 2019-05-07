@@ -27,6 +27,10 @@ def get_overlay():
     return os.path.join(sublime.packages_path(), settings.OVERLAY_ROOT)
 
 
+def get_overlay_cache():
+    return os.path.join(sublime.cache_path(), settings.OVERLAY_ROOT)
+
+
 def get_overlay_aliases():
     return os.path.join(sublime.packages_path(), settings.OVERLAY_ROOT,
                         "aliases")

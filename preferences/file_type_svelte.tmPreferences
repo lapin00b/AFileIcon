@@ -2,11 +2,11 @@
 <plist version="1.0">
   <dict>
     <key>scope</key>
-    <string>text.plain.visualstudio, text.xml.visualstudio</string>
+    <string>text.html.svelte</string>
     <key>settings</key>
     <dict>
       <key>icon</key>
-      <string>file_type_visualstudio</string>
+      <string>file_type_svelte</string>
     </dict>
   </dict>
 </plist>

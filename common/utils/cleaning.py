@@ -52,14 +52,17 @@ class AfiCleanCommand(sublime_plugin.ApplicationCommand):
 class AfiRevertCommand(sublime_plugin.ApplicationCommand):
     def run(self):
         log("Reverting to a freshly installed state")
-        overlay_path = path.get_overlay()
 
-        if os.path.exists(overlay_path):
-            try:
+        try:
+            cache_path = path.get_overlay_cache()
+            if os.path.exists(cache_path):
+                shutil.rmtree(cache_path)
+            overlay_path = path.get_overlay()
+            if os.path.exists(overlay_path):
                 shutil.rmtree(overlay_path)
-            except Exception as error:
-                log("Error during reverting")
-                dump(error)
-            else:
-                log("Reverted successfully")
-                sublime.run_command("afi_reload")
+        except Exception as error:
+            log("Error during reverting")
+            dump(error)
+        else:
+            log("Reverted successfully")
+            sublime.run_command("afi_reload")

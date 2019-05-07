@@ -2,11 +2,11 @@
 <plist version="1.0">
   <dict>
     <key>scope</key>
-    <string>text.plain.visualstudio, text.xml.visualstudio</string>
+    <string>source.cs</string>
     <key>settings</key>
     <dict>
       <key>icon</key>
-      <string>file_type_visualstudio</string>
+      <string>file_type_c#</string>
     </dict>
   </dict>
 </plist>
