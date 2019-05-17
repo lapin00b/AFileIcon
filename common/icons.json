@@ -1677,7 +1677,13 @@
         "name": "XML (Visual Studio)",
         "extensions": [
           "csproj",
+          "fsproj",
+          "shproj",
+          "sqlproj",
+          "vbproj",
+          "vcxproj",
           "vsproj",
+          "props",
           "ruleset",
           "settings",
           "targets"
