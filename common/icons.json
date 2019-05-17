@@ -1595,6 +1595,27 @@
       }
     ]
   },
+  "file_type_unity3d": {
+    "color": "sky",
+    "syntaxes": [
+      {
+        "name": "Boo (Unity 3D)",
+        "scope": "source.boo.unity3d"
+      },
+      {
+        "name": "C# (Unity 3D)",
+        "scope": "source.cs.unity3d"
+      },
+      {
+        "name": "JavaScript (Unity 3D)",
+        "scope": "source.js.unity3d"
+      },
+      {
+        "name": "Shader (Unity 3D)",
+        "scope": "source.shader"
+      }
+    ]
+  },
   "file_type_vhdl": {
     "color": "blue",
     "syntaxes": [
