@@ -1228,6 +1228,19 @@
       }
     ]
   },
+  "file_type_registry": {
+    "color": "sky",
+    "aliases": [
+      {
+        "name": "Registry (REG)",
+        "extensions": [
+          "reg"
+        ],
+        "base": "source.ini",
+        "scope": "source.reg"
+      }
+    ]
+  },
   "file_type_restructuredtext": {
     "color": "sky",
     "syntaxes": [
