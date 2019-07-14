@@ -142,15 +142,12 @@ def get_installed(logging=True):
 def get_customizable(installed_themes):
     log("Getting the list of theme packages with customization support")
 
-    customizable_themes = []
+    customizable_themes = set()
 
-    theme_res = sublime.find_resources(".supports-a-file-icon-customization")
-
-    for res in theme_res:
-        pkg = re.sub(PATTERN, "", res)
-
-        if pkg in installed_themes:
-            customizable_themes.append(pkg)
+    for res in sublime.find_resources(".supports-a-file-icon-customization"):
+        _, package, *_ = res.split("/")
+        if package in installed_themes:
+            customizable_themes.add(package)
 
     dump(customizable_themes)
 
