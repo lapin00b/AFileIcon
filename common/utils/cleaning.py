@@ -31,38 +31,42 @@ def clean_all():
             message("Cleaned up successfully")
 
 
+def clean_patches():
+    log("Cleaning patches")
+    overlay_path = path.get_overlay()
+    patches = _get_patches(overlay_path, ".sublime-theme")
+
+    if os.path.exists(overlay_path):
+        try:
+            for p in patches:
+                os.remove(p)
+        except Exception as error:
+            log("Error during cleaning")
+            dump(error)
+        else:
+            log("Cleaned up successfully")
+            sublime.run_command("afi_patch_themes")
+
+
+def revert():
+    log("Reverting to a freshly installed state")
+
+    try:
+        shutil.rmtree(path.get_overlay_cache(), ignore_errors=True)
+        shutil.rmtree(path.get_overlay(), ignore_errors=True)
+    except Exception as error:
+        log("Error during reverting")
+        dump(error)
+    else:
+        log("Reverted successfully")
+        sublime.run_command("afi_reload")
+
+
 class AfiCleanCommand(sublime_plugin.ApplicationCommand):
     def run(self):
-        log("Cleaning")
-        overlay_path = path.get_overlay()
-        patches = _get_patches(overlay_path, ".sublime-theme")
-
-        if os.path.exists(overlay_path):
-            try:
-                for p in patches:
-                    os.remove(p)
-            except Exception as error:
-                log("Error during cleaning")
-                dump(error)
-            else:
-                log("Cleaned up successfully")
-                sublime.run_command("afi_patch_themes")
+        sublime.set_timeout_async(clean_patches)
 
 
 class AfiRevertCommand(sublime_plugin.ApplicationCommand):
     def run(self):
-        log("Reverting to a freshly installed state")
-
-        try:
-            cache_path = path.get_overlay_cache()
-            if os.path.exists(cache_path):
-                shutil.rmtree(cache_path)
-            overlay_path = path.get_overlay()
-            if os.path.exists(overlay_path):
-                shutil.rmtree(overlay_path)
-        except Exception as error:
-            log("Error during reverting")
-            dump(error)
-        else:
-            log("Reverted successfully")
-            sublime.run_command("afi_reload")
+        sublime.set_timeout_async(revert)
