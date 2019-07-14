@@ -4,6 +4,12 @@ import sublime
 from .. import settings
 
 
+def makedirs(*args):
+    absolute_path = os.path.join(*args)
+    os.makedirs(absolute_path, exist_ok=True)
+    return absolute_path
+
+
 def get_package_archive():
     return os.path.join(sublime.installed_packages_path(),
                         settings.PACKAGE_ARCH)

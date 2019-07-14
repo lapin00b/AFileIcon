@@ -13,38 +13,22 @@ from ..common.utils.logging import log, dump
 from . import themes
 
 
-def _create_dirs():
-    log("Creating directories")
-
-    try:
-        g = path.get_overlay_patches_general()
-        s = path.get_overlay_patches_specific()
-
-        if not os.path.exists(g):
-            os.makedirs(g)
-
-            if not os.path.exists(s):
-                os.makedirs(s)
-    except Exception as error:
-        log("Error during create")
-        dump(error)
-
-
 def _extract_general():
     log("Extracting general icons")
 
-    temp_dir = tempfile.mkdtemp()
-    dest_path = path.get_overlay_patches_general()
-
     try:
+        general_path = path.get_overlay_patches_general()
+
+        path.makedirs(general_path, "multi")
+        path.makedirs(general_path, "single")
+
         with zipfile.ZipFile(path.get_package_archive(), "r") as z:
-            members = z.namelist()
-            members_to_extract = [m for m in members if m.startswith("icons")]
+            for m in z.namelist():
+                if m.startswith("icons/single") or m.startswith("icons/multi"):
+                    _, color, name = m.split("/")
+                    with open(os.path.join(general_path, color, name), "wb+") as f:
+                        f.write(z.read(m))
 
-            z.extractall(temp_dir, members_to_extract)
-
-            shutil.move(os.path.join(temp_dir, "icons", "single"), dest_path)
-            shutil.move(os.path.join(temp_dir, "icons", "multi"), dest_path)
     except Exception as error:
         log("Error during extract")
         dump(error)
@@ -84,35 +68,32 @@ def _copy_specific():
     src_multi = os.path.join(general_path, "multi")
     src_single = os.path.join(general_path, "single")
 
+    multi_files = os.listdir(src_multi)
+    single_files = os.listdir(src_single)
+
     try:
         for theme_package in customizable_themes:
-            theme_patch_path = os.path.join(specific_path, theme_package)
-            theme_patch_multi_path = os.path.join(theme_patch_path, "multi")
-            theme_patch_single_path = os.path.join(theme_patch_path, "single")
-            missing_icons = icons.get_missing(theme_package)
+            theme_patch_multi_path = path.makedirs(specific_path, theme_package, "multi")
+            theme_patch_single_path = path.makedirs(specific_path, theme_package, "single")
 
-            if missing_icons:
-                if not os.path.exists(theme_patch_path):
-                    os.makedirs(theme_patch_multi_path)
-                    os.makedirs(theme_patch_single_path)
+            for icon in icons.get_missing(theme_package):
+                dest = os.path.join(theme_patch_multi_path, icon + ".png")
 
-                for icon in missing_icons:
-                    dest = os.path.join(theme_patch_multi_path, icon + ".png")
+                if not os.path.exists(dest):
+                    for filename in multi_files:
+                        if filename.startswith(icon):
+                            shutil.copy(
+                                os.path.join(src_multi, filename),
+                                theme_patch_multi_path
+                            )
 
-                    if not os.path.exists(dest):
-                        for filename in os.listdir(src_multi):
-                            if filename.startswith(icon):
-                                shutil.copy(
-                                    os.path.join(src_multi, filename),
-                                    theme_patch_multi_path
-                                )
+                    for filename in single_files:
+                        if filename.startswith(icon):
+                            shutil.copy(
+                                os.path.join(src_single, filename),
+                                theme_patch_single_path
+                            )
 
-                        for filename in os.listdir(src_single):
-                            if filename.startswith(icon):
-                                shutil.copy(
-                                    os.path.join(src_single, filename),
-                                    theme_patch_single_path
-                                )
     except Exception as error:
         log("Error during copy")
         dump(error)
@@ -134,7 +115,6 @@ def init():
     log("Initializing icons")
 
     if not os.path.exists(path.get_overlay()):
-        _create_dirs()
         sublime.set_timeout_async(provide, 0)
     else:
         sublime.set_timeout_async(_copy_specific, 0)
