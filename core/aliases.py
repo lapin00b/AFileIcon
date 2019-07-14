@@ -20,7 +20,8 @@ def _is_enabled():
 
 def _remove():
     try:
-        shutil.rmtree(path.get_overlay_aliases())
+        shutil.rmtree(path.get_overlay_aliases_cache(), ignore_errors=True)
+        shutil.rmtree(path.get_overlay_aliases(), ignore_errors=True)
     except Exception as error:
         log("Error during remove")
         dump(error)
