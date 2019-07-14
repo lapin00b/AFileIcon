@@ -1,17 +1,12 @@
 import os
-import re
 
 import sublime
 import sublime_plugin
-
-from collections import OrderedDict
 
 from ..common import settings
 from ..common.utils import path
 from ..common.utils import icons
 from ..common.utils.logging import log, dump, warning
-
-PATTERN = re.compile(r"^Packages/|\/.*$")
 
 
 def _find_package_resources(pattern):
@@ -114,31 +109,14 @@ def get_installed(logging=True):
     if logging:
         log("Getting installed themes")
 
-    theme_resources = _find_package_resources("*.sublime-theme")
-    all_themes_ordered = OrderedDict([])
+    found_themes = set()
     installed_themes = {}
 
-    for res in theme_resources:
-        package = re.sub(PATTERN, "", res)
-        all_themes_ordered[package] = []
-
-    for res in theme_resources:
-        package = re.sub(PATTERN, "", res)
-        theme = os.path.basename(res)
-
-        all_themes_ordered[package].append(theme)
-
-    for k in all_themes_ordered.keys():
-        value = all_themes_ordered[k]
-        is_addon = False
-        is_patch = True if k == settings.OVERLAY_ROOT else False
-
-        for v in installed_themes.values():
-            if set(value).issubset(set(v)):
-                is_addon = True
-
-        if not (is_addon or is_patch):
-            installed_themes[k] = value
+    for res in _find_package_resources("*.sublime-theme"):
+        _, package, *_, theme = res.split("/")
+        if package != settings.OVERLAY_ROOT and theme not in found_themes:
+            found_themes.add(theme)
+            installed_themes.setdefault(package, []).append(theme)
 
     if logging:
         dump(installed_themes)
