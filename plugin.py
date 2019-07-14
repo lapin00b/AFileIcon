@@ -19,13 +19,6 @@ if int(sublime.version()) >= 3114:
 
     NOPC_MSG = "It seems like you don't have Package Control installed"
 
-    def main():
-        """
-        The main routine.
-        """
-        settings.init()
-        icons.init()
-
     def ensure_reload():
         """
         Ensure all modules reload to initialize plugin successfully.
@@ -68,7 +61,8 @@ if int(sublime.version()) >= 3114:
             if was_upgraded:
                 ensure_reload()
             else:
-                main()
+                settings.init()
+                icons.init()
 
     def plugin_unloaded():
         """
