@@ -12,10 +12,7 @@ from ..common.utils.logging import log, dump
 
 
 def _is_enabled():
-    if os.path.exists(path.get_overlay_aliases()):
-        return True
-
-    return False
+    return os.path.exists(path.get_overlay_aliases())
 
 
 def _remove():
@@ -26,7 +23,8 @@ def _remove():
         log("Error during remove")
         dump(error)
     finally:
-        sublime.run_command("refresh_folder_list")
+        sublime.set_timeout(
+            lambda: sublime.run_command("refresh_folder_list"), 100)
 
 
 def _rename():
@@ -43,7 +41,8 @@ def _rename():
         log("Error during rename")
         dump(error)
     finally:
-        sublime.run_command("refresh_folder_list")
+        sublime.set_timeout(
+            lambda: sublime.run_command("refresh_folder_list"), 100)
 
 
 def _copy():
@@ -84,9 +83,9 @@ def enable():
     log("Enabling aliases")
     if not _is_enabled():
         if settings.is_package_archive():
-            sublime.set_timeout_async(_extract, 0)
+            _extract()
         else:
-            sublime.set_timeout_async(_copy, 0)
+            _copy()
     else:
         dump("Aliases already enabled")
 
@@ -94,7 +93,7 @@ def enable():
 def disable():
     log("Disabling aliases")
     if _is_enabled():
-        sublime.set_timeout_async(_remove, 0)
+        _remove()
     else:
         dump("Aliases already disabled")
 
@@ -110,4 +109,4 @@ def check():
 
 class AfiCheckAliasesCommand(sublime_plugin.ApplicationCommand):
     def run(self):
-        check()
+        sublime.set_timeout_async(check)
