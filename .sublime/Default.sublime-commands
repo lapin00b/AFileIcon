@@ -8,7 +8,7 @@
     "command": "afi_revert"
   },
   {
-    "caption": "A File Icon: Settings",
+    "caption": "Preferences: A File Icon Settings",
     "command": "edit_settings", "args":
     {
       "base_file": "${packages}/A File Icon/.sublime/A File Icon.sublime-settings",
