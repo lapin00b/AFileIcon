@@ -14,6 +14,13 @@ from ..common.utils.logging import log, dump, warning
 PATTERN = re.compile(r"^Packages/|\/.*$")
 
 
+def _find_package_resources(pattern):
+    return [
+        resource for resource in sublime.find_resources(pattern)
+        if resource.startswith("Packages/")
+    ]
+
+
 def _patch_icon(attrib, color=None, opacity=None):
     icon = {"class": "icon_file_type"}
     if attrib:
@@ -107,7 +114,7 @@ def get_installed(logging=True):
     if logging:
         log("Getting installed themes")
 
-    theme_resources = sublime.find_resources("*.sublime-theme")
+    theme_resources = _find_package_resources("*.sublime-theme")
     all_themes_ordered = OrderedDict([])
     installed_themes = {}
 
@@ -144,7 +151,7 @@ def get_customizable(installed_themes):
 
     customizable_themes = set()
 
-    for res in sublime.find_resources(".supports-a-file-icon-customization"):
+    for res in _find_package_resources(".supports-a-file-icon-customization"):
         _, package, *_ = res.split("/")
         if package in installed_themes:
             customizable_themes.add(package)
