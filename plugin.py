@@ -87,5 +87,8 @@ if int(sublime.version()) >= 3114:
         finally:
             if is_upgrading or was_removed:
                 cleaning.clean_all()
+            if not is_upgrading:
+                sublime.set_timeout(
+                    lambda: sublime.run_command("refresh_folder_list"), 100)
 else:
     raise ImportWarning("Doesn't support Sublime Text versions prior to 3114")
