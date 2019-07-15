@@ -10,53 +10,44 @@ def makedirs(*args):
     return absolute_path
 
 
-def get_package_archive():
-    return os.path.join(sublime.installed_packages_path(),
-                        settings.PACKAGE_ARCH)
+def installed_package_path():
+    return os.path.join(
+        sublime.installed_packages_path(), settings.PACKAGE_ARCH)
 
 
-def get_package_folder():
-    return os.path.join(sublime.packages_path(), settings.PACKAGE_NAME)
+def package_icons_path():
+    return os.path.join(
+        sublime.packages_path(), settings.PACKAGE_NAME, "icons")
 
 
-def get_package_icons():
-    return os.path.join(sublime.packages_path(), settings.PACKAGE_NAME,
-                        "icons")
+def package_aliases_path():
+    return os.path.join(
+        sublime.packages_path(), settings.PACKAGE_NAME, "aliases")
 
 
-def get_package_aliases():
-    return os.path.join(sublime.packages_path(), settings.PACKAGE_NAME,
-                        "aliases")
-
-
-def get_overlay():
+def overlay_path():
     return os.path.join(sublime.packages_path(), settings.OVERLAY_ROOT)
 
 
-def get_overlay_cache():
+def overlay_cache_path():
     return os.path.join(sublime.cache_path(), settings.OVERLAY_ROOT)
 
 
-def get_overlay_aliases():
-    return os.path.join(sublime.packages_path(), settings.OVERLAY_ROOT,
-                        "aliases")
+def overlay_aliases_path():
+    return os.path.join(
+        sublime.packages_path(), settings.OVERLAY_ROOT, "aliases")
 
 
-def get_overlay_aliases_cache():
-    return os.path.join(sublime.cache_path(), settings.OVERLAY_ROOT,
-                        "aliases")
+def overlay_patches_path():
+    return os.path.join(
+        sublime.packages_path(), settings.OVERLAY_ROOT, "patches")
 
 
-def get_overlay_patches():
-    return os.path.join(sublime.packages_path(), settings.OVERLAY_ROOT,
-                        "patches")
+def overlay_patches_general_path():
+    return os.path.join(
+        sublime.packages_path(), settings.OVERLAY_ROOT, "patches", "general")
 
 
-def get_overlay_patches_general():
-    return os.path.join(sublime.packages_path(), settings.OVERLAY_ROOT,
-                        "patches", "general")
-
-
-def get_overlay_patches_specific():
-    return os.path.join(sublime.packages_path(), settings.OVERLAY_ROOT,
-                        "patches", "specific")
+def overlay_patches_specific_path():
+    return os.path.join(
+        sublime.packages_path(), settings.OVERLAY_ROOT, "patches", "specific")

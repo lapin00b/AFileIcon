@@ -14,9 +14,8 @@ def get_path(package_name):
 
 
 def get_missing(theme_package):
-    package_icons = json.loads(sublime.load_resource("Packages/" +
-                                                     settings.PACKAGE_NAME +
-                                                     "/common/icons.json"))
+    package_icons = json.loads(sublime.load_resource(
+        "Packages/" + settings.PACKAGE_NAME + "/common/icons.json"))
     theme_icons_path = get_path(theme_package)
     if not theme_icons_path:
         return package_icons

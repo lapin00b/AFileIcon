@@ -17,12 +17,12 @@ def _extract_general():
     log("Extracting general icons")
 
     try:
-        general_path = path.get_overlay_patches_general()
+        general_path = path.overlay_patches_general_path()
 
         path.makedirs(general_path, "multi")
         path.makedirs(general_path, "single")
 
-        with zipfile.ZipFile(path.get_package_archive(), "r") as z:
+        with zipfile.ZipFile(path.installed_package_path(), "r") as z:
             for m in z.namelist():
                 if m.startswith("icons/single") or m.startswith("icons/multi"):
                     _, color, name = m.split("/")
@@ -37,10 +37,10 @@ def _extract_general():
 def _copy_general():
     log("Copying general icons")
 
-    package_path = path.get_package_icons()
+    package_path = path.package_icons_path()
 
     if os.path.exists(package_path):
-        general_path = path.get_overlay_patches_general()
+        general_path = path.overlay_patches_general_path()
 
         src_multi = os.path.join(package_path, "multi")
         src_single = os.path.join(package_path, "single")
@@ -62,8 +62,8 @@ def _copy_specific():
     log("Checking theme specific icons")
 
     customizable_themes = themes.get_customizable(themes.get_installed())
-    general_path = path.get_overlay_patches_general()
-    specific_path = path.get_overlay_patches_specific()
+    general_path = path.overlay_patches_general_path()
+    specific_path = path.overlay_patches_specific_path()
 
     src_multi = os.path.join(general_path, "multi")
     src_single = os.path.join(general_path, "single")
@@ -114,7 +114,7 @@ def provide():
 def init():
     log("Initializing icons")
 
-    if not os.path.exists(path.get_overlay()):
+    if not os.path.exists(path.overlay_path()):
         sublime.set_timeout_async(provide, 0)
     else:
         sublime.set_timeout_async(_copy_specific, 0)

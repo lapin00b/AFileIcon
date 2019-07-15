@@ -20,8 +20,8 @@ def clean_all():
             log("Error during cleaning")
         dump(error)
 
-    shutil.rmtree(path.get_overlay_cache(), onerror=_on_rmtree_error)
-    shutil.rmtree(path.get_overlay(), onerror=_on_rmtree_error)
+    shutil.rmtree(path.overlay_cache_path(), onerror=_on_rmtree_error)
+    shutil.rmtree(path.overlay_path(), onerror=_on_rmtree_error)
 
     if success:
         message("Cleaned up successfully")
@@ -34,7 +34,7 @@ def clean_theme_patches():
 
     success = True
 
-    for dirname, _, files in os.walk(path.get_overlay()):
+    for dirname, _, files in os.walk(path.overlay_path()):
         for f in files:
             if f.endswith(".sublime-theme"):
                 try:

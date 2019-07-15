@@ -151,8 +151,8 @@ class AfiPatchThemesCommand(sublime_plugin.ApplicationCommand):
         general_to_patch = []
         patches_to_clean = []
 
-        general = path.get_overlay_patches_general()
-        specific = path.get_overlay_patches_specific()
+        general = path.overlay_patches_general_path()
+        specific = path.overlay_patches_specific_path()
 
         dest_new = "multi"
         dest_old = "single"

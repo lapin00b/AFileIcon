@@ -12,13 +12,13 @@ from ..common.utils.logging import log, dump
 
 
 def _is_enabled():
-    return os.path.exists(path.get_overlay_aliases())
+    return os.path.exists(path.overlay_aliases_path())
 
 
 def _remove():
     try:
-        shutil.rmtree(path.get_overlay_aliases_cache(), ignore_errors=True)
-        shutil.rmtree(path.get_overlay_aliases(), ignore_errors=True)
+        shutil.rmtree(path.overlay_cache_path(), ignore_errors=True)
+        shutil.rmtree(path.overlay_aliases_path(), ignore_errors=True)
     except Exception as error:
         log("Error during remove")
         dump(error)
@@ -28,7 +28,7 @@ def _remove():
 
 
 def _rename():
-    aliases_path = path.get_overlay_aliases()
+    aliases_path = path.overlay_aliases_path()
 
     try:
         for alias_base in os.listdir(aliases_path):
@@ -46,8 +46,8 @@ def _rename():
 
 
 def _copy():
-    src = path.get_package_aliases()
-    dest = path.get_overlay_aliases()
+    src = path.package_aliases_path()
+    dest = path.overlay_aliases_path()
 
     try:
         shutil.copytree(src, dest)
@@ -60,10 +60,10 @@ def _copy():
 
 def _extract():
     temp_dir = tempfile.mkdtemp()
-    dest_path = path.get_overlay_aliases()
+    dest_path = path.overlay_aliases_path()
 
     try:
-        with zipfile.ZipFile(path.get_package_archive(), "r") as z:
+        with zipfile.ZipFile(path.is_package_archive(), "r") as z:
             members = z.namelist()
             members_to_extract = [
                 m for m in members if m.startswith("aliases")
