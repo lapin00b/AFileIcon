@@ -5,8 +5,9 @@ if int(sublime.version()) >= 3114:
     from .common.utils import cleaning
     from .common.utils import logging
 
-    from .core import icons
     from .core import aliases
+    from .core import icons
+    from .core import themes
 
     from .common.utils.reloader import AfiReloadCommand
     from .common.utils.cleaning import AfiCleanCommand
@@ -63,7 +64,10 @@ if int(sublime.version()) >= 3114:
             else:
                 def init():
                     settings.init()
+                    aliases.check()
                     icons.init()
+                    themes.patch()
+                    settings.add_listener()
                 sublime.set_timeout_async(init)
 
     def plugin_unloaded():

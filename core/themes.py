@@ -223,8 +223,6 @@ def patch(overwrite=False):
     else:
         log("All the themes are already patched")
 
-    settings.add_listener()
-
 
 class AfiPatchThemesCommand(sublime_plugin.ApplicationCommand):
     def run(self, overwrite=False):
