@@ -61,8 +61,10 @@ if int(sublime.version()) >= 3114:
             if was_upgraded:
                 ensure_reload()
             else:
-                settings.init()
-                icons.init()
+                def init():
+                    settings.init()
+                    icons.init()
+                sublime.set_timeout_async(init)
 
     def plugin_unloaded():
         """

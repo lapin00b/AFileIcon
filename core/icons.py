@@ -13,6 +13,22 @@ from ..common.utils.logging import log, dump
 from . import themes
 
 
+def init():
+    log("Initializing icons")
+
+    if os.path.exists(path.overlay_patches_general_path()):
+        _copy_specific()
+        dump("All the necessary icons are provided")
+        return
+
+    if settings.is_package_archive():
+        _extract_general()
+    else:
+        _copy_general()
+
+    _copy_specific()
+
+
 def _extract_general():
     log("Extracting general icons")
 
@@ -100,22 +116,3 @@ def _copy_specific():
     finally:
         sublime.run_command("afi_check_aliases")
         sublime.run_command("afi_patch_themes")
-
-
-def provide():
-    if settings.is_package_archive():
-        _extract_general()
-    else:
-        _copy_general()
-
-    _copy_specific()
-
-
-def init():
-    log("Initializing icons")
-
-    if not os.path.exists(path.overlay_path()):
-        sublime.set_timeout_async(provide, 0)
-    else:
-        sublime.set_timeout_async(_copy_specific, 0)
-        dump("All the necessary icons are provided")
