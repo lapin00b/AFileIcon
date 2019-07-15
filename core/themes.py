@@ -139,89 +139,93 @@ def get_customizable(installed_themes):
     return customizable_themes
 
 
-class AfiPatchThemesCommand(sublime_plugin.ApplicationCommand):
-    def run(self, overwrite=False):
-        log("Preparing to patch")
+def patch(overwrite=False):
+    log("Preparing to patch")
 
-        installed_themes = get_installed()
-        customizable_themes = get_customizable(installed_themes)
-        icons_settings = settings.icons()
-        force_mode = settings.package().get("force_mode")
+    installed_themes = get_installed()
+    customizable_themes = get_customizable(installed_themes)
+    icons_settings = settings.icons()
+    force_mode = settings.package().get("force_mode")
 
-        general_to_patch = []
-        patches_to_clean = []
+    general_to_patch = []
+    patches_to_clean = []
 
-        general = path.overlay_patches_general_path()
-        specific = path.overlay_patches_specific_path()
+    general = path.overlay_patches_general_path()
+    specific = path.overlay_patches_specific_path()
 
-        dest_new = "multi"
-        dest_old = "single"
+    dest_new = "multi"
+    dest_old = "single"
 
-        if "color" in icons_settings and icons_settings["color"]:
-            dest_new = "single"
-            dest_old = "multi"
+    if "color" in icons_settings and icons_settings["color"]:
+        dest_new = "single"
+        dest_old = "multi"
 
-        general_dest = os.path.join(general, dest_new)
+    general_dest = os.path.join(general, dest_new)
 
-        for pkg in installed_themes:
-            is_customizable = pkg in customizable_themes
-            missing_icons = []
+    for pkg in installed_themes:
+        is_customizable = pkg in customizable_themes
+        missing_icons = []
 
-            if is_customizable:
-                missing_icons = icons.get_missing(pkg)
+        if is_customizable:
+            missing_icons = icons.get_missing(pkg)
 
-            for theme in installed_themes[pkg]:
-                general_old = os.path.join(general, dest_old, theme)
-                general_new = os.path.join(general, dest_new, theme)
-                specific_old = os.path.join(specific, pkg, dest_old, theme)
-                specific_new = os.path.join(specific, pkg, dest_new, theme)
-                specific_dest = os.path.join(specific, pkg, dest_new)
+        for theme in installed_themes[pkg]:
+            general_old = os.path.join(general, dest_old, theme)
+            general_new = os.path.join(general, dest_new, theme)
+            specific_old = os.path.join(specific, pkg, dest_old, theme)
+            specific_new = os.path.join(specific, pkg, dest_new, theme)
+            specific_dest = os.path.join(specific, pkg, dest_new)
 
-                if is_customizable and not force_mode:
-                    if os.path.exists(general_old):
-                        patches_to_clean.append(general_old)
+            if is_customizable and not force_mode:
+                if os.path.exists(general_old):
+                    patches_to_clean.append(general_old)
 
-                    if os.path.exists(general_new):
-                        patches_to_clean.append(general_new)
+                if os.path.exists(general_new):
+                    patches_to_clean.append(general_new)
 
-                    if missing_icons:
-                        if not os.path.exists(specific_new) or overwrite:
-                            try:
-                                _patch_specific(
-                                    theme, specific_dest, icons_settings
-                                )
-                            except Exception as error:
-                                log("Error during patching")
-                                dump(error)
-
-                        if os.path.exists(specific_old):
-                            patches_to_clean.append(specific_old)
-                else:
-                    if not os.path.exists(general_new) or overwrite:
-                        general_to_patch.append(theme)
-
-                    if os.path.exists(general_old):
-                        patches_to_clean.append(general_old)
+                if missing_icons:
+                    if not os.path.exists(specific_new) or overwrite:
+                        try:
+                            _patch_specific(
+                                theme, specific_dest, icons_settings
+                            )
+                        except Exception as error:
+                            log("Error during patching")
+                            dump(error)
 
                     if os.path.exists(specific_old):
                         patches_to_clean.append(specific_old)
-
-                    if os.path.exists(specific_new):
-                        patches_to_clean.append(specific_new)
-
-        _clean_patches(patches_to_clean)
-
-        if general_to_patch:
-            try:
-                _patch_general(general_to_patch, general_dest, icons_settings)
-                log("Patching finished successfully")
-            except Exception as error:
-                log("Error during patching")
-                dump(error)
             else:
-                sublime.run_command("refresh_folder_list")
-                warning()
-        else:
-            log("All the themes are already patched")
+                if not os.path.exists(general_new) or overwrite:
+                    general_to_patch.append(theme)
 
-        settings.add_listener()
+                if os.path.exists(general_old):
+                    patches_to_clean.append(general_old)
+
+                if os.path.exists(specific_old):
+                    patches_to_clean.append(specific_old)
+
+                if os.path.exists(specific_new):
+                    patches_to_clean.append(specific_new)
+
+    _clean_patches(patches_to_clean)
+
+    if general_to_patch:
+        try:
+            _patch_general(general_to_patch, general_dest, icons_settings)
+            log("Patching finished successfully")
+        except Exception as error:
+            log("Error during patching")
+            dump(error)
+        else:
+            sublime.run_command("refresh_folder_list")
+            warning()
+    else:
+        log("All the themes are already patched")
+
+    settings.add_listener()
+
+
+class AfiPatchThemesCommand(sublime_plugin.ApplicationCommand):
+    def run(self, overwrite=False):
+        sublime.set_timeout_async(lambda: patch(overwrite))
