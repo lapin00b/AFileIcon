@@ -64,9 +64,9 @@ if int(sublime.version()) >= 3114:
             else:
                 def init():
                     settings.init()
-                    aliases.check()
                     icons.init()
                     themes.patch()
+                    aliases.check()
                     settings.add_listener()
                 sublime.set_timeout_async(init)
 
