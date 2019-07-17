@@ -1,6 +1,6 @@
+import json
 import os
 import shutil
-import tempfile
 import zipfile
 
 import sublime
@@ -9,8 +9,6 @@ from ..common import settings
 from ..common.utils import path
 from ..common.utils import icons
 from ..common.utils.logging import log, dump
-
-from . import themes
 
 
 def init():
@@ -22,7 +20,6 @@ def init():
             dump("All the necessary icons are provided")
         else:
             _init_overlay(general_path)
-        _copy_specific()
     except Exception as error:
         log("Error during copy")
         dump(error)
@@ -68,37 +65,58 @@ def _init_overlay(dest):
         pass
 
 
-def _copy_specific():
-    log("Checking theme specific icons")
+def copy_missing(source, overlay, package):
+    log("Checking icons for {}...".format(package))
 
-    customizable_themes = themes.get_customizable(themes.get_installed())
-    general_path = path.overlay_patches_general_path()
-    specific_path = path.overlay_patches_specific_path()
+    try:
+        missing_icons = _get_missing(package)
+        if missing_icons:
+            _copy_missing(source, overlay, package, "multi", missing_icons)
+            _copy_missing(source, overlay, package, "single", missing_icons)
+        return bool(missing_icons)
+    except Exception as error:
+        log("Error during copy")
+        dump(error)
+    return False
 
-    src_multi = os.path.join(general_path, "multi")
-    src_single = os.path.join(general_path, "single")
 
-    multi_files = os.listdir(src_multi)
-    single_files = os.listdir(src_single)
+def _copy_missing(source, overlay, package, color, icons):
+    src = os.path.join(source, color)
+    dest = path.makedirs(overlay, package, color)
+    for icon in icons:
+        _copy(src, dest, icon + ".png")
+        for i in range(2, 4):
+            _copy(src, dest, "{}@{}x.png".format(icon, i))
 
-    for theme_package in customizable_themes:
-        theme_patch_multi_path = path.makedirs(specific_path, theme_package, "multi")
-        theme_patch_single_path = path.makedirs(specific_path, theme_package, "single")
 
-        for icon in icons.get_missing(theme_package):
-            dest = os.path.join(theme_patch_multi_path, icon + ".png")
+def _copy(src, dest, icon):
+    try:
+        with open(os.path.join(dest, icon), "xb") as df:
+            with open(os.path.join(src, icon), "rb") as sf:
+                df.write(sf.read())
+    except FileExistsError:
+        pass
 
-            if not os.path.exists(dest):
-                for filename in multi_files:
-                    if filename.startswith(icon):
-                        shutil.copy(
-                            os.path.join(src_multi, filename),
-                            theme_patch_multi_path
-                        )
 
-                for filename in single_files:
-                    if filename.startswith(icon):
-                        shutil.copy(
-                            os.path.join(src_single, filename),
-                            theme_patch_single_path
-                        )
+def _get_missing(package):
+    package_icons = json.loads(sublime.load_resource(
+        "Packages/" + settings.PACKAGE_NAME + "/common/icons.json"))
+    theme_icons_path = _icons_path(package)
+    if not theme_icons_path:
+        return package_icons
+
+    theme_icons = {
+        os.path.basename(os.path.splitext(i)[0])
+        for i in sublime.find_resources("*.png")
+        if i.startswith(theme_icons_path)
+    }
+
+    return [icon for icon in package_icons if icon not in theme_icons]
+
+
+def _icons_path(package):
+    package_path = "Packages/" + package
+    for res in sublime.find_resources("file_type_default.png"):
+        if res.startswith(package_path):
+            return os.path.dirname(res)
+    return False

@@ -5,8 +5,9 @@ import sublime_plugin
 
 from ..common import settings
 from ..common.utils import path
-from ..common.utils import icons
 from ..common.utils.logging import log, dump, warning
+
+from . import icons
 
 
 def _find_package_resources(pattern):
@@ -164,10 +165,10 @@ def patch(overwrite=False):
 
     for pkg in installed_themes:
         is_customizable = pkg in customizable_themes
-        missing_icons = []
+        copied_missing = False
 
         if is_customizable:
-            missing_icons = icons.get_missing(pkg)
+            copied_missing = icons.copy_missing(general, specific, pkg)
 
         for theme in installed_themes[pkg]:
             general_old = os.path.join(general, dest_old, theme)
@@ -183,7 +184,7 @@ def patch(overwrite=False):
                 if os.path.exists(general_new):
                     patches_to_clean.append(general_new)
 
-                if missing_icons:
+                if copied_missing:
                     if not os.path.exists(specific_new) or overwrite:
                         try:
                             _patch_specific(
