@@ -69,7 +69,6 @@ gulp.task("build:settings", function() {
       var iconName = path.basename(file.path, path.extname(file.path));
       var iconOpts = opts.icons[iconName];
       var iconScope = getIconScope(iconOpts);
-      var iconAliases = iconOpts.aliases;
       var iconSettings = merge();
 
       if (iconScope) {
@@ -88,27 +87,6 @@ gulp.task("build:settings", function() {
           .pipe(gulp.dest("./preferences"))
         );
       }
-
-      if (iconAliases) {
-        iconSettings.add(iconAliases.map(function(alias) {
-          return gulp.src("./common/templates/alias.yaml")
-            .pipe($.data(function() {
-              return {
-                alias: alias.name,
-                extensions: alias.extensions,
-                base: alias.base,
-                scope: alias.scope
-              };
-            }))
-            .pipe($.template())
-            .pipe($.rename({
-              basename: alias.name,
-              extname: ".disabled-sublime-syntax"
-            }))
-            .pipe(gulp.dest("./aliases"));
-        }));
-      }
-
       return iconSettings.isEmpty() ? stream : iconSettings;
     }));
 });
