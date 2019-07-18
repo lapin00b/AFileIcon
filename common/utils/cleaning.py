@@ -12,21 +12,21 @@ from .logging import log, dump, message
 def clean_all():
     message("Cleaning up")
 
-    success = True
-
-    def _on_rmtree_error(function, path, excinfo):
-        if success:
-            success = False
+    def handler(function, path, excinfo):
+        if handler.success:
+            handler.success = False
             log("Error during cleaning")
-        dump(error)
+        dump(path)
 
-    shutil.rmtree(path.overlay_cache_path(), onerror=_on_rmtree_error)
-    shutil.rmtree(path.overlay_path(), onerror=_on_rmtree_error)
+    handler.success = True
 
-    if success:
+    shutil.rmtree(path.overlay_cache_path(), onerror=handler)
+    shutil.rmtree(path.overlay_path(), onerror=handler)
+
+    if handler.success:
         message("Cleaned up successfully")
 
-    return success
+    return handler.success
 
 
 def clean_theme_patches():
