@@ -1,3 +1,4 @@
+import json
 import os
 
 import sublime
@@ -53,7 +54,7 @@ def _patch_general(themes, dest, isettings):
     if color or opacity:
         theme_content.append(_patch_icon("selected", color, opacity))
 
-    text = sublime.encode_value(theme_content)
+    text = json.dumps(theme_content)
 
     for theme in themes:
         log("Patching `{}`".format(theme))
@@ -78,7 +79,7 @@ def _patch_specific(theme, dest, isettings):
     if color_on_select:
         theme_content.append(_patch_icon("selected", color_on_select))
 
-    text = sublime.encode_value(theme_content)
+    text = json.dumps(theme_content)
 
     with open(os.path.join(dest, theme), "w") as t:
         t.write(text)
