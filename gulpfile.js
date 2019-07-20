@@ -116,22 +116,3 @@ gulp.task("build:icons", function() {
       return iconImages;
     }));
 });
-
-/*
- * Release
- */
-
-gulp.task("media", function() {
-  return gulp.src("./media/*.{png,jpg}")
-    .pipe($.imagemin({verbose: true}))
-    .pipe(gulp.dest("./media"));
-});
-
-
-gulp.task("bump-version", function() {
-  return gulp.src("./package.json")
-    .pipe($.if(argv.patch, $.bump({ type: "patch" })))
-    .pipe($.if(argv.minor, $.bump({ type: "minor" })))
-    .pipe($.if(argv.major, $.bump({ type: "major" })))
-    .pipe(gulp.dest("./"));
-});
