@@ -20,6 +20,11 @@ def package_icons_path():
         sublime.packages_path(), settings.PACKAGE_NAME, "icons")
 
 
+def package_preferences_path():
+    return os.path.join(
+        sublime.packages_path(), settings.PACKAGE_NAME, "preferences")
+
+
 def overlay_path():
     return os.path.join(sublime.packages_path(), settings.OVERLAY_ROOT)
 

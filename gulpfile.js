@@ -55,42 +55,6 @@ var getIconScope = function(iconOpts) {
  * Build
  */
 
-// Preferences
-
-gulp.task("build:settings", function() {
-  opts.icons = getIconOpts();
-
-  return gulp.src("./common/assets/*.svg", {read: false})
-    .pipe($.plumber(function(error) {
-      console.log("[build:settings]".bold.magenta + " There was an issue building icon settings:\n".bold.red + error.message);
-      this.emit("end");
-    }))
-    .pipe($.flatmap(function(stream, file) {
-      var iconName = path.basename(file.path, path.extname(file.path));
-      var iconOpts = opts.icons[iconName];
-      var iconScope = getIconScope(iconOpts);
-      var iconSettings = merge();
-
-      if (iconScope) {
-        iconSettings.add(gulp.src("./common/templates/preference.xml")
-          .pipe($.data(function() {
-            return {
-              name: iconName,
-              scope: iconScope
-            };
-          }))
-          .pipe($.template())
-          .pipe($.rename({
-            basename: iconName,
-            extname: ".tmPreferences"
-          }))
-          .pipe(gulp.dest("./preferences"))
-        );
-      }
-      return iconSettings.isEmpty() ? stream : iconSettings;
-    }));
-});
-
 // Icons
 
 gulp.task("build:icons", function() {
