@@ -7,7 +7,6 @@ import sublime
 
 from ..common import settings
 from ..common.utils import path
-from ..common.utils import icons
 from ..common.utils.logging import log, dump
 
 
