@@ -12,21 +12,21 @@ SUBLIME_SETTINGS_FILE = "Preferences.sublime-settings"
 PKGCTRL_SETTINGS_FILE = "Package Control.sublime-settings"
 
 _current_settings = {}
-_default_settings = {}
 _hsl_pattern = re.compile(r'hsl\(\s*(\d+),\s*(\d+)%,\s*(\d+)%\s*\)')
 _uuid = "9ebcce78-4cac-4089-8bd7-d551c634b052"
 
 
-def _get_default():
-    s = sublime.decode_value(sublime.load_resource(
-        "Packages/{0}/.sublime/{1}"
-        .format(PACKAGE_NAME, PACKAGE_SETTINGS_FILE)
-    ))
-
-    del s["dev_mode"]
-    del s["dev_trace"]
-
-    return s
+def _package_settings_keys():
+    try:
+        return _package_settings_keys.cache
+    except AttributeError:
+        _package_settings_keys.cache = {
+            key for key in sublime.decode_value(sublime.load_resource(
+                "Packages/{0}/.sublime/{1}"
+                .format(PACKAGE_NAME, PACKAGE_SETTINGS_FILE)
+            )).keys() if key not in ("dev_mode", "dev_trace")
+        }
+        return _package_settings_keys.cache
 
 
 def _merge(*settings):
@@ -45,7 +45,7 @@ def _parse_hsl_color(color):
 def _get_colors(package_settings):
     colors = {}
     color_options = [
-        o for o in _default_settings if o.startswith("color")
+        key for key in _package_settings_keys() if key.startswith("color")
     ]
 
     if package_settings.get("color"):
@@ -104,13 +104,13 @@ def _on_change():
 
     package_settings = package()
 
-    for s in _default_settings:
-        real_settings[s] = package_settings.get(s)
+    for key in _package_settings_keys():
+        real_settings[key] = package_settings.get(key)
 
-        if real_settings[s] != _current_settings[s]:
-            if s.startswith("aliases"):
+        if real_settings[key] != _current_settings[key]:
+            if key.startswith("aliases"):
                 is_aliases_changed = True
-            elif s.startswith("force_mode"):
+            elif key.startswith("force_mode"):
                 is_force_mode_changed = True
             else:
                 is_icons_changed = True
@@ -130,8 +130,8 @@ def _on_change():
 def _update():
     global _current_settings
 
-    for s in _default_settings:
-        _current_settings[s] = package().get(s)
+    for key in _package_settings_keys():
+        _current_settings[key] = package().get(key)
 
 
 def subltxt():
@@ -184,8 +184,4 @@ def icons():
 
 def init():
     log("Initializing settings")
-
-    global _default_settings
-    _default_settings = _get_default()
-
     _update()
