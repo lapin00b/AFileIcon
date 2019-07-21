@@ -13,7 +13,6 @@ import sys
 import types
 import os
 
-import sublime
 import sublime_plugin
 
 from contextlib import contextmanager
@@ -253,8 +252,3 @@ class FilteringImportHook:
     def find_module(self, name, path=None):
         if self.condition(name):
             return self
-
-
-class AfiReloadCommand(sublime_plugin.ApplicationCommand):
-    def run(self):
-        reload_plugin()

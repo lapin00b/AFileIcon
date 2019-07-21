@@ -9,7 +9,7 @@ if int(sublime.version()) >= 3114:
     from .core import icons
     from .core import themes
 
-    from .common.utils.reloader import AfiReloadCommand
+    from .common.utils.reloader import reload_plugin
     from .common.utils.cleaning import AfiCleanCommand
     from .common.utils.cleaning import AfiRevertCommand
 
@@ -36,7 +36,7 @@ if int(sublime.version()) >= 3114:
             active_view.erase_status("afi_status")
 
         def reload():
-            sublime.run_command("afi_reload")
+            reload_plugin()
             active_view.set_status("afi_status", finish_upgrade_msg)
             sublime.set_timeout(erase_status, 2000)
 

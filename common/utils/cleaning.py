@@ -7,6 +7,7 @@ import sublime_plugin
 from . import path
 
 from .logging import log, dump, message
+from .reloader import reload_plugin
 
 
 def clean_all():
@@ -51,7 +52,7 @@ def clean_theme_patches():
 
 def revert():
     if clean_all():
-        sublime.run_command("afi_reload")
+        reload_plugin()
 
 
 class AfiCleanCommand(sublime_plugin.ApplicationCommand):
