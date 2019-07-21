@@ -141,6 +141,26 @@ def get_customizable(installed_themes):
     return customizable_themes
 
 
+def clean_patches():
+    log("Cleaning patches")
+
+    success = True
+
+    for dirname, _, files in os.walk(path.overlay_path()):
+        for f in files:
+            if f.endswith(".sublime-theme"):
+                try:
+                    os.remove(os.path.join(dirname, f))
+                except Exception as error:
+                    if success:
+                        success = False
+                        log("Error during cleaning")
+                    dump(error)
+    if success:
+        log("Cleaned up successfully")
+        patch()
+
+
 def patch(overwrite=False):
     log("Preparing to patch")
 
@@ -224,6 +244,11 @@ def patch(overwrite=False):
             warning()
     else:
         log("All the themes are already patched")
+
+
+class AfiCleanCommand(sublime_plugin.ApplicationCommand):
+    def run(self):
+        sublime.set_timeout_async(clean_patches)
 
 
 class AfiPatchThemesCommand(sublime_plugin.ApplicationCommand):

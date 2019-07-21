@@ -1,4 +1,3 @@
-import os
 import shutil
 
 import sublime
@@ -30,34 +29,9 @@ def clean_all():
     return handler.success
 
 
-def clean_theme_patches():
-    log("Cleaning patches")
-
-    success = True
-
-    for dirname, _, files in os.walk(path.overlay_path()):
-        for f in files:
-            if f.endswith(".sublime-theme"):
-                try:
-                    os.remove(os.path.join(dirname, f))
-                except Exception as error:
-                    if success:
-                        success = False
-                        log("Error during cleaning")
-                    dump(error)
-    if success:
-        log("Cleaned up successfully")
-        sublime.run_command("afi_patch_themes")
-
-
 def revert():
     if clean_all():
         reload_plugin()
-
-
-class AfiCleanCommand(sublime_plugin.ApplicationCommand):
-    def run(self):
-        sublime.set_timeout_async(clean_theme_patches)
 
 
 class AfiRevertCommand(sublime_plugin.ApplicationCommand):
