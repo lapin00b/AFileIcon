@@ -104,28 +104,27 @@ def _on_change():
 
     package_settings = package()
 
-    if is_enabled():
-        for s in _default_settings:
-            real_settings[s] = package_settings.get(s)
+    for s in _default_settings:
+        real_settings[s] = package_settings.get(s)
 
-            if real_settings[s] != _current_settings[s]:
-                if s.startswith("aliases"):
-                    is_aliases_changed = True
-                elif s.startswith("force_mode"):
-                    is_force_mode_changed = True
-                else:
-                    is_icons_changed = True
+        if real_settings[s] != _current_settings[s]:
+            if s.startswith("aliases"):
+                is_aliases_changed = True
+            elif s.startswith("force_mode"):
+                is_force_mode_changed = True
+            else:
+                is_icons_changed = True
 
-        if is_aliases_changed:
-            _on_aliases_change()
+    if is_aliases_changed:
+        _on_aliases_change()
 
-        if is_icons_changed:
-            _on_icons_change()
-        elif is_force_mode_changed:
-            _on_force_mode_change()
+    if is_icons_changed:
+        _on_icons_change()
+    elif is_force_mode_changed:
+        _on_force_mode_change()
 
-        if is_aliases_changed or is_force_mode_changed or is_icons_changed:
-            _current_settings = real_settings
+    if is_aliases_changed or is_force_mode_changed or is_icons_changed:
+        _current_settings = real_settings
 
 
 def _update():
@@ -165,10 +164,6 @@ def add_listener():
 
 def clear_listener():
     package().clear_on_change(_uuid)
-
-
-def is_enabled():
-    return PACKAGE_NAME not in subltxt().get("ignored_packages", [])
 
 
 def icons():
