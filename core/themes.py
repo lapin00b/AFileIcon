@@ -116,7 +116,7 @@ def get_installed(logging=True):
 
     for res in _find_package_resources("*.sublime-theme"):
         _, package, *_, theme = res.split("/")
-        if package != settings.OVERLAY_ROOT and theme not in found_themes:
+        if package != path.OVERLAY_ROOT and theme not in found_themes:
             found_themes.add(theme)
             installed_themes.setdefault(package, []).append(theme)
 

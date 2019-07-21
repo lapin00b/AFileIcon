@@ -5,17 +5,11 @@ import sublime
 
 from .vendor import webcolors
 from .utils.logging import log, dump, message
-
-PACKAGE_BASE = os.path.basename(os.path.dirname(os.path.dirname(__file__)))
-PACKAGE_NAME = os.path.splitext(PACKAGE_BASE)[0]
-PACKAGE_MAIN = "plugin"
-PACKAGE_ARCH = PACKAGE_NAME + ".sublime-package"
+from .utils.path import PACKAGE_NAME
 
 PACKAGE_SETTINGS_FILE = "A File Icon.sublime-settings"
 SUBLIME_SETTINGS_FILE = "Preferences.sublime-settings"
 PKGCTRL_SETTINGS_FILE = "Package Control.sublime-settings"
-
-OVERLAY_ROOT = "{0} {1} {0}".format("zzz", PACKAGE_NAME)
 
 _current_settings = {}
 _default_settings = {}

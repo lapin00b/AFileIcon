@@ -10,13 +10,12 @@ if int(sublime.version()) >= 3114:
     from .core import themes
 
     from .common.utils.cleaning import AfiRevertCommand
+    from .common.utils.path import PACKAGE_NAME
     from .common.utils.reloader import reload_plugin
 
     from .core.aliases import AfiCheckAliasesCommand
     from .core.themes import AfiCleanCommand
     from .core.themes import AfiPatchThemesCommand
-
-    from .common.settings import PACKAGE_NAME
 
     NOPC_MSG = "It seems like you don't have Package Control installed"
 

@@ -6,7 +6,6 @@ from textwrap import dedent
 import sublime
 import sublime_plugin
 
-from .common import settings
 from .common.utils import path
 from .common.utils.logging import log, dump
 
@@ -54,5 +53,5 @@ def create_preferences(icons):
 
 class AfiBuildPreferencesCommand(sublime_plugin.ApplicationCommand):
     def run(self):
-        create_preferences(json.loads(sublime.load_resource(
-            "Packages/" + settings.PACKAGE_NAME + "/common/icons.json")))
+        create_preferences(
+            json.loads(sublime.load_resource(path.icons_json_path())))

@@ -18,7 +18,7 @@ import sublime_plugin
 from contextlib import contextmanager
 
 from . import logging
-from .. import settings
+from .path import PACKAGE_NAME, PACKAGE_MAIN
 
 dump = logging.dump.tag("reload")
 log = logging.log.tag("reload")
@@ -28,11 +28,13 @@ def reload_plugin():
     """
     Reload the plugin among with all its modules.
     """
-    main = importlib.import_module(settings.PACKAGE_NAME + "." +
-                                   settings.PACKAGE_MAIN)
+    main = importlib.import_module(PACKAGE_NAME + "." + PACKAGE_MAIN)
 
-    modules = {name: module for name, module in sys.modules.items()
-               if name.startswith(settings.PACKAGE_NAME + ".")}
+    modules = {
+        name: module
+        for name, module in sys.modules.items()
+        if name.startswith(PACKAGE_NAME + ".")
+    }
     try:
         reload_modules(main, modules)
     except:
@@ -55,8 +57,7 @@ def ensure_loaded(main, modules):
             sys.modules[name] = modules
             dump("bug! ", "restored ", name)
 
-        main = sys.modules[settings.PACKAGE_NAME + "." +
-                           settings.PACKAGE_MAIN]
+        main = sys.modules[PACKAGE_NAME + "." + PACKAGE_MAIN]
 
         sublime_plugin.reload_plugin(main.__name__)
 

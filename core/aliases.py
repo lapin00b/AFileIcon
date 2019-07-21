@@ -30,8 +30,7 @@ def enable():
 
     log("Enabling aliases")
 
-    file_types = json.loads(sublime.load_resource(
-        "Packages/" + settings.PACKAGE_NAME + "/common/icons.json"))
+    file_types = json.loads(sublime.load_resource(path.icons_json_path()))
 
     # template to create alias syntax without pyyaml dependency
     template = dedent("""

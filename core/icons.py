@@ -5,7 +5,6 @@ import zipfile
 
 import sublime
 
-from ..common import settings
 from ..common.utils import path
 from ..common.utils.logging import log, dump
 
@@ -98,8 +97,7 @@ def _copy(src, dest, icon):
 
 
 def _get_missing(package):
-    package_icons = json.loads(sublime.load_resource(
-        "Packages/" + settings.PACKAGE_NAME + "/common/icons.json"))
+    package_icons = json.loads(sublime.load_resource(path.icons_json_path()))
     theme_icons_path = _icons_path(package)
     if not theme_icons_path:
         return package_icons
