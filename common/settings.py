@@ -177,10 +177,6 @@ def is_enabled():
     return PACKAGE_NAME not in subltxt().get("ignored_packages", [])
 
 
-def is_package_archive():
-    return PACKAGE_BASE.endswith(".sublime-package")
-
-
 def icons():
     log("Getting settings of the icons")
 
