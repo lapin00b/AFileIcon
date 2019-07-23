@@ -1107,6 +1107,10 @@
       }
     ]
   },
+  "file_type_preferences": {
+    "color": "yellow",
+    "syntaxes": []
+  },
   "file_type_premiere": {
     "color": "purple",
     "aliases": [
