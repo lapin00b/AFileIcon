@@ -5,16 +5,13 @@ import shutil
 from textwrap import dedent
 
 import sublime
-import sublime_plugin
 
-from ..common import settings
-from ..common.utils import path
-from ..common.utils.logging import log, dump
+from .utils import path
+from .utils.logging import log, dump
 
 
-def check():
-    log("Checking aliases")
-    if settings.package().get("aliases"):
+def check(desired_state):
+    if desired_state:
         enable()
     else:
         disable()
@@ -61,8 +58,3 @@ def disable():
     log("Disabling aliases")
     shutil.rmtree(path.overlay_cache_path(), ignore_errors=True)
     shutil.rmtree(path.overlay_aliases_path(), ignore_errors=True)
-
-
-class AfiCheckAliasesCommand(sublime_plugin.ApplicationCommand):
-    def run(self):
-        sublime.set_timeout_async(check)

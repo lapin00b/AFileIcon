@@ -6,8 +6,8 @@ from textwrap import dedent
 import sublime
 import sublime_plugin
 
-from .common.utils import path
-from .common.utils.logging import log, dump
+from .core.utils import path
+from .core.utils.logging import log, dump
 
 
 def create_preferences(icons):

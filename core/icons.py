@@ -5,8 +5,8 @@ import zipfile
 
 import sublime
 
-from ..common.utils import path
-from ..common.utils.logging import log, dump
+from .utils import path
+from .utils.logging import log, dump
 
 
 def init():

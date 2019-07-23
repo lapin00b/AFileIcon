@@ -1,9 +1,5 @@
 [
   {
-    "caption": "A File Icon: Clean Patches",
-    "command": "afi_clean"
-  },
-  {
     "caption": "A File Icon: Revert to a Freshly Installed State",
     "command": "afi_revert"
   },

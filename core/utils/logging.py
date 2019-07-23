@@ -4,9 +4,6 @@ import functools
 
 MESSAGE_PREFIX = "A File Icon"
 VALUE_PREFIX = " " * (len(MESSAGE_PREFIX) - 2) + ">>> "
-WARNING_MESSAGE = """\n***\n{}: \
-Please restart Sublime Text for the applied icons to take effect ...\n***
-""".format(MESSAGE_PREFIX)
 
 
 def _tags():
@@ -35,12 +32,6 @@ def log(*args, **kwargs):
 
 def dump(*args, **kwargs):
     _trace(VALUE_PREFIX, *args, **kwargs)
-
-
-def warning():
-    # ST 3176+ reloads icons/themes automatically
-    if int(sublime.version()) < 3176:
-        print(WARNING_MESSAGE)
 
 
 def message(*args, **kwargs):

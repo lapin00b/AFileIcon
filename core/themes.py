@@ -2,20 +2,160 @@ import json
 import os
 
 import sublime
-import sublime_plugin
 
-from ..common import settings
-from ..common.utils import path
-from ..common.utils.logging import log, dump, warning
+from .utils import path
+from .utils.colors import convert_color_value
+from .utils.logging import log, dump
 
 from . import icons
 
 
+def patch(settings, overwrite=False):
+    log("Preparing to patch")
+
+    theme_packages, obsolete_patches = _installed_themes()
+    supported = [] if settings.get("force_mode") else _customizable_themes()
+
+    general_patch = _create_general_patch(settings)
+    specific_patch = _create_specific_patch(settings)
+
+    general = path.overlay_patches_general_path()
+    specific = path.overlay_patches_specific_path()
+
+    color = "single" if settings.get("color") else "multi"
+    general_dest = os.path.join(general, color)
+
+    for package, themes in theme_packages.items():
+        if package in supported:
+            icons.copy_missing(general, specific, package)
+            obsolete_patches -= _patch_themes(
+                themes, os.path.join(specific, package, color),
+                specific_patch, overwrite)
+        else:
+            obsolete_patches -= _patch_themes(
+                themes, general_dest, general_patch, overwrite)
+
+    if obsolete_patches:
+        log("Cleaning obsolete patches")
+        for patch in obsolete_patches:
+            try:
+                os.remove(patch)
+                dump(patch)
+            except OSError:
+                pass
+
+
+def _customizable_themes():
+    log("Getting the list of theme packages with customization support")
+
+    customizable = set()
+    for res in _find_package_resources(".supports-a-file-icon-customization"):
+        try:
+            _, package, _ = res.split("/")
+        except ValueError:
+            pass
+        else:
+            customizable.add(package)
+
+    dump(customizable)
+    return customizable
+
+
+def _installed_themes():
+    log("Getting installed themes")
+
+    found_themes = set()
+    theme_packages = {}
+    theme_patches = set()
+
+    packages_root = sublime.packages_path()[:-len("/Packages")]
+
+    for res in _find_package_resources("*.sublime-theme"):
+        _, package, *_, theme = res.split("/")
+        if package != path.OVERLAY_ROOT:
+            if theme not in found_themes:
+                found_themes.add(theme)
+                theme_packages.setdefault(package, []).append(theme)
+        else:
+            theme_patches.add(
+                os.path.normpath(os.path.join(packages_root, res)))
+
+    dump(theme_packages)
+    return theme_packages, theme_patches
+
+
 def _find_package_resources(pattern):
-    return [
-        resource for resource in sublime.find_resources(pattern)
-        if resource.startswith("Packages/")
-    ]
+    return (resource for resource in sublime.find_resources(pattern)
+            if resource.startswith("Packages/"))
+
+
+def _patch_themes(themes, dest, text, overwrite):
+    patched = set()
+    mode = "w" if overwrite else "x"
+    for theme in themes:
+        try:
+            filename = os.path.join(dest, theme)
+            patched.add(filename)
+            with open(filename, mode) as t:
+                t.write(text)
+        except FileExistsError:
+            log("Ignored `{}`".format(theme))
+        except Exception as error:
+            log("Error patching `{}`".format(theme))
+            dump(error)
+        else:
+            log("Patched `{}`".format(theme))
+    return patched
+
+
+def _create_general_patch(settings):
+    log("Preparing general patch")
+    theme_content = []
+
+    color = convert_color_value(settings.get("color"))
+    opacity = settings.get("opacity")
+    size = settings.get("size")
+    row_padding = settings.get("row_padding")
+    if color or opacity or size or row_padding:
+        icon = _patch_icon(None, color, opacity)
+        if size:
+            icon["content_margin"] = [size, size]
+        if row_padding:
+            icon["row_padding"] = row_padding
+        theme_content.append(icon)
+
+    color = convert_color_value(settings.get("color_on_hover"))
+    opacity = settings.get("opacity_on_hover")
+    if color or opacity:
+        theme_content.append(_patch_icon("hover", color, opacity))
+
+    color = convert_color_value(settings.get("color_on_select"))
+    opacity = settings.get("opacity_on_select")
+    if color or opacity:
+        theme_content.append(_patch_icon("selected", color, opacity))
+
+    dump(theme_content)
+    return json.dumps(theme_content)
+
+
+def _create_specific_patch(settings):
+    log("Preparing specific patch")
+    theme_content = []
+
+    color = convert_color_value(settings.get("color"))
+    if color:
+        theme_content.append(_patch_icon(None, color))
+
+        color_on_hover = convert_color_value(settings.get("color_on_hover"))
+        if color_on_hover:
+            theme_content.append(_patch_icon("hover", color_on_hover))
+
+        color_on_select = convert_color_value(settings.get("color_on_select"))
+        if color_on_select:
+            theme_content.append(_patch_icon("selected", color_on_select))
+
+    dump(theme_content)
+    return json.dumps(theme_content)
 
 
 def _patch_icon(attrib, color=None, opacity=None):
@@ -27,230 +167,3 @@ def _patch_icon(attrib, color=None, opacity=None):
     if opacity:
         icon["layer0.opacity"] = opacity
     return icon
-
-
-def _patch_general(themes, dest, isettings):
-    theme_content = []
-
-    color = isettings.get("color")
-    opacity = isettings.get("opacity")
-    size = isettings.get("size")
-    row_padding = isettings.get("row_padding")
-    if color or opacity or size or row_padding:
-        icon = _patch_icon(None, color, opacity)
-        if size:
-            icon["content_margin"] = [size, size]
-        if row_padding:
-            icon["row_padding"] = row_padding
-        theme_content.append(icon)
-
-    color = isettings.get("color_on_hover")
-    opacity = isettings.get("opacity_on_hover")
-    if color or opacity:
-        theme_content.append(_patch_icon("hover", color, opacity))
-
-    color = isettings.get("color_on_select")
-    opacity = isettings.get("opacity_on_select")
-    if color or opacity:
-        theme_content.append(_patch_icon("selected", color, opacity))
-
-    text = json.dumps(theme_content)
-
-    for theme in themes:
-        log("Patching `{}`".format(theme))
-        with open(os.path.join(dest, theme), "w") as t:
-            t.write(text)
-
-
-def _patch_specific(theme, dest, isettings):
-    log("Patching `{}`".format(theme))
-
-    theme_content = []
-
-    color = isettings.get("color")
-    if color:
-        theme_content.append(_patch_icon(None, color))
-
-    color_on_hover = isettings.get("color_on_hover")
-    if color_on_hover:
-        theme_content.append(_patch_icon("hover", color_on_hover))
-
-    color_on_select = isettings.get("color_on_select")
-    if color_on_select:
-        theme_content.append(_patch_icon("selected", color_on_select))
-
-    text = json.dumps(theme_content)
-
-    with open(os.path.join(dest, theme), "w") as t:
-        t.write(text)
-
-
-def _clean_patches(patches):
-    log("Clearing old unnecessary patches")
-    try:
-        for patch in patches:
-            try:
-                os.remove(patch)
-            except FileNotFoundError:
-                pass
-    except Exception as error:
-        log("Error during patch cleaning")
-        dump(error)
-
-
-def get_current():
-    log("Getting the current theme")
-
-    current = settings.subltxt().get("theme")
-    dump(current)
-
-    return current
-
-
-def get_installed(logging=True):
-    if logging:
-        log("Getting installed themes")
-
-    found_themes = set()
-    installed_themes = {}
-
-    for res in _find_package_resources("*.sublime-theme"):
-        _, package, *_, theme = res.split("/")
-        if package != path.OVERLAY_ROOT and theme not in found_themes:
-            found_themes.add(theme)
-            installed_themes.setdefault(package, []).append(theme)
-
-    if logging:
-        dump(installed_themes)
-
-    return installed_themes
-
-
-def get_customizable(installed_themes):
-    log("Getting the list of theme packages with customization support")
-
-    customizable_themes = set()
-
-    for res in _find_package_resources(".supports-a-file-icon-customization"):
-        _, package, *_ = res.split("/")
-        if package in installed_themes:
-            customizable_themes.add(package)
-
-    dump(customizable_themes)
-
-    return customizable_themes
-
-
-def clean_patches():
-    log("Cleaning patches")
-
-    success = True
-
-    for dirname, _, files in os.walk(path.overlay_path()):
-        for f in files:
-            if f.endswith(".sublime-theme"):
-                try:
-                    os.remove(os.path.join(dirname, f))
-                except Exception as error:
-                    if success:
-                        success = False
-                        log("Error during cleaning")
-                    dump(error)
-    if success:
-        log("Cleaned up successfully")
-        patch()
-
-
-def patch(overwrite=False):
-    log("Preparing to patch")
-
-    installed_themes = get_installed()
-    customizable_themes = get_customizable(installed_themes)
-    icons_settings = settings.icons()
-    force_mode = settings.package().get("force_mode")
-
-    general_to_patch = []
-    patches_to_clean = []
-
-    general = path.overlay_patches_general_path()
-    specific = path.overlay_patches_specific_path()
-
-    dest_new = "multi"
-    dest_old = "single"
-
-    if "color" in icons_settings and icons_settings["color"]:
-        dest_new = "single"
-        dest_old = "multi"
-
-    general_dest = os.path.join(general, dest_new)
-
-    for pkg in installed_themes:
-        is_customizable = pkg in customizable_themes
-        copied_missing = False
-
-        if is_customizable:
-            copied_missing = icons.copy_missing(general, specific, pkg)
-
-        for theme in installed_themes[pkg]:
-            general_old = os.path.join(general, dest_old, theme)
-            general_new = os.path.join(general, dest_new, theme)
-            specific_old = os.path.join(specific, pkg, dest_old, theme)
-            specific_new = os.path.join(specific, pkg, dest_new, theme)
-            specific_dest = os.path.join(specific, pkg, dest_new)
-
-            if is_customizable and not force_mode:
-                if os.path.exists(general_old):
-                    patches_to_clean.append(general_old)
-
-                if os.path.exists(general_new):
-                    patches_to_clean.append(general_new)
-
-                if copied_missing:
-                    if not os.path.exists(specific_new) or overwrite:
-                        try:
-                            _patch_specific(
-                                theme, specific_dest, icons_settings
-                            )
-                        except Exception as error:
-                            log("Error during patching")
-                            dump(error)
-
-                    if os.path.exists(specific_old):
-                        patches_to_clean.append(specific_old)
-            else:
-                if not os.path.exists(general_new) or overwrite:
-                    general_to_patch.append(theme)
-
-                if os.path.exists(general_old):
-                    patches_to_clean.append(general_old)
-
-                if os.path.exists(specific_old):
-                    patches_to_clean.append(specific_old)
-
-                if os.path.exists(specific_new):
-                    patches_to_clean.append(specific_new)
-
-    _clean_patches(patches_to_clean)
-
-    if general_to_patch:
-        try:
-            _patch_general(general_to_patch, general_dest, icons_settings)
-            log("Patching finished successfully")
-        except Exception as error:
-            log("Error during patching")
-            dump(error)
-        else:
-            sublime.run_command("refresh_folder_list")
-            warning()
-    else:
-        log("All the themes are already patched")
-
-
-class AfiCleanCommand(sublime_plugin.ApplicationCommand):
-    def run(self):
-        sublime.set_timeout_async(clean_patches)
-
-
-class AfiPatchThemesCommand(sublime_plugin.ApplicationCommand):
-    def run(self, overwrite=False):
-        sublime.set_timeout_async(lambda: patch(overwrite))

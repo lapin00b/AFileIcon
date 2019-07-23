@@ -1,96 +1,49 @@
 import sublime
+import sublime_plugin
 
 if int(sublime.version()) >= 3114:
-    from .common import settings
-    from .common.utils import cleaning
-    from .common.utils import logging
-
-    from .core import aliases
-    from .core import icons
-    from .core import themes
-
-    from .common.utils.cleaning import AfiRevertCommand
-    from .common.utils.path import PACKAGE_NAME
-    from .common.utils.reloader import reload_plugin
-
-    from .core.aliases import AfiCheckAliasesCommand
-    from .core.themes import AfiCleanCommand
-    from .core.themes import AfiPatchThemesCommand
-
-    NOPC_MSG = "It seems like you don't have Package Control installed"
-
-    def ensure_reload():
-        """
-        Ensure all modules reload to initialize plugin successfully.
-        """
-        start_upgrade_msg = "Do not close the Sublime Text. Upgrading {}".format(
-            PACKAGE_NAME
-        )
-        finish_upgrade_msg = "{} upgrade finished.".format(PACKAGE_NAME)
-
-        active_view = sublime.active_window().active_view()
-        active_view.set_status("afi_status", start_upgrade_msg)
-
-        def erase_status():
-            active_view.erase_status("afi_status")
-
-        def reload():
-            reload_plugin()
-            active_view.set_status("afi_status", finish_upgrade_msg)
-            sublime.set_timeout(erase_status, 2000)
-
-        sublime.set_timeout_async(reload, 5000)
+    from .core.settings import add_listener, clear_listener
+    from .core.cleaning import clean_all, revert
+    from .core.utils.logging import log, dump
+    from .core.utils.reloader import reload_plugin
 
     def plugin_loaded():
-        """
-        A File Icon loaded.
-
-        Raises:
-            ImportError: If `Package Control` is not installed.
-        """
         was_upgraded = False
 
         try:
             from package_control import events
         except ImportError as error:
-            logging.log(NOPC_MSG)
-            logging.dump(error)
+            log("It seems like you don't have Package Control installed")
+            dump(error)
         else:
-            was_upgraded = events.post_upgrade(PACKAGE_NAME)
+            was_upgraded = events.post_upgrade(__package__)
         finally:
             if was_upgraded:
-                ensure_reload()
+                sublime.set_timeout_async(reload_plugin, 5000)
             else:
-                def init():
-                    settings.init()
-                    icons.init()
-                    themes.patch()
-                    aliases.check()
-                    settings.add_listener()
-                sublime.set_timeout_async(init)
+                sublime.set_timeout_async(add_listener)
 
     def plugin_unloaded():
-        """
-        A File Icon unloaded.
-
-        Raises:
-            ImportError: If `Package Control` is not installed.
-        """
         is_upgrading = False
         was_removed = False
 
-        settings.clear_listener()
+        clear_listener()
 
         try:
             from package_control import events
         except ImportError as error:
-            logging.log(NOPC_MSG)
-            logging.dump(error)
+            log("It seems like you don't have Package Control installed")
+            dump(error)
         else:
-            is_upgrading = events.pre_upgrade(PACKAGE_NAME)
-            was_removed = events.remove(PACKAGE_NAME)
+            is_upgrading = events.pre_upgrade(__package__)
+            was_removed = events.remove(__package__)
         finally:
             if is_upgrading or was_removed:
-                cleaning.clean_all()
+                clean_all()
+
+    class AfiRevertCommand(sublime_plugin.ApplicationCommand):
+        def run(self):
+            sublime.set_timeout_async(revert)
+
 else:
     raise ImportWarning("Doesn't support Sublime Text versions prior to 3114")
