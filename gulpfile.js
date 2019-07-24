@@ -19,15 +19,15 @@ var $ = require("gulp-load-plugins")();
 
 var opts = {};
 
-opts.colors = require("./common/colors.json");
-opts.sizes = require("./common/sizes.json");
+opts.colors = require("./icons/colors.json");
+opts.sizes = require("./icons/sizes.json");
 
 /*
  * Helpers
  */
 
 var getIconOpts = function() {
-  return JSON.parse(fs.readFileSync("./common/icons.json", "utf8"));
+  return JSON.parse(fs.readFileSync("./icons/icons.json", "utf8"));
 };
 
 var getIconScope = function(iconOpts) {
@@ -62,7 +62,7 @@ gulp.task("build:icons", function() {
 
   opts.icons = getIconOpts();
 
-  return gulp.src("./common/assets/*.svg")
+  return gulp.src("./icons/svg/*.svg")
     .pipe($.plumber(function(error) {
       console.log("[build:icons]".bold.magenta + " There was an issue rasterizing icons:\n".bold.red + error.message);
       this.emit("end");

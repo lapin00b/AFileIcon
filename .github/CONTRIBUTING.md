@@ -58,7 +58,7 @@ Requirements:
 
 Example:
 
-[![ActionScript Icon](https://github.com/SublimeText/AFileIcon/blob/develop/common/assets/file_type_actionscript.svg)](https://github.com/SublimeText/AFileIcon/blob/develop/common/assets/file_type_actionscript.svg)
+[![ActionScript Icon](https://github.com/SublimeText/AFileIcon/blob/develop/icons/svg/file_type_actionscript.svg)](https://github.com/SublimeText/AFileIcon/blob/develop/icons/svg/file_type_actionscript.svg)
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" fill="#000" viewBox="0 0 16 16">

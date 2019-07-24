@@ -53,4 +53,4 @@ def overlay_patches_specific_path():
 
 
 def icons_json_path():
-    return "Packages/" + PACKAGE_NAME + "/common/icons.json"
+    return "Packages/" + PACKAGE_NAME + "/icons/icons.json"
