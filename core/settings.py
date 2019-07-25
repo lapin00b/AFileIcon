@@ -6,6 +6,7 @@ from . import themes
 
 from .utils.path import PACKAGE_NAME
 from .utils.logging import log, dump
+from .utils.overlay import with_ignored_overlay
 
 PACKAGE_SETTINGS = "A File Icon.sublime-settings"
 
@@ -54,7 +55,12 @@ def _on_change():
         aliases.check(_cached_settings["aliases"])
     if is_icons_changed:
         log("Icons settings changed")
-        themes.patch(_cached_settings, True)
+        _patch_theme(True)
     elif is_force_mode_changed:
         log("Force mode settings changed")
-        themes.patch(_cached_settings)
+        _patch_theme(False)
+
+
+@with_ignored_overlay
+def _patch_theme(overwrite):
+    themes.patch(_cached_settings, overwrite)

@@ -6,8 +6,10 @@ from . import settings
 
 from .utils import path
 from .utils.logging import log, dump, message
+from .utils.overlay import with_ignored_overlay
 
 
+@with_ignored_overlay
 def clean_all():
     message("Cleaning up")
 
@@ -29,19 +31,11 @@ def clean_all():
 
 
 def revert():
-    prefs = sublime.load_settings("Preferences.sublime-settings")
-    ignored = prefs.get("ignored_packages", [])
-    if path.OVERLAY_ROOT not in ignored:
-        prefs.set("ignored_packages", ignored + [path.OVERLAY_ROOT])
-
     settings.clear_listener()
 
     try:
         clean_all()
     except Exception as error:
         dump(error)
-
-    try:
-        settings.add_listener()
     finally:
-        prefs.set("ignored_packages", ignored)
+        settings.add_listener()
