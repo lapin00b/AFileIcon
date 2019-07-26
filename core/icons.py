@@ -81,10 +81,10 @@ def copy_missing(source, overlay, package):
 def _copy_missing(source, overlay, package, color, icons):
     src = os.path.join(source, color)
     dest = path.makedirs(overlay, package, color)
+    suffixes = (".png", "@2x.png", "@3x.png")
     for icon in icons:
-        _copy(src, dest, icon + ".png")
-        for i in range(2, 4):
-            _copy(src, dest, "{}@{}x.png".format(icon, i))
+        for suffix in suffixes:
+            _copy(src, dest, icon + suffix)
 
 
 def _copy(src, dest, icon):
