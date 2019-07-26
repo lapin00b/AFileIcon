@@ -1,11 +1,10 @@
 import os
-import json
 
 from textwrap import dedent
 
-import sublime
 import sublime_plugin
 
+from .core.icons import icons_json_content
 from .core.utils import path
 from .core.utils.logging import log, dump
 
@@ -30,7 +29,7 @@ def create_preferences(icons):
 
     success = True
 
-    for name, data in icons.items():
+    for name, data in icons_json_content().items():
         try:
             scopes = {
                 syntax["scope"]
@@ -53,5 +52,4 @@ def create_preferences(icons):
 
 class AfiBuildPreferencesCommand(sublime_plugin.ApplicationCommand):
     def run(self):
-        create_preferences(
-            json.loads(sublime.load_resource(path.icons_json_path())))
+        create_preferences()

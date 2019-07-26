@@ -50,7 +50,3 @@ def overlay_patches_general_path():
 def overlay_patches_specific_path():
     return os.path.join(
         sublime.packages_path(), OVERLAY_ROOT, "patches", "specific")
-
-
-def icons_json_path():
-    return "Packages/" + PACKAGE_NAME + "/icons/icons.json"

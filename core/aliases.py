@@ -1,11 +1,9 @@
-import json
 import os
 import shutil
 
 from textwrap import dedent
 
-import sublime
-
+from .icons import icons_json_content
 from .utils import path
 from .utils.logging import log, dump
 
@@ -27,8 +25,6 @@ def enable():
 
     log("Enabling aliases")
 
-    file_types = json.loads(sublime.load_resource(path.icons_json_path()))
-
     # template to create alias syntax without pyyaml dependency
     template = dedent("""
         %YAML 1.2
@@ -43,7 +39,7 @@ def enable():
             - include: scope:{base}
         """).lstrip()
 
-    for file_type in file_types.values():
+    for file_type in icons_json_content().values():
         for alias in file_type.get("aliases", []):
             try:
                 with open(os.path.join(

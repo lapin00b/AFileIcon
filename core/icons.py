@@ -97,7 +97,7 @@ def _copy(src, dest, icon):
 
 
 def _get_missing(package):
-    package_icons = json.loads(sublime.load_resource(path.icons_json_path()))
+    package_icons = icons_json_content()
     theme_icons_path = _icons_path(package)
     if not theme_icons_path:
         return package_icons
@@ -117,3 +117,8 @@ def _icons_path(package):
         if res.startswith(package_path):
             return os.path.dirname(res)
     return False
+
+
+def icons_json_content():
+    return json.loads(sublime.load_resource(
+        "Packages/" + path.PACKAGE_NAME + "/icons/icons.json"))
