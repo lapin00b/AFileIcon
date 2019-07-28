@@ -1573,6 +1573,15 @@
       }
     ]
   },
+  "file_type_terraform": {
+    "color": "purple",
+    "syntaxes": [
+      {
+        "name": "Terraform",
+        "scope": "source.terraform"
+      }
+    ]
+  },
   "file_type_tex": {
     "color": "blue",
     "syntaxes": [
