@@ -1,5 +1,6 @@
 import json
 import os
+import shutil
 
 import sublime
 
@@ -11,9 +12,7 @@ from . import icons
 
 
 def patch(settings, overwrite=False):
-    log("Preparing to patch")
-
-    theme_packages, obsolete_patches = _installed_themes()
+    theme_packages = _installed_themes()
     supported = [] if settings.get("force_mode") else _customizable_themes()
 
     general_patch = _create_general_patch(settings)
@@ -25,24 +24,36 @@ def patch(settings, overwrite=False):
     color = "single" if settings.get("color") else "multi"
     general_dest = os.path.join(general, color)
 
+    patched = set()
+
+    log("Patching themes")
     for package, themes in theme_packages.items():
         if package in supported:
             icons.copy_missing(general, specific, package)
-            obsolete_patches -= _patch_themes(
+            patched.update(_patch_themes(
                 themes, os.path.join(specific, package, color),
-                specific_patch, overwrite)
+                specific_patch, overwrite))
         else:
-            obsolete_patches -= _patch_themes(
-                themes, general_dest, general_patch, overwrite)
+            patched.update(_patch_themes(
+                themes, general_dest, general_patch, overwrite))
 
-    if obsolete_patches:
-        log("Cleaning obsolete patches")
-        for patch in obsolete_patches:
-            try:
-                os.remove(patch)
-                dump(patch)
-            except OSError:
-                pass
+    log("Removing obsolete theme patches")
+    for dirpath, dirnames, filenames in os.walk(path.overlay_patches_path()):
+        if dirpath == specific:
+            for filepath in set(dirnames) - set(supported):
+                filepath = os.path.join(dirpath, filepath)
+                shutil.rmtree(filepath, ignore_errors=True)
+                dump(filepath)
+
+        for filename in filenames:
+            if filename.endswith(".sublime-theme"):
+                filepath = os.path.join(dirpath, filename)
+                if filepath not in patched:
+                    try:
+                        os.remove(filepath)
+                        dump(filepath)
+                    except OSError:
+                        pass
 
 
 def _customizable_themes():
@@ -66,9 +77,6 @@ def _installed_themes():
 
     found_themes = set()
     theme_packages = {}
-    theme_patches = set()
-
-    packages_root = sublime.packages_path()[:-len("/Packages")]
 
     for res in _find_package_resources("*.sublime-theme"):
         _, package, *_, theme = res.split("/")
@@ -76,12 +84,9 @@ def _installed_themes():
             if theme not in found_themes:
                 found_themes.add(theme)
                 theme_packages.setdefault(package, []).append(theme)
-        else:
-            theme_patches.add(
-                os.path.normpath(os.path.join(packages_root, res)))
 
     dump(theme_packages)
-    return theme_packages, theme_patches
+    return theme_packages
 
 
 def _find_package_resources(pattern):
