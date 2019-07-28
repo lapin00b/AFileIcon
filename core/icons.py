@@ -32,27 +32,16 @@ def _init_overlay(dest):
     This function therefore creates a package named `zzz A File Icon zzz` and
     copies all icons over there.
     """
-    # initializes path variables
-    dest_multi = os.path.join(dest, "multi")
-    dest_single = os.path.join(dest, "single")
-
     # copy icons from the loosen package folder
     src = path.package_icons_path()
-    try:
-        shutil.copytree(os.path.join(src, "single"), dest_single)
-    except FileNotFoundError:
-        os.makedirs(dest_single, exist_ok=True)
-
-    try:
-        shutil.copytree(os.path.join(src, "multi"), dest_multi)
-    except FileNotFoundError:
-        os.makedirs(dest_multi, exist_ok=True)
+    _copy_general(src, dest, "multi")
+    _copy_general(src, dest, "single")
 
     # extract remaining icons from the package archive
     try:
         with zipfile.ZipFile(path.installed_package_path(), "r") as z:
             for m in z.namelist():
-                if m.startswith("icons/single") or m.startswith("icons/multi"):
+                if m.startswith("icons/multi") or m.startswith("icons/single"):
                     _, color, name = m.split("/")
                     try:
                         with open(os.path.join(dest, color, name), "xb") as f:
@@ -72,10 +61,21 @@ def copy_missing(source, overlay, package):
             _copy_missing(source, overlay, package, "multi", missing_icons)
             _copy_missing(source, overlay, package, "single", missing_icons)
         return bool(missing_icons)
-    except Exception as error:
+    except OSError as error:
         log("Error during copy")
         dump(error)
     return False
+
+
+def _copy_general(source, overlay, color):
+    dest = os.path.join(overlay, color)
+    try:
+        shutil.copytree(os.path.join(source, color), dest)
+    except FileNotFoundError:
+        os.makedirs(dest, exist_ok=True)
+    except OSError as error:
+        log("Error during copy")
+        dump(error)
 
 
 def _copy_missing(source, overlay, package, color, icons):
