@@ -11,6 +11,22 @@ from .utils.overlay import with_ignored_overlay
 
 @with_ignored_overlay
 def clean_all():
+    _cleanup()
+
+
+@with_ignored_overlay
+def revert():
+    settings.clear_listener()
+
+    try:
+        _cleanup()
+    except Exception as error:
+        dump(error)
+    finally:
+        settings.add_listener()
+
+
+def _cleanup():
     message("Cleaning up")
 
     def handler(function, path, excinfo):
@@ -28,14 +44,3 @@ def clean_all():
         message("Cleaned up successfully")
 
     return handler.success
-
-
-def revert():
-    settings.clear_listener()
-
-    try:
-        clean_all()
-    except Exception as error:
-        dump(error)
-    finally:
-        settings.add_listener()
