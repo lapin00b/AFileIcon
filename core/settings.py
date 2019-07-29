@@ -4,9 +4,9 @@ from . import aliases
 from . import icons
 from . import themes
 
-from .utils.path import PACKAGE_NAME
 from .utils.logging import log, dump
 from .utils.overlay import with_ignored_overlay
+from .utils.path import PACKAGE_NAME
 
 PACKAGE_SETTINGS = "A File Icon.sublime-settings"
 

@@ -39,7 +39,7 @@ def _init_overlay(dest):
 
     # extract remaining icons from the package archive
     try:
-        with zipfile.ZipFile(path.installed_package_path(), "r") as z:
+        with zipfile.ZipFile(path.installed_package_path()) as z:
             for m in z.namelist():
                 if m.startswith("icons/multi") or m.startswith("icons/single"):
                     _, color, name = m.split("/")
