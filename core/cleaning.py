@@ -1,29 +1,35 @@
 import shutil
 
 import sublime
+import sublime_plugin
 
-from . import settings
+from .settings import add_listener, clear_listener
 
 from .utils import path
 from .utils.logging import log, dump, message
 from .utils.overlay import with_ignored_overlay
 
 
+class AfiRevertCommand(sublime_plugin.ApplicationCommand):
+
+    def run(self):
+
+        @with_ignored_overlay
+        def revert():
+            clear_listener()
+            try:
+                _cleanup()
+            except Exception as error:
+                dump(error)
+            finally:
+                add_listener()
+
+        sublime.set_timeout_async(revert)
+
+
 @with_ignored_overlay
 def clean_all():
     _cleanup()
-
-
-@with_ignored_overlay
-def revert():
-    settings.clear_listener()
-
-    try:
-        _cleanup()
-    except Exception as error:
-        dump(error)
-    finally:
-        settings.add_listener()
 
 
 def _cleanup():

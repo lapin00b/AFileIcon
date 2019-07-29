@@ -1,5 +1,4 @@
 import sublime
-import sublime_plugin
 
 if int(sublime.version()) >= 3114:
 
@@ -30,8 +29,7 @@ if int(sublime.version()) >= 3114:
     reload_modules()
 
     from .core.settings import add_listener, clear_listener
-    from .core.cleaning import clean_all, revert
-    from .core.utils.logging import log, dump
+    from .core.cleaning import AfiRevertCommand, clean_all
 
     def plugin_loaded():
         sublime.set_timeout_async(add_listener)
@@ -45,18 +43,12 @@ if int(sublime.version()) >= 3114:
         try:
             from package_control import events
         except ImportError as error:
-            log("It seems like you don't have Package Control installed")
-            dump(error)
+            pass
         else:
             is_upgrading = events.pre_upgrade(__package__)
             was_removed = events.remove(__package__)
         finally:
             if is_upgrading or was_removed:
                 clean_all()
-
-    class AfiRevertCommand(sublime_plugin.ApplicationCommand):
-        def run(self):
-            sublime.set_timeout_async(revert)
-
 else:
     raise ImportWarning("Doesn't support Sublime Text versions prior to 3114")
