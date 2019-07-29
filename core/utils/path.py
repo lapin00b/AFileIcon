@@ -2,8 +2,6 @@ import os
 import sublime
 
 PACKAGE_NAME, *_ = __package__.split(".", 1)
-PACKAGE_ARCH = PACKAGE_NAME + ".sublime-package"
-
 OVERLAY_ROOT = "{0} {1} {0}".format("zzz", PACKAGE_NAME)
 
 
@@ -14,7 +12,8 @@ def makedirs(*args):
 
 
 def installed_package_path():
-    return os.path.join(sublime.installed_packages_path(), PACKAGE_ARCH)
+    return os.path.join(
+        sublime.installed_packages_path(), PACKAGE_NAME + ".sublime-package")
 
 
 def package_icons_path():
