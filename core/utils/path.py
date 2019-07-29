@@ -21,10 +21,6 @@ def package_icons_path():
     return os.path.join(sublime.packages_path(), PACKAGE_NAME, "icons")
 
 
-def package_preferences_path():
-    return os.path.join(sublime.packages_path(), PACKAGE_NAME, "preferences")
-
-
 def overlay_path():
     return os.path.join(sublime.packages_path(), OVERLAY_ROOT)
 
