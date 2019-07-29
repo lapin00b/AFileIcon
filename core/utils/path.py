@@ -2,7 +2,6 @@ import os
 import sublime
 
 PACKAGE_NAME, *_ = __package__.split(".", 1)
-PACKAGE_MAIN = "plugin"
 PACKAGE_ARCH = PACKAGE_NAME + ".sublime-package"
 
 OVERLAY_ROOT = "{0} {1} {0}".format("zzz", PACKAGE_NAME)
