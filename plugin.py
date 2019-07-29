@@ -28,11 +28,15 @@ if int(sublime.version()) >= 3114:
     #       properly update all module references before usage!
     reload_modules()
 
-    from .core.settings import add_listener, clear_listener
     from .core.cleaning import AfiRevertCommand, clean_all
+    from .core.settings import add_listener, clear_listener
+    from .core.utils.overlay import disable_overlay, enable_overlay
 
     def plugin_loaded():
-        sublime.set_timeout_async(add_listener)
+        def plugin_loaded_async():
+            add_listener()
+            enable_overlay()
+        sublime.set_timeout_async(plugin_loaded_async)
 
     def plugin_unloaded():
         is_upgrading = False
@@ -49,6 +53,11 @@ if int(sublime.version()) >= 3114:
             was_removed = events.remove(__package__)
         finally:
             if is_upgrading or was_removed:
-                clean_all()
+                disable_overlay()
+                try:
+                    clean_all()
+                finally:
+                    if was_removed:
+                        enable_overlay()
 else:
     raise ImportWarning("Doesn't support Sublime Text versions prior to 3114")

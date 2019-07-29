@@ -18,7 +18,7 @@ class AfiRevertCommand(sublime_plugin.ApplicationCommand):
         def revert():
             clear_listener()
             try:
-                _cleanup()
+                clean_all()
             except Exception as error:
                 dump(error)
             finally:
@@ -27,12 +27,7 @@ class AfiRevertCommand(sublime_plugin.ApplicationCommand):
         sublime.set_timeout_async(revert)
 
 
-@with_ignored_overlay
 def clean_all():
-    _cleanup()
-
-
-def _cleanup():
     message("Cleaning up")
 
     def handler(function, path, excinfo):
