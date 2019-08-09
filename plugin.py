@@ -1,3 +1,4 @@
+import sys
 import sublime
 
 if int(sublime.version()) >= 3114:
@@ -5,7 +6,6 @@ if int(sublime.version()) >= 3114:
     def reload_modules():
         import imp
         import importlib
-        import sys
 
         modules_load_order = [
             ".core.utils.colors",
@@ -26,7 +26,8 @@ if int(sublime.version()) >= 3114:
 
     # Note: Must be called before importing the core package in order to
     #       properly update all module references before usage!
-    reload_modules()
+    if __package__ + ".core" in sys.modules:
+        reload_modules()
 
     from .core.cleaning import AfiRevertCommand, clean_all
     from .core.settings import add_listener, clear_listener
