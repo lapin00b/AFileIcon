@@ -10,7 +10,7 @@ Its aims are:
 * To be a `tmPreferences` storage for UI themes those support file-specific icons.
 * To provide icons for themes those don't (fully) support file-specific icons.
 
-If you have any problems, please search for a similar issue first, before creating [a new one][new-issue]. 
+If you have any problems, please search for a similar issue first, before creating [a new one][new-issue].
 
 > Also, check the list of [known issues][known-issues] before doing so.
 
@@ -20,11 +20,23 @@ If you have any problems, please search for a similar issue first, before creati
 
 #### Package Control
 
-The easiest way to install is using Sublime's [Package Control][downloads]. It's listed as `A File Icon`.
+1. Download & Install `Sublime Text 3` (https://www.sublimetext.com/3)
+1. Go to the menu `Tools -> Install Package Control`, then,
+   wait few seconds until the `Package Control` installation finishes
+1. Go to the menu `Preferences -> Package Control`
+1. Type `Package Control Add Channel` on the opened quick panel and press <kbd>Enter</kbd>
+1. Then, input the following address and press <kbd>Enter</kbd>
+   ```
+   https://raw.githubusercontent.com/evandrocoan/StudioChannel/master/channel.json
+   ```
+1. Now, go again to the menu `Preferences -> Package Control`
+1. This time type `Package Control Install Package` on the opened quick panel and press <kbd>Enter</kbd>
+1. Then, search for `A File Icon` and press <kbd>Enter</kbd>
 
-1. Open `Command Palette` using menu item `Tools → Command Palette...`
-2. Choose `Package Control: Install Package`
-3. Find `A File Icon` and hit `Enter`
+See also:
+1. [ITE - Integrated Toolset Environment](https://github.com/evandrocoan/ITE)
+1. [Package control docs](https://packagecontrol.io/docs/usage) for details.
+
 
 #### Download
 
@@ -32,7 +44,7 @@ The easiest way to install is using Sublime's [Package Control][downloads]. It's
 2. Unzip and rename folder to `A File Icon`
 3. Copy folder into `Packages` directory, which you can find using the menu item `Preferences → Browse Packages...`
 
-> **Note:** Don't forget to restart Sublime Text after installing this package. 
+> **Note:** Don't forget to restart Sublime Text after installing this package.
 
 ### Customization
 
@@ -100,23 +112,23 @@ This package contains icons provided by:
 - [Icomoon](https://icomoon.io/)
 - [Octicons](https://octicons.github.com/)
 
-Source icons are provided in SVG format (Sublime Text doesn't currently support it). We convert them to @1x and @2x PNG assets before each release via a custom `gulp` task. 
+Source icons are provided in SVG format (Sublime Text doesn't currently support it). We convert them to @1x and @2x PNG assets before each release via a custom `gulp` task.
 
 Rasterized icons can be found in `icons` folder.
 
 <!-- Misc -->
 
-[customization]: https://github.com/deathaxe/sublime-a-file-icon#customization
+[customization]: https://github.com/evandroforks/AFileIcon#customization
 [downloads]: https://packagecontrol.io/packages/A%20File%20Icon 'A File Icon @ Package Control'
 [forum]: https://forum.sublimetext.com/t/a-file-icon-sublime-file-specific-icons-for-improved-visual-grepping/25874
-[icons]: https://github.com/deathaxe/sublime-a-file-icon/tree/develop/icons/multi
-[known-issues]: https://github.com/deathaxe/sublime-a-file-icon/labels/known%20issue
-[new-issue]: https://github.com/deathaxe/sublime-a-file-icon/issues/new
-[packages]: https://github.com/deathaxe/sublime-a-file-icon/blob/develop/PACKAGES.md
-[release]: https://github.com/deathaxe/sublime-a-file-icon/releases
-[stars]: https://github.com/deathaxe/sublime-a-file-icon/stargazers
-[template]: https://github.com/deathaxe/sublime-a-file-icon/blob/develop/common/templates/theme.py
-[issues]: https://github.com/deathaxe/sublime-a-file-icon/issues
+[icons]: https://github.com/evandroforks/AFileIcon/tree/develop/icons/multi
+[known-issues]: https://github.com/evandroforks/AFileIcon/labels/known%20issue
+[new-issue]: https://github.com/evandroforks/AFileIcon/issues/new
+[packages]: https://github.com/evandroforks/AFileIcon/blob/develop/PACKAGES.md
+[release]: https://github.com/evandroforks/AFileIcon/releases
+[stars]: https://github.com/evandroforks/AFileIcon/stargazers
+[template]: https://github.com/evandroforks/AFileIcon/blob/develop/common/templates/theme.py
+[issues]: https://github.com/evandroforks/AFileIcon/issues
 
 <!-- Assets -->
 
