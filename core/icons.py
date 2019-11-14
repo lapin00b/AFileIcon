@@ -23,6 +23,21 @@ def init():
         dump(error)
 
 
+def copy_missing(source, overlay, package):
+    log("Checking icons for {}...".format(package))
+
+    try:
+        missing_icons = _get_missing(package)
+        if missing_icons:
+            _copy_missing(source, overlay, package, "multi", missing_icons)
+            _copy_missing(source, overlay, package, "single", missing_icons)
+        return bool(missing_icons)
+    except OSError as error:
+        log("Error during copy")
+        dump(error)
+    return False
+
+
 def _init_overlay(dest):
     """Create the icon overlay package.
 
@@ -50,21 +65,6 @@ def _init_overlay(dest):
                         pass
     except FileNotFoundError:
         pass
-
-
-def copy_missing(source, overlay, package):
-    log("Checking icons for {}...".format(package))
-
-    try:
-        missing_icons = _get_missing(package)
-        if missing_icons:
-            _copy_missing(source, overlay, package, "multi", missing_icons)
-            _copy_missing(source, overlay, package, "single", missing_icons)
-        return bool(missing_icons)
-    except OSError as error:
-        log("Error during copy")
-        dump(error)
-    return False
 
 
 def _copy_general(source, overlay, color):
