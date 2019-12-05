@@ -1232,6 +1232,11 @@
       }
     ]
   },
+  "file_type_react": {
+    "color": "sky",
+    "syntaxes": [
+    ]
+  },
   "file_type_registry": {
     "color": "sky",
     "aliases": [
