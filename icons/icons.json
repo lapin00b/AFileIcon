@@ -1623,6 +1623,15 @@
       }
     ]
   },
+  "file_type_tsx": {
+    "color": "sky",
+    "syntaxes": [
+      {
+        "name": "TypeScript React",
+        "scope": "source.tsx"
+      }
+    ]
+  },
   "file_type_twig": {
     "color": "green",
     "syntaxes": [
