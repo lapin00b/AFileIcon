@@ -191,6 +191,7 @@ This file contains a list of possible packages you may need to install to see th
 ## TypeScript
 
 - [TypeScript](https://packagecontrol.io/packages/TypeScript)
+- [TypeScript Syntax](https://packagecontrol.io/packages/TypeScript%20Syntax)
 
 ## Verilog
 
