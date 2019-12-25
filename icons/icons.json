@@ -1626,6 +1626,20 @@
       }
     ]
   },
+  "file_type_test_tsx": {
+    "color": "sky",
+    "aliases":[
+      {
+        "name": "UnitTest (TypeScript React)",
+        "extensions": [
+          "spec.tsx",
+          "test.tsx"
+        ],
+        "base": "source.tsx",
+        "scope": "source.tsx.unittest"
+      }
+    ]
+  },
   "file_type_test_typescript": {
     "color": "sky",
     "aliases":[
