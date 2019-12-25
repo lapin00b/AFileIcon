@@ -1612,6 +1612,20 @@
       }
     ]
   },
+  "file_type_test_jsx": {
+    "color": "blue",
+    "aliases":[
+      {
+        "name": "UnitTest (JavaScript React)",
+        "extensions": [
+          "spec.jsx",
+          "test.jsx"
+        ],
+        "base": "source.js.react",
+        "scope": "source.js.react.unittest"
+      }
+    ]
+  },
   "file_type_test_typescript": {
     "color": "sky",
     "aliases":[
