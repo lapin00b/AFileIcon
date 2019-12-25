@@ -1612,6 +1612,20 @@
       }
     ]
   },
+  "file_type_test_typescript": {
+    "color": "sky",
+    "aliases":[
+      {
+        "name": "UnitTest (TypeScript)",
+        "extensions": [
+          "spec.ts",
+          "test.ts"
+        ],
+        "base": "source.ts",
+        "scope": "source.ts.unittest"
+      }
+    ]
+  },
   "file_type_tex": {
     "color": "blue",
     "syntaxes": [
