@@ -1598,6 +1598,62 @@
       }
     ]
   },
+  "file_type_test_js": {
+    "color": "yellow",
+    "aliases":[
+      {
+        "name": "UnitTest (JavaScript)",
+        "extensions": [
+          "spec.js",
+          "test.js"
+        ],
+        "base": "source.js",
+        "scope": "source.js.unittest"
+      }
+    ]
+  },
+  "file_type_test_jsx": {
+    "color": "blue",
+    "aliases":[
+      {
+        "name": "UnitTest (JavaScript React)",
+        "extensions": [
+          "spec.jsx",
+          "test.jsx"
+        ],
+        "base": "source.js.react",
+        "scope": "source.js.react.unittest"
+      }
+    ]
+  },
+  "file_type_test_tsx": {
+    "color": "sky",
+    "aliases":[
+      {
+        "name": "UnitTest (TypeScript React)",
+        "extensions": [
+          "spec.tsx",
+          "test.tsx"
+        ],
+        "base": "source.tsx",
+        "scope": "source.tsx.unittest"
+      }
+    ]
+  },
+  "file_type_test_typescript": {
+    "color": "sky",
+    "aliases":[
+      {
+        "name": "UnitTest (TypeScript)",
+        "extensions": [
+          "spec.ts",
+          "test.ts"
+        ],
+        "base": "source.ts",
+        "scope": "source.ts.unittest"
+      }
+    ]
+  },
   "file_type_tex": {
     "color": "blue",
     "syntaxes": [
@@ -1695,7 +1751,7 @@
   },
   "file_type_video": {
     "color": "purple",
-    "aliases":[
+    "aliases": [
       {
         "name": "Plain Text (Video)",
         "extensions": [
