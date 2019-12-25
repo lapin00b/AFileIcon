@@ -1598,6 +1598,20 @@
       }
     ]
   },
+  "file_type_test_js": {
+    "color": "yellow",
+    "aliases":[
+      {
+        "name": "UnitTest (JavaScript)",
+        "extensions": [
+          "spec.js",
+          "test.js"
+        ],
+        "base": "source.js",
+        "scope": "source.js.unittest"
+      }
+    ]
+  },
   "file_type_tex": {
     "color": "blue",
     "syntaxes": [
