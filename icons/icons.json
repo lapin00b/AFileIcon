@@ -1695,7 +1695,7 @@
   },
   "file_type_video": {
     "color": "purple",
-    "aliases":[
+    "aliases": [
       {
         "name": "Plain Text (Video)",
         "extensions": [
