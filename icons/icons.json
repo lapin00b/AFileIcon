@@ -1684,6 +1684,15 @@
       }
     ]
   },
+  "file_type_toml": {
+    "color": "graphite",
+    "syntaxes": [
+      {
+        "name": "TOML",
+        "scope": "source.toml"
+      }
+    ]
+  },
   "file_type_tsx": {
     "color": "sky",
     "syntaxes": [
