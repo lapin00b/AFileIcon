@@ -4,7 +4,8 @@ from textwrap import dedent
 
 
 def create_preferences(icons):
-    template = dedent("""
+    template = dedent(
+        """
         <?xml version="1.0" encoding="UTF-8"?>
         <plist version="1.0">
           <dict>
@@ -17,7 +18,8 @@ def create_preferences(icons):
             </dict>
           </dict>
         </plist>
-        """).lstrip()
+        """
+    ).lstrip()
 
     package_root = os.path.dirname(os.path.dirname(__file__))
 
@@ -28,8 +30,7 @@ def create_preferences(icons):
             for syntax in data.get(syntaxes, [])
         }
         if scopes:
-            with open(os.path.join(
-                    package_root, "preferences", name + ".tmPreferences"),
-                    "w") as out:
-                out.write(template.format(
-                    name=name, scope=", ".join(sorted(scopes))))
+            with open(
+                os.path.join(package_root, "preferences", name + ".tmPreferences"), "w"
+            ) as out:
+                out.write(template.format(name=name, scope=", ".join(sorted(scopes))))

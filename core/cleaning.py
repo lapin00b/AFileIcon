@@ -11,9 +11,7 @@ from .utils.overlay import with_ignored_overlay
 
 
 class AfiRevertCommand(sublime_plugin.ApplicationCommand):
-
     def run(self):
-
         @with_ignored_overlay
         def revert():
             clear_listener()

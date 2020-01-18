@@ -7,11 +7,14 @@ from preferences import create_preferences
 
 def main(argv=None):
     parser = argparse.ArgumentParser(
-        description='Create icons and preferences for A File Icon.')
+        description="Create icons and preferences for A File Icon."
+    )
     parser.add_argument(
-        '-i', '--icons', action='store_true', help='convert svg icons to png')
+        "-i", "--icons", action="store_true", help="convert svg icons to png"
+    )
     parser.add_argument(
-        '-p', '--preferences', action='store_true', help='create preferences')
+        "-p", "--preferences", action="store_true", help="create preferences"
+    )
 
     options = parser.parse_args(argv)
     if not options.icons and not options.preferences:
@@ -28,5 +31,5 @@ def main(argv=None):
         create_preferences(icons)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

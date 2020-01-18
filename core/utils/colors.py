@@ -3,7 +3,7 @@ import re
 
 from ..vendor import webcolors
 
-_hsl_pattern = re.compile(r'hsl\(\s*(\d+),\s*(\d+)%,\s*(\d+)%\s*\)')
+_hsl_pattern = re.compile(r"hsl\(\s*(\d+),\s*(\d+)%,\s*(\d+)%\s*\)")
 
 
 def convert_color_value(color):

@@ -13,7 +13,8 @@ def makedirs(*args):
 
 def installed_package_path():
     return os.path.join(
-        sublime.installed_packages_path(), PACKAGE_NAME + ".sublime-package")
+        sublime.installed_packages_path(), PACKAGE_NAME + ".sublime-package"
+    )
 
 
 def package_icons_path():
@@ -37,10 +38,8 @@ def overlay_patches_path():
 
 
 def overlay_patches_general_path():
-    return os.path.join(
-        sublime.packages_path(), OVERLAY_ROOT, "patches", "general")
+    return os.path.join(sublime.packages_path(), OVERLAY_ROOT, "patches", "general")
 
 
 def overlay_patches_specific_path():
-    return os.path.join(
-        sublime.packages_path(), OVERLAY_ROOT, "patches", "specific")
+    return os.path.join(sublime.packages_path(), OVERLAY_ROOT, "patches", "specific")
