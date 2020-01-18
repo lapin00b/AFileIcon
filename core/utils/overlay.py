@@ -1,5 +1,3 @@
-from functools import partial
-
 import sublime
 
 from .path import OVERLAY_ROOT

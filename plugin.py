@@ -32,7 +32,7 @@ if int(sublime.version()) >= 3114:
 
         try:
             from package_control import events
-        except ImportError as error:
+        except ImportError:
             pass
         else:
             is_upgrading = events.pre_upgrade(__package__)

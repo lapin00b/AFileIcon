@@ -4,7 +4,7 @@ from . import aliases
 from . import icons
 from . import themes
 
-from .utils.logging import log, dump
+from .utils.logging import log
 from .utils.overlay import with_ignored_overlay
 from .utils.path import PACKAGE_NAME
 
