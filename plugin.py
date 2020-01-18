@@ -3,31 +3,15 @@ import sublime
 
 if int(sublime.version()) >= 3114:
 
-    def reload_modules():
-        import imp
-        import importlib
-
-        modules_load_order = [
-            ".core.utils.colors",
-            ".core.utils.logging",
-            ".core.utils.path",
-            ".core.utils.overlay",
-            ".core.icons",
-            ".core.themes",
-            ".core.aliases",
-            ".core.settings",
-            ".core.cleaning"
-        ]
-        importlib.invalidate_caches()
-        for module in modules_load_order:
-            mod = sys.modules.get(__package__ + module)
-            if mod:
-                imp.reload(mod)
-
-    # Note: Must be called before importing the core package in order to
-    #       properly update all module references before usage!
-    if __package__ + ".core" in sys.modules:
-        reload_modules()
+    # Clear module cache to force reloading all modules of this package.
+    prefix = __package__ + "."  # don't clear the base package
+    for module_name in [
+        module_name
+        for module_name in sys.modules
+        if module_name.startswith(prefix) and module_name != __name__
+    ]:
+        del sys.modules[module_name]
+    prefix = None
 
     from .core.cleaning import AfiRevertCommand, clean_all
     from .core.settings import add_listener, clear_listener
