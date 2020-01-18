@@ -14,5 +14,5 @@ jobs:
     - name: Install black
       run: pip install black
     - name: Check formating
-      run: black --check --exclude "/(\.git.*|\.mypy_cache|\.nox|\.tox|\.venv|vendor)/" .
+      run: black --check .
 
