@@ -37,6 +37,7 @@ def enable():
         scope: {scope}
         contexts:
           main:
+            - include: scope:{base}#prototype
             - include: scope:{base}
         """
     ).strip()
