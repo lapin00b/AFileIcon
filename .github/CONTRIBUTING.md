@@ -14,22 +14,56 @@ We use [**Angular JS commit guidelines**](https://github.com/angular/angular.js/
 
 ## Building
 
-This package uses a custom Gulp builder. If you want to add new icons you must install it first:
+## Prerequisites
+
+This package provides the `build` python package to create the preferences and icons. In order to add new icons a _python 3_ interpreter is required.
+
+The `build` uses [pyPNG](https://pypi.org/project/pypng/) and [CairoSVG](https://pypi.org/project/CairoSVG/) to convert the icons from SVG to PNG. You nee to...
 
 ```bash
-$ npm install
+pip install cairosvg
+pip install pypng
 ```
 
-Then run the task to build the icon you've added:
+The CairoSVG needs the `cairo` library being present on the system.
+
+**Linux**
 
 ```bash
-$ npm run build
+sudo apt-get install libcairo2
 ```
 
-Build process consists of:
+**Windows**
 
-* Build settings that are required for applying icons.
-* Build SVG sources to PNG icons.
+You can download the latest release of the [cairo.dll](https://github.com/preshing/cairo-windows/releases) from https://github.com/preshing/cairo-windows/releases and place it somewhere python can load it from.
+
+### Building
+
+Run the build scripts via makefile:
+
+```bash
+# build all
+make all
+
+# build icons
+make icons
+
+# build preferences
+make preferences
+```
+
+If no make is available run the build scripts directly via python:
+
+```bash
+# build all
+python -u build --icons --preferences
+
+# build icons
+python -u build --icons
+
+# build preferences
+python -u build --preferences
+```
 
 ## Want to add new icons?
 
@@ -37,16 +71,16 @@ If you want to add a new icon, please follow these steps:
 
 1. Try to find an icon in one of [these resources](https://github.com/SublimeText/AFileIcon#icons). We always try to be pretty similar to [Atom File Icons](https://github.com/DanBrooker/file-icons) package. If you are unable to find anything – add your own.
 2. Add an example file that shows this icon to the `tests` folder.
-3. Provide the icon in SVG format and put it in the `common/assets` directory.
-4. Add icon settings to the [common/icons.json](https://github.com/SublimeText/AFileIcon/blob/develop/common/icons.json) file.
-5. Build and check if the icon looks good (don't forget to remove `Packages/zzz A File Icon zzz` folder before you check, we copy icons once right after install or upgrade).
+3. Provide the icon in SVG format and put it in the `icons/svg` directory.
+4. Add icon settings to the [icons/icons.json](https://github.com/SublimeText/AFileIcon/blob/develop/icons/icons.json) file.
+5. Build and check if the icon looks good (Run _A File Icon: Revert to a Freshly Installed State_ after build to apply your icon).
 6. It's recommended to add a link to the package which provides the syntax (see [PACKAGES.md](https://github.com/SublimeText/AFileIcon/blob/develop/PACKAGES.md))
 
 > All that you need to add are the SVG icon, its settings and the example file(s).
 
 > All settings should be alphabetically sorted.
 
-> Please do not change any other files - specially in `aliases`, `icons` and `preferences` folders.
+> Please do not change any other files - specially in `icons/multi`, `icons/single` and `preferences` folders.
 
 ### Icon
 
@@ -58,7 +92,7 @@ Requirements:
 
 Example:
 
-[![ActionScript Icon](https://github.com/SublimeText/AFileIcon/blob/develop/common/assets/file_type_actionscript.svg)](https://github.com/SublimeText/AFileIcon/blob/develop/common/assets/file_type_actionscript.svg)
+[![ActionScript Icon](https://github.com/SublimeText/AFileIcon/blob/develop/icons/svg/file_type_actionscript.svg)](https://github.com/SublimeText/AFileIcon/blob/develop/icons/svg/file_type_actionscript.svg)
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" fill="#000" viewBox="0 0 16 16">

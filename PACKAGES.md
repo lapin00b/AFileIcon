@@ -176,9 +176,17 @@ This file contains a list of possible packages you may need to install to see th
 - [Swift](https://packagecontrol.io/packages/Swift)
 - [Swift for F\*ing Sublime](https://packagecontrol.io/packages/Swift%20for%20F*ing%20Sublime)
 
+## Terraform
+
+- [Terraform](https://github.com/tmichel/sublime-terraform)
+
 ## TODO
 
 - [PlainTasks](https://packagecontrol.io/packages/PlainTasks)
+
+## TOML
+
+- [TOML](https://packagecontrol.io/packages/TOML)
 
 ## Twig
 
@@ -187,6 +195,7 @@ This file contains a list of possible packages you may need to install to see th
 ## TypeScript
 
 - [TypeScript](https://packagecontrol.io/packages/TypeScript)
+- [TypeScript Syntax](https://packagecontrol.io/packages/TypeScript%20Syntax)
 
 ## Verilog
 
