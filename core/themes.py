@@ -30,12 +30,18 @@ def patch(settings, overwrite=False):
     for package, themes in theme_packages.items():
         if package in supported:
             icons.copy_missing(general, specific, package)
-            patched.update(_patch_themes(
-                themes, os.path.join(specific, package, color),
-                specific_patch, overwrite))
+            patched.update(
+                _patch_themes(
+                    themes,
+                    os.path.join(specific, package, color),
+                    specific_patch,
+                    overwrite,
+                )
+            )
         else:
-            patched.update(_patch_themes(
-                themes, general_dest, general_patch, overwrite))
+            patched.update(
+                _patch_themes(themes, general_dest, general_patch, overwrite)
+            )
 
     log("Removing obsolete theme patches")
     for dirpath, dirnames, filenames in os.walk(path.overlay_patches_path()):
@@ -90,8 +96,11 @@ def _installed_themes():
 
 
 def _find_package_resources(pattern):
-    return (resource for resource in sublime.find_resources(pattern)
-            if resource.startswith("Packages/"))
+    return (
+        resource
+        for resource in sublime.find_resources(pattern)
+        if resource.startswith("Packages/")
+    )
 
 
 def _patch_themes(themes, dest, text, overwrite):

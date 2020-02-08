@@ -120,5 +120,6 @@ def _icons_path(package):
 
 
 def icons_json_content():
-    return json.loads(sublime.load_resource(
-        "Packages/" + path.PACKAGE_NAME + "/icons/icons.json"))
+    return json.loads(
+        sublime.load_resource("Packages/" + path.PACKAGE_NAME + "/icons/icons.json")
+    )

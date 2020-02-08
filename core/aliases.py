@@ -26,7 +26,8 @@ def enable():
     log("Enabling aliases")
 
     # template to create alias syntax without pyyaml dependency
-    template = dedent("""
+    template = dedent(
+        """
         %YAML 1.2
         ---
         # http://www.sublimetext.com/docs/3/syntax.html
@@ -36,15 +37,17 @@ def enable():
         scope: {scope}
         contexts:
           main:
+            - include: scope:{base}#prototype
             - include: scope:{base}
-        """).lstrip()
+        """
+    ).strip()
 
     for file_type in icons_json_content().values():
         for alias in file_type.get("aliases", []):
             try:
-                with open(os.path.join(
-                        dest_path, alias["name"] + ".sublime-syntax"),
-                        "w") as out:
+                with open(
+                    os.path.join(dest_path, alias["name"] + ".sublime-syntax"), "w"
+                ) as out:
                     out.write(template.format(**alias))
             except Exception as error:
                 dump(error)

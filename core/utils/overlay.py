@@ -1,12 +1,9 @@
-from functools import partial
-
 import sublime
 
 from .path import OVERLAY_ROOT
 
 
 def with_ignored_overlay(fun):
-
     def decorator(*args, **kwargs):
         disable_overlay()
         try:
