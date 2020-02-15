@@ -151,6 +151,22 @@
       }
     ]
   },
+  "file_type_bazel": {
+    "color": "green",
+    "aliases": [
+      {
+        "name": "Starlark (Bazel)",
+        "extensions": [
+          "bazel",
+          "bzl",
+          "BUILD",
+          "WORKSPACE"
+        ],
+        "base": "source.python",
+        "scope": "source.python.starlark"
+      }
+    ]
+  },
   "file_type_binary": {
     "color": "graphite"
   },
