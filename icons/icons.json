@@ -153,17 +153,10 @@
   },
   "file_type_bazel": {
     "color": "green",
-    "aliases": [
+    "syntaxes": [
       {
-        "name": "Starlark (Bazel)",
-        "extensions": [
-          "bazel",
-          "bzl",
-          "BUILD",
-          "WORKSPACE"
-        ],
-        "base": "source.python",
-        "scope": "source.python.starlark"
+        "name": "Bazel",
+        "scope": "source.bazel"
       }
     ]
   },
