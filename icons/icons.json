@@ -703,7 +703,26 @@
     ]
   },
   "file_type_image": {
-    "color": "green"
+    "color": "green",
+    "aliases": [
+      {
+        "name": "Plain Text (Image)",
+        "extensions": [
+          "emf",
+          "jp2",
+          "pnm",
+          "ppm",
+          "tga",
+          "tif",
+          "tiff",
+          "webp",
+          "xbm",
+          "xpm"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.image"
+      }
+    ]
   },
   "file_type_indesign": {
     "color": "pink",
