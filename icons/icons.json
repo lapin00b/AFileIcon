@@ -1387,15 +1387,6 @@
         ],
         "base": "source.json",
         "scope": "source.json.settings"
-      },
-      {
-        "name": "XML (Config)",
-        "linter": "xml",
-        "extensions": [
-          "config"
-        ],
-        "base": "text.xml",
-        "scope": "text.xml.config"
       }
     ]
   },
