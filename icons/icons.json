@@ -555,6 +555,15 @@
       }
     ]
   },
+  "file_type_fsharp": {
+    "color": "sky",
+    "syntaxes": [
+      {
+        "name": "F#",
+        "scope": "source.fsharp"
+      }
+    ]
+  },
   "file_type_git": {
     "color": "orange",
     "syntaxes": [
@@ -913,6 +922,15 @@
       {
         "name": "Markdown",
         "scope": "text.html.markdown"
+      }
+    ]
+  },
+  "file_type_markdownx": {
+    "color": "cyan",
+    "syntaxes": [
+      {
+        "name": "MDX (Markdown JSX)",
+        "scope": "text.html.markdown.jsx"
       }
     ]
   },
@@ -1387,15 +1405,6 @@
         ],
         "base": "source.json",
         "scope": "source.json.settings"
-      },
-      {
-        "name": "XML (Config)",
-        "linter": "xml",
-        "extensions": [
-          "config"
-        ],
-        "base": "text.xml",
-        "scope": "text.xml.config"
       }
     ]
   },
