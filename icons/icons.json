@@ -925,6 +925,15 @@
       }
     ]
   },
+  "file_type_markdownx": {
+    "color": "cyan",
+    "syntaxes": [
+      {
+        "name": "MDX (Markdown JSX)",
+        "scope": "text.html.markdown.jsx"
+      }
+    ]
+  },
   "file_type_markup": {
     "color": "purple"
   },

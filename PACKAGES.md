@@ -105,6 +105,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [MayaSublime](https://packagecontrol.io/packages/MayaSublime)
 
+## MDX
+
+- [MDX Syntax Highlighting](https://packagecontrol.io/packages/MDX%20Syntax%20Highlighting)
+
 ## Mustache & Handlebars
 
 - [HTML Mustache](https://packagecontrol.io/packages/HTML%20Mustache)
