@@ -555,6 +555,15 @@
       }
     ]
   },
+  "file_type_fsharp": {
+    "color": "sky",
+    "syntaxes": [
+      {
+        "name": "F#",
+        "scope": "source.fsharp"
+      }
+    ]
+  },
   "file_type_git": {
     "color": "orange",
     "syntaxes": [

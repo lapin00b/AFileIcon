@@ -55,6 +55,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [DotENV](https://packagecontrol.io/packages/DotENV)
 
+# FSharp
+
+- [FSharp](https://github.com/hoest/sublimetext-fsharp)
+
 ## Git
 
 - [GitSyntaxes](https://packagecontrol.io/packages/GitSyntaxes)
