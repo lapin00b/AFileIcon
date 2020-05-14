@@ -1894,6 +1894,7 @@
         "extensions": [
           "webpack.config.js",
           "webpack.config.babel.js",
+          "webpack.dev.js",
           "webpack.mix.js"
         ],
         "base": "source.js",
