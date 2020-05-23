@@ -19,7 +19,7 @@ def convert_color_value(color):
             try:
                 return webcolors.html5_parse_legacy_color(color)
             except:
-                return []
+                return None
 
 
 def _parse_hsl_color(color):
