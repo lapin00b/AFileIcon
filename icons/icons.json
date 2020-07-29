@@ -590,6 +590,27 @@
       }
     ]
   },
+  "file_type_fortran": {
+    "color": "red",
+    "syntaxes": [
+      {
+        "name": "Fortran",
+        "scope": "source.fortran"
+      },
+      {
+        "name": "Fortran Namelist",
+        "scope": "source.fortran-namelist"
+      },
+      {
+        "name": "Fixed Form Fortran",
+        "scope": "source.fixedform-fortran"
+      },
+      {
+        "name": "Modern Fortran",
+        "scope": "source.modern-fortran"
+      }
+    ]
+  },
   "file_type_fsharp": {
     "color": "sky",
     "syntaxes": [

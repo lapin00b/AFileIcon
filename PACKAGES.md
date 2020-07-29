@@ -70,6 +70,11 @@ This file contains a list of possible packages you may need to install to see th
 
 - [DotENV](https://packagecontrol.io/packages/DotENV)
 
+## Fortran
+
+- [Fortran](https://packagecontrol.io/packages/Fortran)
+- [MinimalFortran](https://packagecontrol.io/packages/MinimalFortran)
+
 # FSharp
 
 - [FSharp](https://github.com/hoest/sublimetext-fsharp)
