@@ -75,7 +75,7 @@ This file contains a list of possible packages you may need to install to see th
 - [Fortran](https://packagecontrol.io/packages/Fortran)
 - [MinimalFortran](https://packagecontrol.io/packages/MinimalFortran)
 
-# FSharp
+## FSharp
 
 - [FSharp](https://github.com/hoest/sublimetext-fsharp)
 
