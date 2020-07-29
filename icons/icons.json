@@ -792,6 +792,10 @@
     "syntaxes": [
       {
         "name": "JSX",
+        "scope": "source.jsx"
+      },
+      {
+        "name": "JSX",
         "scope": "source.js.jsx"
       },
       {
@@ -1658,8 +1662,8 @@
           "spec.jsx",
           "test.jsx"
         ],
-        "base": "source.js.react",
-        "scope": "source.js.react.unittest"
+        "base": "source.jsx",
+        "scope": "source.jsx.unittest"
       }
     ]
   },
