@@ -4,6 +4,10 @@ The icons for packages provided by the community must be installed, i.e., if you
 
 This file contains a list of possible packages you may need to install to see their respective icons.
 
+## Ada
+
+- [Ada](https://packagecontrol.io/packages/Ada)
+
 ## Arduino
 
 - [Arduino](https://packagecontrol.io/packages/Arduino)

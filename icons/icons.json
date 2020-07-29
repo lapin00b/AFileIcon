@@ -33,6 +33,15 @@
       }
     ]
   },
+  "file_type_ada": {
+    "color": "red",
+    "syntaxes": [
+      {
+        "name": "Ada",
+        "scope": "source.ada"
+      }
+    ]
+  },
   "file_type_ae": {
     "color": "purple",
     "aliases": [
