@@ -4,6 +4,11 @@ The icons for packages provided by the community must be installed, i.e., if you
 
 This file contains a list of possible packages you may need to install to see their respective icons.
 
+## Arduino
+
+- [Arduino](https://packagecontrol.io/packages/Arduino)
+- [Arduino-like IDE](https://packagecontrol.io/packages/Arduino-like%20IDE)
+
 ## Bazel
 
 - [BazelSyntax](https://packagecontrol.io/packages/BazelSyntax)

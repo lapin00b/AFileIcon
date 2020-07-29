@@ -109,6 +109,19 @@
       }
     ]
   },
+  "file_type_arduino": {
+    "color": "cyan",
+    "syntaxes": [
+      {
+        "name": "Arduino",
+        "scope": "source.c++.arduino"
+      },
+      {
+        "name": "Arduino-like IDE",
+        "scope": "source.arduino"
+      }
+    ]
+  },
   "file_type_audio": {
     "color": "red",
     "aliases":[
