@@ -17,6 +17,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [BazelSyntax](https://packagecontrol.io/packages/BazelSyntax)
 
+## COBOL
+
+- [COBOL](https://packagecontrol.io/packages/COBOL%20Syntax)
+
 ## CMake
 
 - [CMake](https://packagecontrol.io/packages/CMake)

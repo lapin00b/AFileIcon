@@ -272,6 +272,15 @@
 
     ]
   },
+  "file_type_cobol": {
+    "color": "cyan",
+    "syntaxes": [
+      {
+        "name": "Cobol",
+        "scope": "source.cobol"
+      }
+    ]
+  },
   "file_type_coffeescript": {
     "color": "orange",
     "syntaxes": [
