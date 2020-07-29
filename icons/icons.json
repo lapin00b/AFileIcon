@@ -1076,6 +1076,19 @@
       }
     ]
   },
+  "file_type_pcb": {
+    "color": "cyan",
+    "aliases": [
+      {
+        "name": "Gerber fabrication files",
+        "extensions": [
+          "pcb"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.pcb"
+      }
+    ]
+  },
   "file_type_pdf": {
     "color": "red",
     "aliases": [
