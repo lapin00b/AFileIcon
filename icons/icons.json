@@ -457,6 +457,19 @@
       }
     ]
   },
+  "file_type_ember": {
+    "color": "green",
+    "syntaxes": [
+      {
+        "name": "EmberScript",
+        "scope": "source.ember"
+      },
+      {
+        "name": "HTML (EmberScript)",
+        "scope": "text.html.ember"
+      }
+    ]
+  },
   "file_type_ejs": {
     "color": "green",
     "syntaxes": [

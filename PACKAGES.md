@@ -61,6 +61,11 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Elm Language Support](https://packagecontrol.io/packages/Elm%20Language%20Support)
 
+## EmberScript
+
+- [EmberScript](https://packagecontrol.io/packages/EmberScript)
+- [Ember Single-File Component Syntax](https://packagecontrol.io/packages/Ember%20Single-File%20Component%20Syntax)
+
 ## Env
 
 - [DotENV](https://packagecontrol.io/packages/DotENV)
