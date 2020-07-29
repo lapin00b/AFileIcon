@@ -1740,6 +1740,10 @@
       {
         "name": "TypeScript React",
         "scope": "source.tsx"
+      },
+      {
+        "name": "TypeScript React",
+        "scope": "source.ts.react"
       }
     ]
   },
@@ -1758,7 +1762,12 @@
       {
         "name": "TypeScript",
         "scope": "source.ts"
+      },
+      {
+        "name": "TypeScript",
+        "scope": "source.js.typescript"
       }
+
     ]
   },
   "file_type_unity3d": {
