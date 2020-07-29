@@ -48,6 +48,11 @@ This file contains a list of possible packages you may need to install to see th
 
 - [EditorConfig](https://packagecontrol.io/packages/EditorConfig)
 
+## EJS
+
+- [EJS](https://packagecontrol.io/packages/EJS)
+- [EJS 2](https://packagecontrol.io/packages/EJS%202)
+
 ## Elixir
 
 - [Elixir](https://packagecontrol.io/packages/Elixir)

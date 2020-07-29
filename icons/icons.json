@@ -457,6 +457,15 @@
       }
     ]
   },
+  "file_type_ejs": {
+    "color": "green",
+    "syntaxes": [
+      {
+        "name": "EJS",
+        "scope": "text.ejs"
+      }
+    ]
+  },
   "file_type_elm": {
     "color": "cyan",
     "syntaxes": [
