@@ -33,6 +33,15 @@
       }
     ]
   },
+  "file_type_ada": {
+    "color": "red",
+    "syntaxes": [
+      {
+        "name": "Ada",
+        "scope": "source.ada"
+      }
+    ]
+  },
   "file_type_ae": {
     "color": "purple",
     "aliases": [
@@ -106,6 +115,19 @@
         ],
         "base": "text.plain",
         "scope": "text.plain.archive"
+      }
+    ]
+  },
+  "file_type_arduino": {
+    "color": "cyan",
+    "syntaxes": [
+      {
+        "name": "Arduino",
+        "scope": "source.c++.arduino"
+      },
+      {
+        "name": "Arduino-like IDE",
+        "scope": "source.arduino"
       }
     ]
   },
@@ -248,6 +270,15 @@
         "scope": "source.cmakeeditor"
       }
 
+    ]
+  },
+  "file_type_cobol": {
+    "color": "cyan",
+    "syntaxes": [
+      {
+        "name": "Cobol",
+        "scope": "source.cobol"
+      }
     ]
   },
   "file_type_coffeescript": {
@@ -444,6 +475,28 @@
       }
     ]
   },
+  "file_type_ember": {
+    "color": "green",
+    "syntaxes": [
+      {
+        "name": "EmberScript",
+        "scope": "source.ember"
+      },
+      {
+        "name": "HTML (EmberScript)",
+        "scope": "text.html.ember"
+      }
+    ]
+  },
+  "file_type_ejs": {
+    "color": "green",
+    "syntaxes": [
+      {
+        "name": "EJS",
+        "scope": "text.ejs"
+      }
+    ]
+  },
   "file_type_elm": {
     "color": "cyan",
     "syntaxes": [
@@ -552,6 +605,27 @@
         ],
         "base": "text.plain",
         "scope": "text.plain.font"
+      }
+    ]
+  },
+  "file_type_fortran": {
+    "color": "red",
+    "syntaxes": [
+      {
+        "name": "Fortran",
+        "scope": "source.fortran"
+      },
+      {
+        "name": "Fortran Namelist",
+        "scope": "source.fortran-namelist"
+      },
+      {
+        "name": "Fixed Form Fortran",
+        "scope": "source.fixedform-fortran"
+      },
+      {
+        "name": "Modern Fortran",
+        "scope": "source.modern-fortran"
       }
     ]
   },
@@ -790,6 +864,10 @@
   "file_type_jsx": {
     "color": "blue",
     "syntaxes": [
+      {
+        "name": "JSX",
+        "scope": "source.jsx"
+      },
       {
         "name": "JSX",
         "scope": "source.js.jsx"
@@ -1056,6 +1134,19 @@
         ],
         "base": "text.plain",
         "scope": "text.plain.onenote"
+      }
+    ]
+  },
+  "file_type_pcb": {
+    "color": "cyan",
+    "aliases": [
+      {
+        "name": "Gerber fabrication files",
+        "extensions": [
+          "pcb"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.pcb"
       }
     ]
   },
@@ -1658,8 +1749,8 @@
           "spec.jsx",
           "test.jsx"
         ],
-        "base": "source.js.react",
-        "scope": "source.js.react.unittest"
+        "base": "source.jsx",
+        "scope": "source.jsx.unittest"
       }
     ]
   },
@@ -1736,6 +1827,10 @@
       {
         "name": "TypeScript React",
         "scope": "source.tsx"
+      },
+      {
+        "name": "TypeScript React",
+        "scope": "source.ts.react"
       }
     ]
   },
@@ -1754,7 +1849,12 @@
       {
         "name": "TypeScript",
         "scope": "source.ts"
+      },
+      {
+        "name": "TypeScript",
+        "scope": "source.js.typescript"
       }
+
     ]
   },
   "file_type_unity3d": {

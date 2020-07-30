@@ -2,11 +2,11 @@
 <plist version="1.0">
   <dict>
     <key>scope</key>
-    <string>source.js.typescript, source.ts</string>
+    <string>text.ejs</string>
     <key>settings</key>
     <dict>
       <key>icon</key>
-      <string>file_type_typescript</string>
+      <string>file_type_ejs</string>
     </dict>
   </dict>
 </plist>
