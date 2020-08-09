@@ -70,11 +70,19 @@
     ]
   },
   "file_type_angular": {
-    "color": "pink",
+    "color": "red",
     "syntaxes": [
       {
         "name": "Angular​JS",
         "scope": "text.html.basic.angularjs"
+      },
+      {
+        "name": "Angular​JS",
+        "scope": "text.html.angularjs"
+      },
+      {
+        "name": "Ngx HTML",
+        "scope": "text.html.ngx"
       }
     ]
   },
