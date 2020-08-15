@@ -175,10 +175,7 @@ def _create_specific_patch(settings):
 
 
 def _patch_icon(attrib, color=None, opacity=None):
-    icon = {
-        "class": "icon_file_type",
-        "layer0.tint": color
-    }
+    icon = {"class": "icon_file_type", "layer0.tint": color}
     if attrib:
         icon["parents"] = [{"class": "tree_row", "attributes": [attrib]}]
     if opacity:
