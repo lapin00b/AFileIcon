@@ -1821,7 +1821,7 @@
     ]
   },
   "file_type_toml": {
-    "color": "graphite",
+    "color": "cyan",
     "syntaxes": [
       {
         "name": "TOML",
