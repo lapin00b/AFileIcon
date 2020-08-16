@@ -180,6 +180,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Puppet](https://packagecontrol.io/packages/Puppet)
 
+## Registry
+
+- [REG](https://packagecontrol.io/packages/REG)
+
 ## Riot
 
 - [Riot Tag](https://packagecontrol.io/packages/Riot%20Tag)
