@@ -19,7 +19,7 @@ def create_preferences(icons):
           </dict>
         </plist>
         """
-    ).lstrip()
+    ).lstrip().replace("  ", "\t")
 
     package_root = os.path.dirname(os.path.dirname(__file__))
 
