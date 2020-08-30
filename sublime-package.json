@@ -3,7 +3,7 @@
 		"settings": [
 			{
 				"file_patterns": [
-					"A%20File%20Icon.sublime-settings"
+					"A File Icon.sublime-settings"
 				],
 				"schema": {
 					"properties": {
