@@ -757,6 +757,15 @@
 			}
 		]
 	},
+	"file_type_harbour": {
+		"color": "sky",
+		"syntaxes": [
+			{
+				"name": "Harbour",
+				"scope": "source.harbour"
+			}
+		]
+	},
 	"file_type_haml": {
 		"color": "yellow",
 		"syntaxes": [
