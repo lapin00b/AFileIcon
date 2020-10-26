@@ -99,6 +99,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Haml](https://packagecontrol.io/packages/Haml)
 
+## Harbour
+
+- [Harbour](https://github.com/rafathefull/harbour)
+
 ## Haxe
 
 - [Haxe](https://packagecontrol.io/packages/Haxe)
