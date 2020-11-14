@@ -58,7 +58,7 @@
 	},
 	"file_type_ai": {
 		"color": "orange",
-		"aliases":[
+		"aliases": [
 			{
 				"name": "Plain Text (Adobe Illustrator)",
 				"extensions": [
@@ -106,7 +106,7 @@
 	},
 	"file_type_archive": {
 		"color": "graphite",
-		"aliases":[
+		"aliases": [
 			{
 				"name": "Plain Text (Archive)",
 				"extensions": [
@@ -141,7 +141,7 @@
 	},
 	"file_type_audio": {
 		"color": "red",
-		"aliases":[
+		"aliases": [
 			{
 				"name": "Plain Text (Audio)",
 				"extensions": [
@@ -203,7 +203,7 @@
 	},
 	"file_type_bower": {
 		"color": "yellow",
-		"aliases":[
+		"aliases": [
 			{
 				"name": "JSON (Bower)",
 				"extensions": [
@@ -230,7 +230,7 @@
 	},
 	"file_type_circleci": {
 		"color": "graphite",
-		"aliases":[
+		"aliases": [
 			{
 				"name": "YAML (CircleCI)",
 				"extensions": [
@@ -364,7 +364,7 @@
 	},
 	"file_type_csv": {
 		"color": "green",
-		"aliases":[
+		"aliases": [
 			{
 				"name": "Plain Text (CSV)",
 				"extensions": [
@@ -593,7 +593,7 @@
 	},
 	"file_type_font": {
 		"color": "green",
-		"aliases":[
+		"aliases": [
 			{
 				"name": "Plain Text (Font)",
 				"extensions": [
@@ -1066,7 +1066,7 @@
 	},
 	"file_type_nodejs": {
 		"color": "green",
-		"aliases":[
+		"aliases": [
 			{
 				"name": "Plain Text (NodeJS)",
 				"extensions": [
@@ -1508,7 +1508,7 @@
 	},
 	"file_type_sketch": {
 		"color": "purple",
-		"aliases":[
+		"aliases": [
 			{
 				"name": "Plain Text (Sketch)",
 				"extensions": [
@@ -1716,7 +1716,7 @@
 	},
 	"file_type_test_js": {
 		"color": "yellow",
-		"aliases":[
+		"aliases": [
 			{
 				"name": "UnitTest (JavaScript)",
 				"extensions": [
@@ -1730,7 +1730,7 @@
 	},
 	"file_type_test_jsx": {
 		"color": "blue",
-		"aliases":[
+		"aliases": [
 			{
 				"name": "UnitTest (JavaScript React)",
 				"extensions": [
@@ -1744,7 +1744,7 @@
 	},
 	"file_type_test_tsx": {
 		"color": "sky",
-		"aliases":[
+		"aliases": [
 			{
 				"name": "UnitTest (TypeScript React)",
 				"extensions": [
@@ -1758,7 +1758,7 @@
 	},
 	"file_type_test_typescript": {
 		"color": "sky",
-		"aliases":[
+		"aliases": [
 			{
 				"name": "UnitTest (TypeScript)",
 				"extensions": [
