@@ -1637,6 +1637,7 @@
 				"name": "JSON (Sublime)",
 				"linter": "json",
 				"extensions": [
+					".sublime-project",
 					".no-sublime-package",
 					"hidden-color-scheme",
 					"hidden-theme",
