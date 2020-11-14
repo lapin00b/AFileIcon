@@ -1697,17 +1697,11 @@
 	},
 	"file_type_terraform": {
 		"color": "purple",
-		"aliases": [
+		"syntaxes": [
 			{
 				"name": "JSON (Terraform)",
-				"extensions": [
-					"tfstate"
-				],
-				"base": "source.json",
 				"scope": "source.json.terraform"
-			}
-		],
-		"syntaxes": [
+			},
 			{
 				"name": "Terraform",
 				"scope": "source.terraform"
