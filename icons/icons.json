@@ -1249,16 +1249,22 @@
 		"syntaxes": [
 			{
 				"extensions": [
-					"hgn",
-					"hjs",
 					"mst",
 					"mustache"
 				],
-				"name": "HTML Mustache",
-				"scope": "txt.html.mustache, text.html.hgn"
+				"name": "HTML (Mustache)",
+				"scope": "txt.html.mustache"
 			},
 			{
-				"name": "Handlebars",
+				"extensions": [
+					"hgn",
+					"hjs"
+				],
+				"name": "HTML (Hogan)",
+				"scope": "text.html.hgn"
+			},
+			{
+				"name": "HTML (Handlebars)",
 				"scope": "text.html.handlebars"
 			},
 			{
