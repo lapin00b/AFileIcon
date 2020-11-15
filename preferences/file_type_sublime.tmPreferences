@@ -2,7 +2,7 @@
 <plist version="1.0">
 	<dict>
 		<key>scope</key>
-		<string>source.json.sublime, source.sublime-settings, source.sublimekeymap, source.yaml.sublime</string>
+		<string>source.json.sublime, source.sublime-settings, source.sublimekeymap, source.yaml.sublime.syntax, text.xml.sublime.snippet</string>
 		<key>settings</key>
 		<dict>
 			<key>icon</key>

@@ -1614,32 +1614,44 @@
 			{
 				"name": "JSON (Sublime)",
 				"extensions": [
-					".sublime-project",
 					".no-sublime-package",
+					".python-version",
+					".sublime-project",
 					"hidden-color-scheme",
 					"hidden-theme",
 					"sublime-color-scheme",
 					"sublime-commands",
+					"sublime-completions",
+					"sublime-keymap",
+					"sublime-macro",
 					"sublime-menu",
+					"sublime-mousemap",
 					"sublime-project",
 					"sublime-settings",
 					"sublime-theme",
-					"sublime-workspace",
-					"sublime-keymap",
-					"sublime-mousemap"
+					"sublime-workspace"
 				],
 				"base": "source.json",
 				"scope": "source.json.sublime"
+			},
+			{
+				"name": "XML (Sublime)",
+				"extensions": [
+					"sublime-snippet"
+				],
+				"name": "XML (Sublime)",
+				"scope": "text.xml.sublime.snippet"
 			},
 			{
 				"name": "YAML (Sublime)",
 				"extensions": [
 					"sublime-syntax"
 				],
-				"base": "source.yaml",
-				"scope": "source.yaml.sublime"
+				"name": "YAML (Sublime)",
+				"scope": "source.yaml.sublime.syntax"
 			}
-		]
+		],
+		"color": "orange"
 	},
 	"file_type_svelte": {
 		"color": "orange",
