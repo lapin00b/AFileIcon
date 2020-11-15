@@ -670,7 +670,22 @@
 					"exs"
 				],
 				"name": "Elixir",
-				"scope": "source.elixir, text.html.elixir"
+				"scope": "source.elixir"
+			},
+			{
+				"extensions": [
+					"eex"
+				],
+				"name": "EEx",
+				"scope": "text.elixir"
+			},
+			{
+				"extensions": [
+					"html.eex",
+					"html.leex"
+				],
+				"name": "HTML (EEx)",
+				"scope": "text.html.elixir"
 			}
 		]
 	},
