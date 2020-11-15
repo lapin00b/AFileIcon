@@ -1179,7 +1179,14 @@
 					"lsl"
 				],
 				"name": "LSL",
-				"scope": "source.lsl, source.ossl"
+				"scope": "source.lsl"
+			},
+			{
+				"extensions": [
+					"ossl"
+				],
+				"name": "LSL",
+				"scope": "source.ossl"
 			}
 		]
 	},
