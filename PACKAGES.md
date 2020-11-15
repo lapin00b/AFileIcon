@@ -8,6 +8,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Ada](https://packagecontrol.io/packages/Ada)
 
+## AngularJS
+
+- [AngularJS](https://packagecontrol.io/packages/AngularJS)
+
 ## Arduino
 
 - [Arduino](https://packagecontrol.io/packages/Arduino)
@@ -73,6 +77,7 @@ This file contains a list of possible packages you may need to install to see th
 
 - [EmberScript](https://packagecontrol.io/packages/EmberScript)
 - [Ember Single-File Component Syntax](https://packagecontrol.io/packages/Ember%20Single-File%20Component%20Syntax)
+- [Ember Syntax](https://packagecontrol.io/packages/Ember%20Syntax)
 
 ## Env
 
@@ -190,6 +195,7 @@ This file contains a list of possible packages you may need to install to see th
 
 ## Riot
 
+- [Riot Syntax](https://packagecontrol.io/packages/Riot%20Syntax)
 - [Riot Tag](https://packagecontrol.io/packages/Riot%20Tag)
 
 ## SASS & SCSS
@@ -219,6 +225,10 @@ This file contains a list of possible packages you may need to install to see th
 ## Stylus
 
 - [Stylus](https://packagecontrol.io/packages/Stylus)
+
+## Svelte
+
+- [Svelte](https://packagecontrol.io/packages/Svelte)
 
 ## Swift
 
