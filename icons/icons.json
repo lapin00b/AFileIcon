@@ -289,18 +289,28 @@
 		"syntaxes": [
 			{
 				"extensions": [
-					"cfc",
-					"cfm"
+					"cfc"
 				],
 				"name": "ColdFusion",
-				"scope": "source.cfscript.cfc, text.html.cfm"
+				"scope": "source.cfscript.cfc"
+			},
+			{
+				"extensions": [
+					"cfm"
+				],
+				"name": "HTML (ColdFusion)",
+				"scope": "text.html.cfm"
 			},
 			{
 				"extensions": [
 					"cfml"
 				],
 				"name": "CFML",
-				"scope": "embedding.cfml, source.cfml.script"
+				"scope": "source.cfml.script"
+			},
+			{
+				"name": "Embedding CFML",
+				"scope": "embedding.cfml"
 			}
 		]
 	},
