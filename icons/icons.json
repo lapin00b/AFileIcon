@@ -73,11 +73,11 @@
 		"color": "red",
 		"syntaxes": [
 			{
-				"name": "Angular​JS",
+				"name": "Angular JS",
 				"scope": "text.html.basic.angularjs"
 			},
 			{
-				"name": "Angular​JS",
+				"name": "Angular JS",
 				"scope": "text.html.angularjs"
 			},
 			{
@@ -1215,7 +1215,7 @@
 		"color": "red",
 		"syntaxes": [
 			{
-				"name": "Syntax Highlighting for Post​CSS",
+				"name": "Syntax Highlighting for Post CSS",
 				"scope": "source.postcss"
 			}
 		]
@@ -1488,7 +1488,7 @@
 				"scope": "source.ini"
 			},
 			{
-				"name": "Dot​ENV",
+				"name": "Dot ENV",
 				"scope": "source.env"
 			}
 		]
