@@ -2,7 +2,6 @@
 	"file_type_access": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"adn",
 					"accdb",
@@ -37,6 +36,11 @@
 		"color": "red",
 		"syntaxes": [
 			{
+				"extensions": [
+					"ada",
+					"adb",
+					"ads"
+				],
 				"name": "Ada",
 				"scope": "source.ada"
 			}
@@ -45,7 +49,6 @@
 	"file_type_ae": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"aep",
 					"aet"
@@ -59,7 +62,6 @@
 	"file_type_ai": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"ai"
 				],
@@ -73,6 +75,10 @@
 		"color": "red",
 		"syntaxes": [
 			{
+				"extensions": [
+					"html",
+					"ng.html"
+				],
 				"name": "Angular JS",
 				"scope": "text.html.basic.angularjs"
 			},
@@ -90,6 +96,23 @@
 		"color": "yellow",
 		"syntaxes": [
 			{
+				"extensions": [
+					"conf",
+					"CONF",
+					"envvars",
+					"htaccess",
+					"HTACCESS",
+					"htgroups",
+					"HTGROUPS",
+					"htpasswd",
+					"HTPASSWD",
+					".htaccess",
+					".HTACCESS",
+					".htgroups",
+					".HTGROUPS",
+					".htpasswd",
+					".HTPASSWD"
+				],
 				"name": "Apache Conf",
 				"scope": "source.apacheconf"
 			}
@@ -107,7 +130,6 @@
 	"file_type_archive": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"7z",
 					"7zip",
@@ -134,6 +156,10 @@
 				"scope": "source.c++.arduino"
 			},
 			{
+				"extensions": [
+					"ino",
+					"pde"
+				],
 				"name": "Arduino-like IDE",
 				"scope": "source.arduino"
 			}
@@ -142,7 +168,6 @@
 	"file_type_audio": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"mp3",
 					"m4p",
@@ -184,6 +209,11 @@
 		"color": "green",
 		"syntaxes": [
 			{
+				"extensions": [
+					"BUILD",
+					"WORKSPACE",
+					"bzl"
+				],
 				"name": "Bazel",
 				"scope": "source.bazel"
 			}
@@ -196,6 +226,10 @@
 		"color": "orange",
 		"syntaxes": [
 			{
+				"extensions": [
+					"blade",
+					"blade.php"
+				],
 				"name": "Laravel Blade Highlighter",
 				"scope": "text.blade"
 			}
@@ -254,10 +288,17 @@
 		"color": "cyan",
 		"syntaxes": [
 			{
+				"extensions": [
+					"cfc",
+					"cfm"
+				],
 				"name": "ColdFusion",
 				"scope": "source.cfscript.cfc, text.html.cfm"
 			},
 			{
+				"extensions": [
+					"cfml"
+				],
 				"name": "CFML",
 				"scope": "embedding.cfml, source.cfml.script"
 			}
@@ -289,6 +330,10 @@
 		"color": "blue",
 		"syntaxes": [
 			{
+				"extensions": [
+					"CMakeLists.txt",
+					"cmake"
+				],
 				"name": "CMake",
 				"scope": "source.cmake"
 			},
@@ -302,6 +347,17 @@
 		"color": "cyan",
 		"syntaxes": [
 			{
+				"extensions": [
+					"ccp",
+					"scbl",
+					"cbl",
+					"cpy",
+					"cob",
+					"dds",
+					"ss",
+					"wks",
+					"pco"
+				],
 				"name": "Cobol",
 				"scope": "source.cobol"
 			}
@@ -311,6 +367,13 @@
 		"color": "orange",
 		"syntaxes": [
 			{
+				"extensions": [
+					"coffee",
+					"Cakefile",
+					"coffee.erb",
+					"cson",
+					"cjsx"
+				],
 				"name": "CoffeeScript",
 				"scope": "source.coffee"
 			}
@@ -364,7 +427,6 @@
 	"file_type_csv": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"csv"
 				],
@@ -384,6 +446,11 @@
 		"color": "yellow",
 		"syntaxes": [
 			{
+				"extensions": [
+					"pyx",
+					"pxi",
+					"pxd"
+				],
 				"name": "Cython",
 				"scope": "source.cython"
 			}
@@ -393,6 +460,9 @@
 		"color": "cyan",
 		"syntaxes": [
 			{
+				"extensions": [
+					"dart"
+				],
 				"name": "Dart",
 				"scope": "source.dart"
 			}
@@ -405,6 +475,13 @@
 		"color": "red",
 		"syntaxes": [
 			{
+				"extensions": [
+					"pas",
+					"pascal",
+					"p",
+					"pp",
+					"dpr"
+				],
 				"name": "Pascal",
 				"scope": "source.pascal"
 			}
@@ -450,6 +527,10 @@
 		"color": "sky",
 		"syntaxes": [
 			{
+				"extensions": [
+					"Dockerfile",
+					"dockerfile"
+				],
 				"name": "Dockerfile",
 				"scope": "source.dockerfile"
 			}
@@ -472,6 +553,9 @@
 		"color": "yellow",
 		"syntaxes": [
 			{
+				"extensions": [
+					".editorconfig"
+				],
 				"name": "EditorConfig",
 				"scope": "source.ini.editorconfig"
 			}
@@ -481,6 +565,9 @@
 		"color": "green",
 		"syntaxes": [
 			{
+				"extensions": [
+					"ejs"
+				],
 				"name": "EJS",
 				"scope": "text.ejs"
 			}
@@ -490,6 +577,9 @@
 		"color": "cyan",
 		"syntaxes": [
 			{
+				"extensions": [
+					"elm"
+				],
 				"name": "Elm",
 				"scope": "source.elm"
 			}
@@ -499,6 +589,14 @@
 		"color": "green",
 		"syntaxes": [
 			{
+				"extensions": [
+					"em",
+					"em.erb",
+					"ember",
+					"ember.erb",
+					"emberscript",
+					"emberscript.erb"
+				],
 				"name": "EmberScript",
 				"scope": "source.ember"
 			},
@@ -554,7 +652,6 @@
 				"scope": "source.shell.eslint"
 			},
 			{
-				"base": "text.plain",
 				"extensions": [
 					".eslintcache"
 				],
@@ -568,6 +665,10 @@
 		"color": "purple",
 		"syntaxes": [
 			{
+				"extensions": [
+					"ex",
+					"exs"
+				],
 				"name": "Elixir",
 				"scope": "source.elixir, text.html.elixir"
 			}
@@ -576,7 +677,6 @@
 	"file_type_excel": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"xls",
 					"xlsx",
@@ -593,7 +693,6 @@
 	"file_type_font": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"eot",
 					"otf",
@@ -615,14 +714,37 @@
 				"scope": "source.fortran"
 			},
 			{
+				"extensions": [
+					"namelist"
+				],
 				"name": "Fortran Namelist",
 				"scope": "source.fortran-namelist"
 			},
 			{
+				"extensions": [
+					"f",
+					"F",
+					"f77",
+					"F77",
+					"for",
+					"FOR",
+					"fpp",
+					"FPP"
+				],
 				"name": "Fixed Form Fortran",
 				"scope": "source.fixedform-fortran"
 			},
 			{
+				"extensions": [
+					"f90",
+					"F90",
+					"f95",
+					"F95",
+					"f03",
+					"F03",
+					"f08",
+					"F08"
+				],
 				"name": "Modern Fortran",
 				"scope": "source.modern-fortran"
 			}
@@ -632,6 +754,11 @@
 		"color": "sky",
 		"syntaxes": [
 			{
+				"extensions": [
+					"fs",
+					"fsi",
+					"fsx"
+				],
 				"name": "F#",
 				"scope": "source.fsharp"
 			}
@@ -640,8 +767,8 @@
 	"file_type_git": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
+					".gitblame",
 					".gitkeep"
 				],
 				"name": "Git Keep",
@@ -687,6 +814,9 @@
 		"color": "cyan",
 		"syntaxes": [
 			{
+				"extensions": [
+					"gradle"
+				],
 				"name": "Gradle_Language",
 				"scope": "source.gradle"
 			}
@@ -749,6 +879,9 @@
 		"color": "yellow",
 		"syntaxes": [
 			{
+				"extensions": [
+					"haml"
+				],
 				"name": "Ruby Haml",
 				"scope": "text.haml"
 			}
@@ -758,6 +891,13 @@
 		"color": "sky",
 		"syntaxes": [
 			{
+				"extensions": [
+					"ch",
+					"hb",
+					"idu",
+					"ppo",
+					"prg"
+				],
 				"name": "Harbour",
 				"scope": "source.harbour"
 			}
@@ -776,6 +916,11 @@
 		"color": "orange",
 		"syntaxes": [
 			{
+				"extensions": [
+					"hx",
+					"hxsl",
+					"hscript"
+				],
 				"name": "Haxe",
 				"scope": "source.haxe"
 			}
@@ -793,7 +938,6 @@
 	"file_type_image": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"emf",
 					"jp2",
@@ -815,7 +959,6 @@
 	"file_type_indesign": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"indd",
 					"indl",
@@ -887,6 +1030,9 @@
 		"color": "purple",
 		"syntaxes": [
 			{
+				"extensions": [
+					"jl"
+				],
 				"name": "Julia",
 				"scope": "source.julia"
 			}
@@ -896,6 +1042,10 @@
 		"color": "blue",
 		"syntaxes": [
 			{
+				"extensions": [
+					"kt",
+					"kts"
+				],
 				"name": "Kotlin",
 				"scope": "source.Kotlin"
 			}
@@ -905,6 +1055,10 @@
 		"color": "blue",
 		"syntaxes": [
 			{
+				"extensions": [
+					"less",
+					"css.less"
+				],
 				"name": "LESS",
 				"scope": "source.less"
 			}
@@ -913,7 +1067,6 @@
 	"file_type_license": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"copying",
 					"copyright",
@@ -939,6 +1092,9 @@
 		"color": "green",
 		"syntaxes": [
 			{
+				"extensions": [
+					"liquid"
+				],
 				"name": "Siteleaf Liquid Syntax",
 				"scope": "text.html.liquid"
 			}
@@ -970,7 +1126,6 @@
 	"file_type_log": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"log"
 				],
@@ -984,6 +1139,9 @@
 		"color": "cyan",
 		"syntaxes": [
 			{
+				"extensions": [
+					"lsl"
+				],
 				"name": "LSL",
 				"scope": "source.lsl, source.ossl"
 			}
@@ -1011,6 +1169,9 @@
 		"color": "cyan",
 		"syntaxes": [
 			{
+				"extensions": [
+					"mdx"
+				],
 				"name": "MDX (Markdown JSX)",
 				"scope": "text.html.markdown.jsx"
 			}
@@ -1032,6 +1193,9 @@
 		"color": "cyan",
 		"syntaxes": [
 			{
+				"extensions": [
+					"mel"
+				],
 				"name": "MEL",
 				"scope": "source.mel"
 			}
@@ -1041,6 +1205,12 @@
 		"color": "orange",
 		"syntaxes": [
 			{
+				"extensions": [
+					"hgn",
+					"hjs",
+					"mst",
+					"mustache"
+				],
 				"name": "HTML Mustache",
 				"scope": "txt.html.mustache, text.html.hgn"
 			},
@@ -1058,6 +1228,15 @@
 		"color": "green",
 		"syntaxes": [
 			{
+				"extensions": [
+					"conf.erb",
+					"conf",
+					"nginx.conf",
+					"mime.types",
+					"fastcgi_params",
+					"scgi_params",
+					"uwsgi_params"
+				],
 				"name": "nginx",
 				"scope": "source.nginx"
 			}
@@ -1066,7 +1245,6 @@
 	"file_type_nodejs": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					".node-version",
 					".nvmrc"
@@ -1081,6 +1259,9 @@
 		"color": "green",
 		"syntaxes": [
 			{
+				"extensions": [
+					"note"
+				],
 				"name": "PlainNotes",
 				"scope": "text.html.markdown.note"
 			}
@@ -1113,6 +1294,13 @@
 		"color": "purple",
 		"syntaxes": [
 			{
+				"extensions": [
+					"nsi",
+					"nsh",
+					"bnsi",
+					"bnsh",
+					"nsdincgit"
+				],
 				"name": "NSIS",
 				"scope": "source.nsis"
 			}
@@ -1130,7 +1318,6 @@
 	"file_type_onenote": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"one"
 				],
@@ -1143,7 +1330,6 @@
 	"file_type_pcb": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"pcb"
 				],
@@ -1156,7 +1342,6 @@
 	"file_type_pdf": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"pdf"
 				],
@@ -1188,6 +1373,13 @@
 		"color": "cyan",
 		"syntaxes": [
 			{
+				"extensions": [
+					"plist",
+					"tmLanguage",
+					"tmTheme",
+					"tmSnippet",
+					"tmPreferences"
+				],
 				"name": "plist",
 				"scope": "text.plist"
 			}
@@ -1215,6 +1407,10 @@
 		"color": "red",
 		"syntaxes": [
 			{
+				"extensions": [
+					"pcss",
+					"postcss"
+				],
 				"name": "Syntax Highlighting for Post CSS",
 				"scope": "source.postcss"
 			}
@@ -1223,7 +1419,6 @@
 	"file_type_powerpoint": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"ppt",
 					"pptx",
@@ -1240,6 +1435,11 @@
 		"color": "blue",
 		"syntaxes": [
 			{
+				"extensions": [
+					"ps1",
+					"psm1",
+					"psd1"
+				],
 				"name": "PowerShell",
 				"scope": "source.powershell"
 			}
@@ -1253,7 +1453,6 @@
 	"file_type_premiere": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"prel",
 					"prproj",
@@ -1276,7 +1475,6 @@
 				"scope": "source.yaml.procfile"
 			},
 			{
-				"base": "text.plain",
 				"extensions": [
 					".buildpacks"
 				],
@@ -1289,7 +1487,6 @@
 	"file_type_psd": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"psb",
 					"psd"
@@ -1323,10 +1520,16 @@
 		"color": "yellow",
 		"syntaxes": [
 			{
+				"extensions": [
+					"jade"
+				],
 				"name": "Jade",
 				"scope": "text.jade"
 			},
 			{
+				"extensions": [
+					"pug"
+				],
 				"name": "Pug",
 				"scope": "text.pug"
 			}
@@ -1336,6 +1539,10 @@
 		"color": "purple",
 		"syntaxes": [
 			{
+				"extensions": [
+					"pp",
+					"epp"
+				],
 				"name": "Puppet",
 				"scope": "source.puppet"
 			}
@@ -1415,7 +1622,6 @@
 				"scope": "source.shell.ruby"
 			},
 			{
-				"base": "text.plain",
 				"extensions": [
 					".ruby-version",
 					".ruby-gemset",
@@ -1446,6 +1652,9 @@
 		"color": "pink",
 		"syntaxes": [
 			{
+				"extensions": [
+					"sass"
+				],
 				"name": "Sass",
 				"scope": "source.sass"
 			}
@@ -1464,6 +1673,9 @@
 		"color": "pink",
 		"syntaxes": [
 			{
+				"extensions": [
+					"scss"
+				],
 				"name": "SCSS",
 				"scope": "source.scss"
 			}
@@ -1484,10 +1696,54 @@
 		"color": "graphite",
 		"syntaxes": [
 			{
+				"extensions": [
+					"fmt",
+					"cfg",
+					"ini",
+					"inf",
+					"lng",
+					"pbk",
+					"reg",
+					"url",
+					"conf",
+					"Doxyfile",
+					"DoxyfileTemplate",
+					"DoxyfileTemplate.cfg",
+					"Doxyfile.version",
+					"Doxyfile.aliases",
+					"Doxyfile.rfc",
+					"Doxyfile.base",
+					"Doxyfile.inc",
+					"Doxyfile.include",
+					"buildozer.spec",
+					".editorconfig"
+				],
 				"name": "INI",
 				"scope": "source.ini"
 			},
 			{
+				"extensions": [
+					".env",
+					".env.dist",
+					".env.local",
+					".env.sample",
+					".env.example",
+					".env.test",
+					".env.test.local",
+					".env.testing",
+					".env.dev",
+					".env.development",
+					".env.development.local",
+					".env.prod",
+					".env.production",
+					".env.production.local",
+					".env.dusk.local",
+					".env.staging",
+					".env.default",
+					".env.defaults",
+					".envrc",
+					".flaskenv"
+				],
 				"name": "Dot ENV",
 				"scope": "source.env"
 			}
@@ -1501,6 +1757,9 @@
 				"scope": "source.shell"
 			},
 			{
+				"extensions": [
+					"fish"
+				],
 				"name": "Shell Script (Fish)",
 				"scope": "source.fish"
 			}
@@ -1509,7 +1768,6 @@
 	"file_type_sketch": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"sketch"
 				],
@@ -1523,6 +1781,10 @@
 		"color": "cyan",
 		"syntaxes": [
 			{
+				"extensions": [
+					"slim",
+					"skim"
+				],
 				"name": "Ruby Slim",
 				"scope": "text.slim"
 			}
@@ -1544,6 +1806,10 @@
 		"color": "sky",
 		"syntaxes": [
 			{
+				"extensions": [
+					"do",
+					"ado"
+				],
 				"name": "Stata",
 				"scope": "source.stata"
 			}
@@ -1593,6 +1859,10 @@
 		"color": "green",
 		"syntaxes": [
 			{
+				"extensions": [
+					"styl",
+					"stylus"
+				],
 				"name": "Stylus",
 				"scope": "source.stylus"
 			}
@@ -1646,6 +1916,9 @@
 		"color": "orange",
 		"syntaxes": [
 			{
+				"extensions": [
+					"svelte"
+				],
 				"name": "Svelte",
 				"scope": "text.html.svelte"
 			}
@@ -1668,6 +1941,9 @@
 		"color": "orange",
 		"syntaxes": [
 			{
+				"extensions": [
+					"swift"
+				],
 				"name": "Swift",
 				"scope": "source.swift"
 			}
@@ -1700,10 +1976,19 @@
 		"color": "purple",
 		"syntaxes": [
 			{
+				"base": "source.json",
+				"extensions": [
+					"tfstate"
+				],
 				"name": "JSON (Terraform)",
 				"scope": "source.json.terraform"
 			},
 			{
+				"extensions": [
+					"tf",
+					"tfvars",
+					"hcl"
+				],
 				"name": "Terraform",
 				"scope": "source.terraform"
 			}
@@ -1790,6 +2075,11 @@
 		"color": "green",
 		"syntaxes": [
 			{
+				"extensions": [
+					"todo",
+					"tasks",
+					"todolist.txt"
+				],
 				"name": "PlainTasks",
 				"scope": "text.todo"
 			}
@@ -1799,6 +2089,13 @@
 		"color": "cyan",
 		"syntaxes": [
 			{
+				"extensions": [
+					"toml",
+					"tml",
+					"Cargo.lock",
+					"Gopkg.lock",
+					"Pipfile"
+				],
 				"name": "TOML",
 				"scope": "source.toml"
 			}
@@ -1821,6 +2118,10 @@
 		"color": "green",
 		"syntaxes": [
 			{
+				"extensions": [
+					"twig",
+					"html.twig"
+				],
 				"name": "PHP-Twig",
 				"scope": "text.html.twig"
 			}
@@ -1830,6 +2131,9 @@
 		"color": "sky",
 		"syntaxes": [
 			{
+				"extensions": [
+					"ts"
+				],
 				"name": "TypeScript",
 				"scope": "source.ts"
 			},
@@ -1864,14 +2168,30 @@
 		"color": "blue",
 		"syntaxes": [
 			{
+				"extensions": [
+					"vhd",
+					"vhdl",
+					"vho",
+					"vht"
+				],
 				"name": "VHDL",
 				"scope": "source.vhdl"
 			},
 			{
+				"extensions": [
+					"sv",
+					"v",
+					"svh",
+					"vh"
+				],
 				"name": "SystemVerilog",
 				"scope": "source.systemverilog"
 			},
 			{
+				"extensions": [
+					"v",
+					"V"
+				],
 				"name": "Verilog",
 				"scope": "source.verilog"
 			}
@@ -1880,7 +2200,6 @@
 	"file_type_video": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"avi",
 					"mp4",
@@ -1921,6 +2240,10 @@
 		"color": "green",
 		"syntaxes": [
 			{
+				"extensions": [
+					"vim",
+					".vimrc"
+				],
 				"name": "VimL",
 				"scope": "source.viml"
 			}
@@ -1929,7 +2252,6 @@
 	"file_type_visualstudio": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"idl",
 					"sln"
@@ -1962,6 +2284,9 @@
 		"color": "cyan",
 		"syntaxes": [
 			{
+				"extensions": [
+					"vue"
+				],
 				"name": "Vue Syntax Highlight",
 				"scope": "text.html.vue"
 			}
@@ -1986,7 +2311,6 @@
 	"file_type_windows": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"lnk"
 				],
@@ -2005,7 +2329,6 @@
 	"file_type_word": {
 		"aliases": [
 			{
-				"base": "text.plain",
 				"extensions": [
 					"doc",
 					"docx",
