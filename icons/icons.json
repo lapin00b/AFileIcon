@@ -612,6 +612,10 @@
 			{
 				"name": "Erlang",
 				"scope": "source.erlang"
+			},
+			{
+				"name": "HTML (Erlang)",
+				"scope": "text.html.erlang"
 			}
 		]
 	},
