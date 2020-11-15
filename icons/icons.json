@@ -768,7 +768,14 @@
 		"aliases": [
 			{
 				"extensions": [
-					".gitblame",
+					"git-blame",
+					".gitblame"
+				],
+				"name": "Git Blame",
+				"scope": "text.git.blame"
+			},
+			{
+				"extensions": [
 					".gitkeep"
 				],
 				"name": "Git Keep",
