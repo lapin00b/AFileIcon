@@ -18,9 +18,9 @@ EMPTY_TEMPLATE = dedent(
     %YAML 1.2
     ---
     name: {name}
+    scope: {scope}
     hidden: true
     file_extensions: {extensions}
-    scope: {scope}
     contexts:
       main: []
     """
@@ -32,9 +32,9 @@ if int(sublime.version()) > 4075:
         %YAML 1.2
         ---
         name: {name}
+        scope: {scope}
         hidden: true
         file_extensions: {extensions}
-        scope: {scope}
         contexts:
           main:
             - include: scope:{base}
@@ -48,9 +48,9 @@ else:
         %YAML 1.2
         ---
         name: {name}
+        scope: {scope}
         hidden: true
         file_extensions: {extensions}
-        scope: {scope}
         contexts:
           main:
             - include: scope:{base}#prototype
