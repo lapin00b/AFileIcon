@@ -75,16 +75,16 @@
 		"color": "red",
 		"syntaxes": [
 			{
+				"base": "text.html.basic",
 				"extensions": [
-					"html",
 					"ng.html"
 				],
 				"name": "Angular JS",
-				"scope": "text.html.basic.angularjs"
+				"scope": "text.html.angularjs"
 			},
 			{
 				"name": "Angular JS",
-				"scope": "text.html.angularjs"
+				"scope": "text.html.basic.angularjs"
 			},
 			{
 				"name": "Ngx HTML",
@@ -295,6 +295,7 @@
 				"scope": "source.cfscript.cfc"
 			},
 			{
+				"base": "text.html.basic",
 				"extensions": [
 					"cfm"
 				],
@@ -302,6 +303,7 @@
 				"scope": "text.html.cfm"
 			},
 			{
+				"base": "text.html.basic",
 				"extensions": [
 					"cfml"
 				],
@@ -694,6 +696,7 @@
 				"scope": "text.elixir"
 			},
 			{
+				"base": "text.html.basic",
 				"extensions": [
 					"html.eex",
 					"html.leex"
@@ -1248,6 +1251,7 @@
 		"color": "orange",
 		"syntaxes": [
 			{
+				"base": "text.html.basic",
 				"extensions": [
 					"mst",
 					"mustache"
@@ -1256,6 +1260,7 @@
 				"scope": "txt.html.mustache"
 			},
 			{
+				"base": "text.html.basic",
 				"extensions": [
 					"hgn",
 					"hjs"
@@ -1264,6 +1269,7 @@
 				"scope": "text.html.hgn"
 			},
 			{
+				"base": "text.html.basic",
 				"name": "HTML (Handlebars)",
 				"scope": "text.html.handlebars"
 			},
@@ -2167,6 +2173,7 @@
 		"color": "green",
 		"syntaxes": [
 			{
+				"base": "embedding.php",
 				"extensions": [
 					"twig",
 					"html.twig"
