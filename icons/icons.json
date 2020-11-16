@@ -1366,7 +1366,19 @@
 		"syntaxes": [
 			{
 				"name": "OCaml",
-				"scope": "source.ocaml, source.ocamllex, source.ocamlyacc, source.camlp4.ocaml"
+				"scope": "source.ocaml"
+			},
+			{
+				"name": "OCamllex",
+				"scope": "source.ocamllex"
+			},
+			{
+				"name": "OCamlyacc",
+				"scope": "source.ocamlyacc"
+			},
+			{
+				"name": "camlp4",
+				"scope": "source.camlp4.ocaml"
 			}
 		]
 	},
@@ -1419,8 +1431,12 @@
 		"color": "blue",
 		"syntaxes": [
 			{
-				"name": "PHP",
-				"scope": "embedding.php, source.php"
+				"name": "PHP Source",
+				"scope": "embedding.php"
+			},
+			{
+				"name": "HTML (PHP)",
+				"scope": "source.php"
 			}
 		]
 	},
@@ -1626,7 +1642,11 @@
 		"syntaxes": [
 			{
 				"name": "Rails",
-				"scope": "source.ruby.rails, text.html.ruby"
+				"scope": "source.ruby.rails"
+			},
+			{
+				"name": "HTML (Rails)",
+				"scope": "text.html.ruby"
 			}
 		]
 	},
@@ -2109,8 +2129,20 @@
 		"color": "blue",
 		"syntaxes": [
 			{
+				"name": "BibTeX",
+				"scope": "text.bibtex"
+			},
+			{
+				"name": "BibLaTeX",
+				"scope": "text.biblatex"
+			},
+			{
 				"name": "LaTeX",
-				"scope": "text.tex, text.biblatex, text.bibtex, text.log.latex"
+				"scope": "text.tex"
+			},
+			{
+				"name": "LaTeX Log",
+				"scope": "text.log.latex"
 			}
 		]
 	},
