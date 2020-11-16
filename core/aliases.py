@@ -92,9 +92,10 @@ class AsyncAliasCreator(threading.Thread):
             log("Enabling aliases")
 
         if HAS_FIND_SYNTAX:
-            # Built a dictionary of all scopes and their real syntax.
+            # Built a set of scopes from visible/real syntaxes.
             # Note: Existing aliases in the overlay are hidden and thus excluded
-            #       by default.
+            #       by default. Also ignore possible aliases or special purpose
+            #       syntaxes from 3rd-party packages.
             self.real_syntax = {
                 s.scope for s in sublime.list_syntaxes() if not s.hidden
             }
