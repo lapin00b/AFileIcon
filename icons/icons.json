@@ -41,7 +41,7 @@
 					"adb",
 					"ads"
 				],
-				"name": "Ada",
+				"name": "Plain Text (Ada)",
 				"scope": "source.ada"
 			}
 		]
@@ -79,7 +79,7 @@
 				"extensions": [
 					"ng.html"
 				],
-				"name": "Angular JS",
+				"name": "HTML (Angular JS)",
 				"scope": "text.html.angularjs"
 			},
 			{
@@ -113,7 +113,7 @@
 					".htpasswd",
 					".HTPASSWD"
 				],
-				"name": "Apache Conf",
+				"name": "Plain Text (Apache Conf)",
 				"scope": "source.apacheconf"
 			}
 		]
@@ -160,7 +160,7 @@
 					"ino",
 					"pde"
 				],
-				"name": "Arduino-like IDE",
+				"name": "Plain Text (Arduino)",
 				"scope": "source.arduino"
 			}
 		]
@@ -214,7 +214,7 @@
 					"WORKSPACE",
 					"bzl"
 				],
-				"name": "Bazel",
+				"name": "Plain Text (Bazel)",
 				"scope": "source.bazel"
 			}
 		]
@@ -230,7 +230,7 @@
 					"blade",
 					"blade.php"
 				],
-				"name": "Laravel Blade Highlighter",
+				"name": "Plain Text (Laravel Blade)",
 				"scope": "text.blade"
 			}
 		]
@@ -289,22 +289,18 @@
 		"syntaxes": [
 			{
 				"extensions": [
-					"cfc"
+					"cfc",
+					"cfm",
+					"cfml"
 				],
-				"name": "ColdFusion",
+				"name": "Plain Text (ColdFusion)",
 				"scope": "source.cfscript.cfc"
 			},
 			{
-				"extensions": [
-					"cfm"
-				],
 				"name": "HTML (ColdFusion)",
 				"scope": "text.html.cfm"
 			},
 			{
-				"extensions": [
-					"cfml"
-				],
 				"name": "CFML",
 				"scope": "source.cfml.script"
 			},
@@ -344,7 +340,7 @@
 					"CMakeLists.txt",
 					"cmake"
 				],
-				"name": "CMake",
+				"name": "Plain Text (CMake)",
 				"scope": "source.cmake"
 			},
 			{
@@ -368,7 +364,7 @@
 					"wks",
 					"pco"
 				],
-				"name": "Cobol",
+				"name": "Plain Text (Cobol)",
 				"scope": "source.cobol"
 			}
 		]
@@ -384,7 +380,7 @@
 					"cson",
 					"cjsx"
 				],
-				"name": "CoffeeScript",
+				"name": "Plain Text (CoffeeScript)",
 				"scope": "source.coffee"
 			}
 		]
@@ -461,7 +457,7 @@
 					"pxi",
 					"pxd"
 				],
-				"name": "Cython",
+				"name": "Plain Text (Cython)",
 				"scope": "source.cython"
 			}
 		]
@@ -473,7 +469,7 @@
 				"extensions": [
 					"dart"
 				],
-				"name": "Dart",
+				"name": "Plain Text (Dart)",
 				"scope": "source.dart"
 			}
 		]
@@ -485,13 +481,6 @@
 		"color": "red",
 		"syntaxes": [
 			{
-				"extensions": [
-					"pas",
-					"pascal",
-					"p",
-					"pp",
-					"dpr"
-				],
 				"name": "Pascal",
 				"scope": "source.pascal"
 			}
@@ -566,7 +555,7 @@
 				"extensions": [
 					".editorconfig"
 				],
-				"name": "EditorConfig",
+				"name": "Plain Text (EditorConfig)",
 				"scope": "source.ini.editorconfig"
 			}
 		]
@@ -578,7 +567,7 @@
 				"extensions": [
 					"ejs"
 				],
-				"name": "EJS",
+				"name": "Plain Text (EJS)",
 				"scope": "text.ejs"
 			}
 		]
@@ -590,7 +579,7 @@
 				"extensions": [
 					"elm"
 				],
-				"name": "Elm",
+				"name": "Plain Text (Elm)",
 				"scope": "source.elm"
 			}
 		]
@@ -607,7 +596,7 @@
 					"emberscript",
 					"emberscript.erb"
 				],
-				"name": "EmberScript",
+				"name": "Plain Text (EmberScript)",
 				"scope": "source.ember"
 			},
 			{
@@ -683,21 +672,19 @@
 					"ex",
 					"exs"
 				],
-				"name": "Elixir",
+				"name": "Plain Text (Elixir)",
 				"scope": "source.elixir"
 			},
 			{
 				"extensions": [
-					"eex"
-				],
-				"name": "EEx",
-				"scope": "text.elixir"
-			},
-			{
-				"extensions": [
+					"eex",
 					"html.eex",
 					"html.leex"
 				],
+				"name": "Plain Text (EEx)",
+				"scope": "text.elixir"
+			},
+			{
 				"name": "HTML (EEx)",
 				"scope": "text.html.elixir"
 			}
@@ -739,41 +726,37 @@
 		"color": "red",
 		"syntaxes": [
 			{
-				"name": "Fortran",
-				"scope": "source.fortran"
-			},
-			{
-				"extensions": [
-					"namelist"
-				],
-				"name": "Fortran Namelist",
-				"scope": "source.fortran-namelist"
-			},
-			{
 				"extensions": [
 					"f",
 					"F",
+					"f03",
+					"F03",
+					"F08",
+					"f08",
 					"f77",
 					"F77",
-					"for",
-					"FOR",
-					"fpp",
-					"FPP"
-				],
-				"name": "Fixed Form Fortran",
-				"scope": "source.fixedform-fortran"
-			},
-			{
-				"extensions": [
 					"f90",
 					"F90",
 					"f95",
 					"F95",
-					"f03",
-					"F03",
-					"f08",
-					"F08"
+					"for",
+					"FOR",
+					"FPP",
+					"fpp",
+					"namelist"
 				],
+				"name": "Plain Text (Fortran)",
+				"scope": "source.fortran"
+			},
+			{
+				"name": "Fortran Namelist",
+				"scope": "source.fortran-namelist"
+			},
+			{
+				"name": "Fixed Form Fortran",
+				"scope": "source.fixedform-fortran"
+			},
+			{
 				"name": "Modern Fortran",
 				"scope": "source.modern-fortran"
 			}
@@ -788,7 +771,7 @@
 					"fsi",
 					"fsx"
 				],
-				"name": "F#",
+				"name": "Plain Text (F#)",
 				"scope": "source.fsharp"
 			}
 		]
@@ -853,7 +836,7 @@
 				"extensions": [
 					"gradle"
 				],
-				"name": "Gradle_Language",
+				"name": "Plain Text (Gradle)",
 				"scope": "source.gradle"
 			}
 		]
@@ -934,7 +917,7 @@
 					"ppo",
 					"prg"
 				],
-				"name": "Harbour",
+				"name": "Plain Text (Harbour)",
 				"scope": "source.harbour"
 			}
 		]
@@ -957,7 +940,7 @@
 					"hxsl",
 					"hscript"
 				],
-				"name": "Haxe",
+				"name": "Plain Text (Haxe)",
 				"scope": "source.haxe"
 			}
 		]
@@ -1069,7 +1052,7 @@
 				"extensions": [
 					"jl"
 				],
-				"name": "Julia",
+				"name": "Plain Text (Julia)",
 				"scope": "source.julia"
 			}
 		]
@@ -1082,7 +1065,7 @@
 					"kt",
 					"kts"
 				],
-				"name": "Kotlin",
+				"name": "Plain Text (Kotlin)",
 				"scope": "source.Kotlin"
 			}
 		]
@@ -1095,7 +1078,7 @@
 					"less",
 					"css.less"
 				],
-				"name": "LESS",
+				"name": "Plain Text (LESS)",
 				"scope": "source.less"
 			}
 		]
@@ -1131,7 +1114,7 @@
 				"extensions": [
 					"liquid"
 				],
-				"name": "Siteleaf Liquid Syntax",
+				"name": "Plain Text (Liquid)",
 				"scope": "text.html.liquid"
 			}
 		]
@@ -1178,14 +1161,14 @@
 				"extensions": [
 					"lsl"
 				],
-				"name": "LSL",
+				"name": "Plain Text (LSL)",
 				"scope": "source.lsl"
 			},
 			{
 				"extensions": [
 					"ossl"
 				],
-				"name": "LSL",
+				"name": "Plain Text (OSSL)",
 				"scope": "source.ossl"
 			}
 		]
@@ -1215,7 +1198,7 @@
 				"extensions": [
 					"mdx"
 				],
-				"name": "MDX (Markdown JSX)",
+				"name": "Plain Text (Markdown JSX)",
 				"scope": "text.html.markdown.jsx"
 			}
 		]
@@ -1227,7 +1210,7 @@
 		"color": "orange",
 		"syntaxes": [
 			{
-				"name": "MATLAB",
+				"name": "MatLab",
 				"scope": "source.matlab"
 			}
 		]
@@ -1239,7 +1222,7 @@
 				"extensions": [
 					"mel"
 				],
-				"name": "MEL",
+				"name": "Plain Text (MEL)",
 				"scope": "source.mel"
 			}
 		]
@@ -1248,11 +1231,11 @@
 		"color": "orange",
 		"syntaxes": [
 			{
-				"name": "HTML (Mustache)",
+				"name": "Plain Text (Mustache)",
 				"scope": "txt.html.mustache"
 			},
 			{
-				"name": "HTML (Hogan)",
+				"name": "Plain Text (Hogan)",
 				"scope": "text.html.hgn"
 			},
 			{
@@ -1270,11 +1253,11 @@
 					"rac",
 					"stache"
 				],
-				"name": "HTML (Handlebars)",
+				"name": "Plain Text (Handlebars)",
 				"scope": "text.html.handlebars"
 			},
 			{
-				"name": "Hamlbars",
+				"name": "Plain Text (Hamlbars)",
 				"scope": "source.hamlbars"
 			}
 		]
@@ -1292,7 +1275,7 @@
 					"scgi_params",
 					"uwsgi_params"
 				],
-				"name": "nginx",
+				"name": "Plain Text (nginx)",
 				"scope": "source.nginx"
 			}
 		]
@@ -1317,7 +1300,7 @@
 				"extensions": [
 					"note"
 				],
-				"name": "PlainNotes",
+				"name": "Plain Text (PlainNotes)",
 				"scope": "text.html.markdown.note"
 			}
 		]
@@ -1356,7 +1339,7 @@
 					"bnsh",
 					"nsdincgit"
 				],
-				"name": "NSIS",
+				"name": "Plain Text (NSIS)",
 				"scope": "source.nsis"
 			}
 		]
@@ -1400,7 +1383,7 @@
 				"extensions": [
 					"pcb"
 				],
-				"name": "Gerber fabrication files",
+				"name": "Plain Text (Gerber fabrication files)",
 				"scope": "text.plain.pcb"
 			}
 		],
@@ -1444,6 +1427,7 @@
 		"color": "cyan",
 		"syntaxes": [
 			{
+				"base": "text.xml",
 				"extensions": [
 					"plist",
 					"tmLanguage",
@@ -1451,7 +1435,7 @@
 					"tmSnippet",
 					"tmPreferences"
 				],
-				"name": "plist",
+				"name": "XML (plist)",
 				"scope": "text.plist"
 			}
 		]
@@ -1463,7 +1447,7 @@
 				"extensions": [
 					".postcssrc"
 				],
-				"name": "JSON (PostCSS)",
+				"name": "JSON (Post CSS)",
 				"scope": "source.json.postcss"
 			},
 			{
@@ -1471,7 +1455,7 @@
 				"extensions": [
 					"postcss.config.js"
 				],
-				"name": "JavaScript (PostCSS)",
+				"name": "JavaScript (Post CSS)",
 				"scope": "source.js.postcss"
 			}
 		],
@@ -1482,7 +1466,7 @@
 					"pcss",
 					"postcss"
 				],
-				"name": "Syntax Highlighting for Post CSS",
+				"name": "Plain Text (Post CSS)",
 				"scope": "source.postcss"
 			}
 		]
@@ -1511,7 +1495,7 @@
 					"psm1",
 					"psd1"
 				],
-				"name": "PowerShell",
+				"name": "Plain Text (PowerShell)",
 				"scope": "source.powershell"
 			}
 		]
@@ -1594,14 +1578,14 @@
 				"extensions": [
 					"jade"
 				],
-				"name": "Jade",
+				"name": "Plain Text (Jade)",
 				"scope": "text.jade"
 			},
 			{
 				"extensions": [
 					"pug"
 				],
-				"name": "Pug",
+				"name": "Plain Text (Pug)",
 				"scope": "text.pug"
 			}
 		]
@@ -1614,7 +1598,7 @@
 					"pp",
 					"epp"
 				],
-				"name": "Puppet",
+				"name": "Plain Text (Puppet)",
 				"scope": "source.puppet"
 			}
 		]
@@ -1730,7 +1714,7 @@
 				"extensions": [
 					"sass"
 				],
-				"name": "Sass",
+				"name": "Plain Text (Sass)",
 				"scope": "source.sass"
 			}
 		]
@@ -1751,7 +1735,7 @@
 				"extensions": [
 					"scss"
 				],
-				"name": "SCSS",
+				"name": "Plain Text (SCSS)",
 				"scope": "source.scss"
 			}
 		]
@@ -1793,7 +1777,7 @@
 					"buildozer.spec",
 					".editorconfig"
 				],
-				"name": "INI",
+				"name": "Plain Text (INI)",
 				"scope": "source.ini"
 			},
 			{
@@ -1819,7 +1803,7 @@
 					".envrc",
 					".flaskenv"
 				],
-				"name": "Dot ENV",
+				"name": "Plain Text (Dot ENV)",
 				"scope": "source.env"
 			}
 		]
@@ -1835,7 +1819,7 @@
 				"extensions": [
 					"fish"
 				],
-				"name": "Shell Script (Fish)",
+				"name": "Plain Text (Fish)",
 				"scope": "source.fish"
 			}
 		]
@@ -1860,7 +1844,7 @@
 					"slim",
 					"skim"
 				],
-				"name": "Ruby Slim",
+				"name": "Plain Text (Ruby Slim)",
 				"scope": "text.slim"
 			}
 		]
@@ -1885,7 +1869,7 @@
 					"do",
 					"ado"
 				],
-				"name": "Stata",
+				"name": "Plain Text (Stata)",
 				"scope": "source.stata"
 			}
 		]
@@ -1938,7 +1922,7 @@
 					"styl",
 					"stylus"
 				],
-				"name": "Stylus",
+				"name": "Plain Text (Stylus)",
 				"scope": "source.stylus"
 			}
 		]
@@ -1995,7 +1979,7 @@
 					"svlt",
 					"svelte"
 				],
-				"name": "Svelte",
+				"name": "Plain Text (Svelte)",
 				"scope": "text.html.svelte"
 			}
 		]
@@ -2020,7 +2004,7 @@
 				"extensions": [
 					"swift"
 				],
-				"name": "Swift",
+				"name": "Plain Text (Swift)",
 				"scope": "source.swift"
 			}
 		]
@@ -2065,7 +2049,7 @@
 					"tfvars",
 					"hcl"
 				],
-				"name": "Terraform",
+				"name": "Plain Text (Terraform)",
 				"scope": "source.terraform"
 			}
 		]
@@ -2168,7 +2152,7 @@
 					"tasks",
 					"todolist.txt"
 				],
-				"name": "PlainTasks",
+				"name": "Plain Text (PlainTasks)",
 				"scope": "text.todo"
 			}
 		]
@@ -2184,7 +2168,7 @@
 					"Gopkg.lock",
 					"Pipfile"
 				],
-				"name": "TOML",
+				"name": "Plain Text (TOML)",
 				"scope": "source.toml"
 			}
 		]
@@ -2193,7 +2177,10 @@
 		"color": "sky",
 		"syntaxes": [
 			{
-				"name": "TypeScript React",
+				"extensions": [
+					"tsx"
+				],
+				"name": "Plain Text (TypeScript React)",
 				"scope": "source.tsx"
 			},
 			{
@@ -2223,7 +2210,7 @@
 				"extensions": [
 					"ts"
 				],
-				"name": "TypeScript",
+				"name": "Plain Text (TypeScript)",
 				"scope": "source.ts"
 			},
 			{
@@ -2252,7 +2239,7 @@
 					"cginc",
 					"shader"
 				],
-				"name": "Shader (Unity 3D)",
+				"name": "Plain Text (Unity 3D Shader)",
 				"scope": "source.shader"
 			}
 		]
@@ -2267,7 +2254,7 @@
 					"vho",
 					"vht"
 				],
-				"name": "VHDL",
+				"name": "Plain Text (VHDL)",
 				"scope": "source.vhdl"
 			},
 			{
@@ -2277,7 +2264,7 @@
 					"svh",
 					"vh"
 				],
-				"name": "SystemVerilog",
+				"name": "Plain Text (SystemVerilog)",
 				"scope": "source.systemverilog"
 			},
 			{
@@ -2285,7 +2272,7 @@
 					"v",
 					"V"
 				],
-				"name": "Verilog",
+				"name": "Plain Text (Verilog)",
 				"scope": "source.verilog"
 			}
 		]
@@ -2337,7 +2324,7 @@
 					"vim",
 					".vimrc"
 				],
-				"name": "VimL",
+				"name": "Plain Text (VimL)",
 				"scope": "source.viml"
 			}
 		]
@@ -2380,7 +2367,7 @@
 				"extensions": [
 					"vue"
 				],
-				"name": "HTML (Vue)",
+				"name": "Plain Text (Vue)",
 				"scope": "text.html.vue"
 			}
 		]
