@@ -360,7 +360,6 @@
 					"cpy",
 					"cob",
 					"dds",
-					"ss",
 					"wks",
 					"pco"
 				],
@@ -958,8 +957,13 @@
 		"aliases": [
 			{
 				"extensions": [
+					"bmp",
 					"emf",
+					"gif",
 					"jp2",
+					"jpeg",
+					"jpg",
+					"png",
 					"pnm",
 					"ppm",
 					"tga",
@@ -1268,7 +1272,6 @@
 			{
 				"extensions": [
 					"conf.erb",
-					"conf",
 					"nginx.conf",
 					"mime.types",
 					"fastcgi_params",
@@ -1765,6 +1768,7 @@
 					"reg",
 					"url",
 					"conf",
+					"config",
 					"Doxyfile",
 					"DoxyfileTemplate",
 					"DoxyfileTemplate.cfg",
