@@ -2247,6 +2247,10 @@
 				"scope": "source.js.unity3d"
 			},
 			{
+				"extensions": [
+					"cginc",
+					"shader"
+				],
 				"name": "Shader (Unity 3D)",
 				"scope": "source.shader"
 			}
