@@ -1435,7 +1435,7 @@
 				"scope": "embedding.php"
 			},
 			{
-				"name": "HTML (PHP)",
+				"name": "PHP",
 				"scope": "source.php"
 			}
 		]
@@ -2210,7 +2210,7 @@
 					"twig",
 					"html.twig"
 				],
-				"name": "PHP-Twig",
+				"name": "PHP (Twig)",
 				"scope": "text.html.twig"
 			}
 		]
