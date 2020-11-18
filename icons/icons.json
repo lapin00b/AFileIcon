@@ -2372,10 +2372,11 @@
 		"color": "cyan",
 		"syntaxes": [
 			{
+				"base": "text.html.basic",
 				"extensions": [
 					"vue"
 				],
-				"name": "Vue Syntax Highlight",
+				"name": "HTML (Vue)",
 				"scope": "text.html.vue"
 			}
 		]
