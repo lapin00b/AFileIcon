@@ -1251,25 +1251,29 @@
 		"color": "orange",
 		"syntaxes": [
 			{
-				"base": "text.html.basic",
-				"extensions": [
-					"mst",
-					"mustache"
-				],
 				"name": "HTML (Mustache)",
 				"scope": "txt.html.mustache"
 			},
 			{
-				"base": "text.html.basic",
-				"extensions": [
-					"hgn",
-					"hjs"
-				],
 				"name": "HTML (Hogan)",
 				"scope": "text.html.hgn"
 			},
 			{
 				"base": "text.html.basic",
+				"extensions": [
+					"handlebars",
+					"hbr",
+					"hbrs",
+					"hbs",
+					"hgn",
+					"hjs",
+					"mst",
+					"mu",
+					"mustache",
+					"hdbs",
+					"rac",
+					"stache"
+				],
 				"name": "HTML (Handlebars)",
 				"scope": "text.html.handlebars"
 			},
