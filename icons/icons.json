@@ -295,7 +295,6 @@
 				"scope": "source.cfscript.cfc"
 			},
 			{
-				"base": "text.html.basic",
 				"extensions": [
 					"cfm"
 				],
@@ -303,7 +302,6 @@
 				"scope": "text.html.cfm"
 			},
 			{
-				"base": "text.html.basic",
 				"extensions": [
 					"cfml"
 				],
@@ -696,7 +694,6 @@
 				"scope": "text.elixir"
 			},
 			{
-				"base": "text.html.basic",
 				"extensions": [
 					"html.eex",
 					"html.leex"
@@ -1259,7 +1256,6 @@
 				"scope": "text.html.hgn"
 			},
 			{
-				"base": "text.html.basic",
 				"extensions": [
 					"handlebars",
 					"hbr",
@@ -2381,7 +2377,6 @@
 		"color": "cyan",
 		"syntaxes": [
 			{
-				"base": "text.html.basic",
 				"extensions": [
 					"vue"
 				],
