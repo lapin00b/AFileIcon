@@ -71,12 +71,8 @@ def check(desired_state):
 
 def disable():
     log("Disabling aliases")
-
-    def do_disable():
-        shutil.rmtree(path.overlay_cache_path(), ignore_errors=True)
-        shutil.rmtree(path.overlay_aliases_path(), ignore_errors=True)
-
-    sublime.set_timeout_async(do_disable)
+    shutil.rmtree(path.overlay_cache_path(), ignore_errors=True)
+    shutil.rmtree(path.overlay_aliases_path(), ignore_errors=True)
 
 
 def enable():
