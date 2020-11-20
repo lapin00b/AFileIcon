@@ -28,11 +28,12 @@ def create_preferences(icons):
     package_root = os.path.dirname(os.path.dirname(__file__))
 
     for name, data in icons.items():
-        scopes = {
-            syntax["scope"]
-            for syntaxes in ("aliases", "syntaxes")
-            for syntax in data.get(syntaxes, [])
-        }
+        scopes = set()
+        for keys in ("aliases", "syntaxes"):
+            for syntax in data.get(keys, []):
+                for scope in syntax["scope"].split(","):
+                    scopes.add(scope.strip())
+
         if scopes:
             with open(
                 os.path.join(package_root, "preferences", name + ".tmPreferences"), "w"
