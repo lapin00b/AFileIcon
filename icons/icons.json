@@ -209,12 +209,14 @@
 		"color": "green",
 		"syntaxes": [
 			{
+				"base": "source.python",
 				"extensions": [
 					"BUILD",
 					"WORKSPACE",
+					"bazel",
 					"bzl"
 				],
-				"name": "Plain Text (Bazel)",
+				"name": "Python (Bazel)",
 				"scope": "source.bazel"
 			}
 		]
