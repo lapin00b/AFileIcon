@@ -127,7 +127,7 @@ class AsyncAliasCreator(threading.Thread):
     def _create_alias_file(self, alias):
         name = alias["name"]
         scope = alias["scope"].split(",", 1)[0]
-        exts = '\n  - '.join(alias["extensions"])
+        exts = "\n  - ".join(alias["extensions"])
         base = alias.get("base")
 
         path = os.path.join(self.dest_path, name + ".sublime-syntax")
