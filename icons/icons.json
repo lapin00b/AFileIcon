@@ -2212,9 +2212,6 @@
 		"color": "sky",
 		"syntaxes": [
 			{
-				"extensions": [
-					"ts"
-				],
 				"name": "Plain Text (TypeScript)",
 				"scope": "source.ts"
 			},
