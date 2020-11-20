@@ -1577,6 +1577,15 @@
 		]
 	},
 	"file_type_python": {
+		"aliases": [
+			{
+				"extensions": [
+					".python-version"
+				],
+				"name": "Plain Text (Python)",
+				"scope": "text.plain.python"
+			}
+		],
 		"color": "yellow",
 		"syntaxes": [
 			{
@@ -1906,7 +1915,6 @@
 				"base": "source.json",
 				"extensions": [
 					".no-sublime-package",
-					".python-version",
 					".sublime-project",
 					"hidden-color-scheme",
 					"hidden-theme",
