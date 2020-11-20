@@ -1780,8 +1780,7 @@
 					"Doxyfile.base",
 					"Doxyfile.inc",
 					"Doxyfile.include",
-					"buildozer.spec",
-					".editorconfig"
+					"buildozer.spec"
 				],
 				"name": "Plain Text (INI)",
 				"scope": "source.ini"
