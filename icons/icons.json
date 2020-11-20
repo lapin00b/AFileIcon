@@ -2354,9 +2354,11 @@
 					"vcxproj",
 					"vsproj",
 					"props",
+					"resx",
 					"ruleset",
 					"settings",
-					"targets"
+					"targets",
+					"xaml"
 				],
 				"name": "XML (Visual Studio)",
 				"scope": "text.xml.visualstudio"
