@@ -80,14 +80,14 @@
 					"ng.html"
 				],
 				"name": "HTML (Angular JS)",
-				"scope": "text.html.angularjs"
+				"scope": "text.html.angularjs, text.html.basic.angularjs"
 			},
 			{
-				"name": "Angular JS",
-				"scope": "text.html.basic.angularjs"
-			},
-			{
-				"name": "Ngx HTML",
+				"base": "text.html.basic",
+				"extensions": [
+					"component.html"
+				],
+				"name": "HTML (Ngx)",
 				"scope": "text.html.ngx"
 			}
 		]
@@ -152,16 +152,12 @@
 		"color": "cyan",
 		"syntaxes": [
 			{
-				"name": "Arduino",
-				"scope": "source.c++.arduino"
-			},
-			{
 				"extensions": [
 					"ino",
 					"pde"
 				],
 				"name": "Plain Text (Arduino)",
-				"scope": "source.arduino"
+				"scope": "source.arduino, source.c++.arduino"
 			}
 		]
 	},
@@ -296,19 +292,7 @@
 					"cfml"
 				],
 				"name": "Plain Text (ColdFusion)",
-				"scope": "source.cfscript.cfc"
-			},
-			{
-				"name": "HTML (ColdFusion)",
-				"scope": "text.html.cfm"
-			},
-			{
-				"name": "CFML",
-				"scope": "source.cfml.script"
-			},
-			{
-				"name": "Embedding CFML",
-				"scope": "embedding.cfml"
+				"scope": "source.cfscript.cfc, text.html.cfm, source.cfml.script, embedding.cfml"
 			}
 		]
 	},
@@ -343,11 +327,7 @@
 					"cmake"
 				],
 				"name": "Plain Text (CMake)",
-				"scope": "source.cmake"
-			},
-			{
-				"name": "CMakeEditor",
-				"scope": "source.cmakeeditor"
+				"scope": "source.cmake, source.cmakeeditor"
 			}
 		]
 	},
@@ -438,7 +418,7 @@
 					"csv"
 				],
 				"name": "Plain Text (CSV)",
-				"scope": "text.csv"
+				"scope": "text.csv, text.advanced_csv"
 			}
 		],
 		"color": "green",
@@ -671,23 +651,13 @@
 			{
 				"extensions": [
 					"ex",
-					"exs"
-				],
-				"name": "Plain Text (Elixir)",
-				"scope": "source.elixir"
-			},
-			{
-				"extensions": [
+					"exs",
 					"eex",
 					"html.eex",
 					"html.leex"
 				],
-				"name": "Plain Text (EEx)",
-				"scope": "text.elixir"
-			},
-			{
-				"name": "HTML (EEx)",
-				"scope": "text.html.elixir"
+				"name": "Plain Text (Elixir)",
+				"scope": "text.elixir, text.html.elixir, source.elixir"
 			}
 		]
 	},
@@ -1237,12 +1207,15 @@
 		"color": "orange",
 		"syntaxes": [
 			{
+				"extensions": [
+					"hgn",
+					"hjs",
+					"mst",
+					"mu",
+					"mustache"
+				],
 				"name": "Plain Text (Mustache)",
-				"scope": "txt.html.mustache"
-			},
-			{
-				"name": "Plain Text (Hogan)",
-				"scope": "text.html.hgn"
+				"scope": "txt.html.mustache, text.html.handlebars, text.html.hgn"
 			},
 			{
 				"extensions": [
@@ -1250,11 +1223,6 @@
 					"hbr",
 					"hbrs",
 					"hbs",
-					"hgn",
-					"hjs",
-					"mst",
-					"mu",
-					"mustache",
 					"hdbs",
 					"rac",
 					"stache"

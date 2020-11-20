@@ -17,10 +17,11 @@ EMPTY_TEMPLATE = dedent(
     """
     %YAML 1.2
     ---
-    name: {name}
-    scope: {scope}
+    name: {0}
+    scope: {1}
     hidden: true
-    file_extensions: {extensions}
+    file_extensions:
+      - {2}
     contexts:
       main: []
     """
@@ -31,13 +32,14 @@ if int(sublime.version()) > 4075:
         """
         %YAML 1.2
         ---
-        name: {name}
-        scope: {scope}
+        name: {0}
+        scope: {1}
         hidden: true
-        file_extensions: {extensions}
+        file_extensions:
+          - {2}
         contexts:
           main:
-            - include: scope:{base}
+            - include: scope:{3}
               apply_prototype: true
         """
     ).lstrip()
@@ -47,14 +49,15 @@ else:
         """
         %YAML 1.2
         ---
-        name: {name}
-        scope: {scope}
+        name: {0}
+        scope: {1}
         hidden: true
-        file_extensions: {extensions}
+        file_extensions:
+          - {2}
         contexts:
           main:
-            - include: scope:{base}#prototype
-            - include: scope:{base}
+            - include: scope:{3}#prototype
+            - include: scope:{3}
         """
     ).lstrip()
 
@@ -111,22 +114,33 @@ class AsyncAliasCreator(threading.Thread):
             for file_type in icons_json_content().values():
                 self._create_aliases(file_type.get("aliases", []))
 
+    def _has_real_syntax(self, selector):
+        selector = [s.strip() for s in selector.split(",")]
+        for scope in selector:
+            if scope.strip() in self.real_syntax:
+                return True
+        return False
+
     def _create_aliases(self, syntaxes):
         for syntax in syntaxes:
-            if syntax["scope"] in self.real_syntax:
+            if self._has_real_syntax(syntax["scope"]):
                 self._delete_alias_file(syntax)
             elif "extensions" in syntax:
                 self._create_alias_file(syntax)
 
     def _create_alias_file(self, alias):
-        alias_path = os.path.join(self.dest_path, alias["name"] + ".sublime-syntax")
+        name = alias["name"]
+        scope = alias["scope"].split(",", 1)[0]
+        exts = '\n  - '.join(alias["extensions"])
+        base = alias.get("base")
 
+        path = os.path.join(self.dest_path, name + ".sublime-syntax")
         try:
-            with open(alias_path, "x", encoding="utf-8") as out:
-                if "base" in alias:
-                    out.write(MAIN_TEMPLATE.format(**alias))
+            with open(path, "x", encoding="utf-8") as out:
+                if base:
+                    out.write(MAIN_TEMPLATE.format(name, scope, exts, base))
                 else:
-                    out.write(EMPTY_TEMPLATE.format(**alias))
+                    out.write(EMPTY_TEMPLATE.format(name, scope, exts, base))
         except FileExistsError:
             pass
         except Exception as error:
