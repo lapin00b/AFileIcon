@@ -1403,6 +1403,10 @@
 				"base": "text.xml",
 				"extensions": [
 					"plist",
+					"hidden-tmLanguage",
+					"hidden-tmTheme",
+					"hidden-tmSnippet",
+					"hidden-tmPreferences",
 					"tmLanguage",
 					"tmTheme",
 					"tmSnippet",
