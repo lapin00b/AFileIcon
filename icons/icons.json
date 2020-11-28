@@ -2133,6 +2133,7 @@
 		"aliases": [
 			{
 				"extensions": [
+					"AUTHORS",
 					"NOTICE",
 					"README",
 					"RELEASE-NOTES"
