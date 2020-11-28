@@ -2130,6 +2130,17 @@
 		]
 	},
 	"file_type_text": {
+		"aliases": [
+			{
+				"extensions": [
+					"NOTICE",
+					"README",
+					"RELEASE-NOTES"
+				],
+				"name": "Plain Text (Readme)",
+				"scope": "text.plain.readme"
+			}
+		],
 		"color": "yellow"
 	},
 	"file_type_textile": {
