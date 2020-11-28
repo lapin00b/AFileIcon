@@ -977,6 +977,20 @@
 			}
 		]
 	},
+	"file_type_jenkins": {
+		"aliases": [
+			{
+				"base": "source.groovy",
+				"extensions": [
+					"Jenkinsfile",
+					"jenkins"
+				],
+				"name": "Groovy (Jenkins)",
+				"scope": "source.groovy.jenkins"
+			}
+		],
+		"color": "cyan"
+	},
 	"file_type_js": {
 		"color": "yellow",
 		"syntaxes": [
