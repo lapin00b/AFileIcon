@@ -677,6 +677,24 @@
 		],
 		"color": "green"
 	},
+	"file_type_fastq": {
+		"aliases": [
+			{
+				"extensions": [
+					"fastq",
+					"fq",
+					"fasta",
+					"fa",
+					"gff",
+					"gff3",
+					"gtf"
+				],
+				"name": "Plain Text (FastQ)",
+				"scope": "text.plain.fastq"
+			}
+		],
+		"color": "sky"
+	},
 	"file_type_font": {
 		"aliases": [
 			{
