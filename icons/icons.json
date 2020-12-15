@@ -677,6 +677,24 @@
 		],
 		"color": "green"
 	},
+	"file_type_fastq": {
+		"aliases": [
+			{
+				"extensions": [
+					"fastq",
+					"fq",
+					"fasta",
+					"fa",
+					"gff",
+					"gff3",
+					"gtf"
+				],
+				"name": "Plain Text (FastQ)",
+				"scope": "text.plain.fastq"
+			}
+		],
+		"color": "sky"
+	},
 	"file_type_font": {
 		"aliases": [
 			{
@@ -976,6 +994,20 @@
 				"scope": "source.java"
 			}
 		]
+	},
+	"file_type_jenkins": {
+		"aliases": [
+			{
+				"base": "source.groovy",
+				"extensions": [
+					"Jenkinsfile",
+					"jenkins"
+				],
+				"name": "Groovy (Jenkins)",
+				"scope": "source.groovy.jenkins"
+			}
+		],
+		"color": "cyan"
 	},
 	"file_type_js": {
 		"color": "yellow",
@@ -1403,6 +1435,10 @@
 				"base": "text.xml",
 				"extensions": [
 					"plist",
+					"hidden-tmLanguage",
+					"hidden-tmTheme",
+					"hidden-tmSnippet",
+					"hidden-tmPreferences",
 					"tmLanguage",
 					"tmTheme",
 					"tmSnippet",
@@ -1744,7 +1780,6 @@
 					"inf",
 					"lng",
 					"pbk",
-					"reg",
 					"url",
 					"conf",
 					"config",
@@ -2113,6 +2148,18 @@
 		]
 	},
 	"file_type_text": {
+		"aliases": [
+			{
+				"extensions": [
+					"AUTHORS",
+					"NOTICE",
+					"README",
+					"RELEASE-NOTES"
+				],
+				"name": "Plain Text (Readme)",
+				"scope": "text.plain.readme"
+			}
+		],
 		"color": "yellow"
 	},
 	"file_type_textile": {
