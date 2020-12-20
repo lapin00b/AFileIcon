@@ -94,7 +94,7 @@ Example:
 
 [![ActionScript Icon](https://github.com/SublimeText/AFileIcon/blob/develop/icons/svg/file_type_actionscript.svg)](https://github.com/SublimeText/AFileIcon/blob/develop/icons/svg/file_type_actionscript.svg)
 
-```svg
+```xml
 <svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" fill="#000" viewBox="0 0 16 16">
   <path d="M11.174,9.341A2.586,2.586,0,1,1,9.345,6.176,2.586,2.586,0,0,1,11.174,9.341Zm1.389-1.713A6.757,6.757,0,0,1,12.6,4.2,2.639,2.639,0,0,0,7.5,2.879,6.749,6.749,0,0,1,5.958,5.7a6.41,6.41,0,0,1-3,1.766,2.641,2.641,0,1,0,1.368,5.1,6.349,6.349,0,0,1,3.309-.016,6.782,6.782,0,0,1,2.985,1.776,2.611,2.611,0,0,0,3.609-.108,2.639,2.639,0,0,0,.09-3.631A6.786,6.786,0,0,1,12.562,7.628Z"/>
 </svg>
@@ -109,7 +109,7 @@ Currently Sublime Text requires syntax definitions to apply icons. This means th
 
 For example:
 
-```js
+```json
 "file_type_git": {
   "color": "orange",
   "syntaxes": [
