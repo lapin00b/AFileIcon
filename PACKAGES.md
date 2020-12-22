@@ -156,6 +156,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Nginx](https://packagecontrol.io/packages/nginx)
 
+## Nim
+
+- [NimLime](https://packagecontrol.io/packages/NimLime)
+
 ## Notes
 
 - [PlainNotes](https://packagecontrol.io/packages/PlainNotes)
