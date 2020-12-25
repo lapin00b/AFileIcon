@@ -2400,6 +2400,8 @@
 					"ruleset",
 					"settings",
 					"targets",
+					"wxl",
+					"wxs",
 					"xaml"
 				],
 				"name": "XML (Visual Studio)",
