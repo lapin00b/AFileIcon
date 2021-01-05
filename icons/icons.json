@@ -1285,6 +1285,27 @@
 			}
 		]
 	},
+	"file_type_nim": {
+		"color": "yellow",
+		"syntaxes": [
+			{
+				"extensions": [
+					"nim",
+					"nims",
+					"nimble"
+				],
+				"name": "Plain Text (Nim)",
+				"scope": "source.nim"
+			},
+			{
+				"extensions": [
+					"nimf"
+				],
+				"name": "Plain Text (Nim Filter)",
+				"scope": "source.nim_filter"
+			}
+		]
+	},
 	"file_type_nodejs": {
 		"aliases": [
 			{
@@ -2379,6 +2400,8 @@
 					"ruleset",
 					"settings",
 					"targets",
+					"wxl",
+					"wxs",
 					"xaml"
 				],
 				"name": "XML (Visual Studio)",
