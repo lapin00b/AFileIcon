@@ -1,11 +1,11 @@
 all:
-  python build -i -p
+	python build -i -p
 
 icons:
-  python build -i
+	python build -i
 
 preferences:
-  python build -p
+	python build -p
 
 check:
-  black --check .
+	black --check .
