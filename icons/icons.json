@@ -1673,6 +1673,18 @@
 			}
 		]
 	},
+	"file_type_reach": {
+		"color": "green",
+		"syntaxes": [
+			{
+				"extensions": [
+					"rsh"
+				],
+				"name": "Reach",
+				"scope": "source.rsh"
+			}
+		]
+	},
 	"file_type_react": {
 		"color": "sky",
 		"syntaxes": [

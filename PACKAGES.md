@@ -193,6 +193,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Puppet](https://packagecontrol.io/packages/Puppet)
 
+## Reach
+
+- [Reach IDE](https://packagecontrol.io/packages/Reach%20IDE)
+
 ## Registry
 
 - [REG](https://packagecontrol.io/packages/REG)
