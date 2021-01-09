@@ -1680,7 +1680,7 @@
 				"extensions": [
 					"rsh"
 				],
-				"name": "Reach",
+				"name": "Plain Text (Reach)",
 				"scope": "source.rsh"
 			}
 		]
