@@ -2302,6 +2302,19 @@
 			}
 		]
 	},
+	"file_type_vala": {
+		"color": "sky",
+		"syntaxes": [
+			{
+				"extensions": [
+					"vala",
+					"vapi"
+				],
+				"name": "Plain Text (Vala)",
+				"scope": "source.vala"
+			}
+		]
+	},
 	"file_type_vhdl": {
 		"color": "blue",
 		"syntaxes": [
