@@ -2307,6 +2307,13 @@
 		"syntaxes": [
 			{
 				"extensions": [
+					"gs"
+				],
+				"name": "Plain Text (Genie)",
+				"scope": "source.genie"
+			},
+			{
+				"extensions": [
 					"vala",
 					"vapi"
 				],
