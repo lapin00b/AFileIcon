@@ -1569,6 +1569,19 @@
 		],
 		"color": "purple"
 	},
+	"file_type_protobuf": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"proto",
+					"protodevel"
+				],
+				"name": "Plain Text (Protobuf)",
+				"scope": "source.proto"
+			}
+		]
+	},
 	"file_type_psd": {
 		"aliases": [
 			{

@@ -185,6 +185,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Syntax Highlighting for Post​CSS](https://packagecontrol.io/packages/Syntax%20Highlighting%20for%20PostCSS)
 
+## Protobuf
+
+- [Protobuf Syntax Hightlighting](https://packagecontrol.io/packages/Protobuf%20Syntax%20Hightlighting)
+
 ## Pug (PKA Jade)
 
 - [Pug](https://github.com/davidrios/pug-tmbundle)
