@@ -247,6 +247,19 @@
 		],
 		"color": "yellow"
 	},
+	"file_type_cabal": {
+		"color": "blue",
+		"syntaxes": [
+			{
+				"extensions": [
+					"cabal",
+					"cabal.project"
+				],
+				"name": "Plain Text (Cabal)",
+				"scope": "source.cabal"
+			}
+		]
+	},
 	"file_type_c": {
 		"color": "purple",
 		"syntaxes": [
