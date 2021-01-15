@@ -2532,6 +2532,21 @@
 		],
 		"color": "blue"
 	},
+	"file_type_xsl": {
+		"color": "sky",
+		"syntaxes": [
+			{
+				"base": "text.xml",
+				"extensions": [
+					"xsd",
+					"xsl",
+					"xslt"
+				],
+				"name": "XSL",
+				"scope": "text.xml.xsl"
+			}
+		]
+	},
 	"file_type_yaml": {
 		"color": "yellow",
 		"syntaxes": [
