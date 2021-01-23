@@ -1478,8 +1478,8 @@
 					"tmSnippet",
 					"tmPreferences"
 				],
-				"name": "XML (plist)",
-				"scope": "text.plist"
+				"name": "XML (PList)",
+				"scope": "text.plist, text.xml.plist"
 			}
 		]
 	},
