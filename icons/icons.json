@@ -247,6 +247,19 @@
 		],
 		"color": "yellow"
 	},
+	"file_type_cabal": {
+		"color": "blue",
+		"syntaxes": [
+			{
+				"extensions": [
+					"cabal",
+					"cabal.project"
+				],
+				"name": "Plain Text (Cabal)",
+				"scope": "source.cabal"
+			}
+		]
+	},
 	"file_type_c": {
 		"color": "purple",
 		"syntaxes": [
@@ -1465,8 +1478,8 @@
 					"tmSnippet",
 					"tmPreferences"
 				],
-				"name": "XML (plist)",
-				"scope": "text.plist"
+				"name": "XML (PList)",
+				"scope": "text.plist, text.xml.plist"
 			}
 		]
 	},
@@ -1569,6 +1582,19 @@
 		],
 		"color": "purple"
 	},
+	"file_type_protobuf": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"proto",
+					"protodevel"
+				],
+				"name": "Plain Text (Protobuf)",
+				"scope": "source.proto"
+			}
+		]
+	},
 	"file_type_psd": {
 		"aliases": [
 			{
@@ -1670,6 +1696,18 @@
 			{
 				"name": "HTML (Rails)",
 				"scope": "text.html.ruby"
+			}
+		]
+	},
+	"file_type_reach": {
+		"color": "green",
+		"syntaxes": [
+			{
+				"extensions": [
+					"rsh"
+				],
+				"name": "Plain Text (Reach)",
+				"scope": "source.rsh"
 			}
 		]
 	},
@@ -2290,6 +2328,26 @@
 			}
 		]
 	},
+	"file_type_vala": {
+		"color": "sky",
+		"syntaxes": [
+			{
+				"extensions": [
+					"gs"
+				],
+				"name": "Plain Text (Genie)",
+				"scope": "source.genie"
+			},
+			{
+				"extensions": [
+					"vala",
+					"vapi"
+				],
+				"name": "Plain Text (Vala)",
+				"scope": "source.vala"
+			}
+		]
+	},
 	"file_type_vhdl": {
 		"color": "blue",
 		"syntaxes": [
@@ -2473,6 +2531,21 @@
 			}
 		],
 		"color": "blue"
+	},
+	"file_type_xsl": {
+		"color": "sky",
+		"syntaxes": [
+			{
+				"base": "text.xml",
+				"extensions": [
+					"xsd",
+					"xsl",
+					"xslt"
+				],
+				"name": "XSL",
+				"scope": "text.xml.xsl"
+			}
+		]
 	},
 	"file_type_yaml": {
 		"color": "yellow",
