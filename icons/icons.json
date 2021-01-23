@@ -456,6 +456,22 @@
 			}
 		]
 	},
+	"file_type_cad": {
+		"color": "orange",
+		"aliases": [
+			{
+				"extensions": [
+					"cad",
+					"stl",
+					"stp",
+					"step",
+					"wrl"
+				],
+				"name": "Plain Text (CAD)",
+				"scope": "text.plain.cad"
+			}
+		]
+	},
 	"file_type_dart": {
 		"color": "cyan",
 		"syntaxes": [
