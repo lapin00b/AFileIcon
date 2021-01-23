@@ -1174,6 +1174,11 @@
 			{
 				"name": "Lisp",
 				"scope": "source.lisp"
+			},
+			{
+				"base": "source.lisp",
+				"name": "Lisp (Autolisp)",
+				"scope": "source.autolisp"
 			}
 		]
 	},
