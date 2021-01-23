@@ -472,6 +472,18 @@
 			}
 		]
 	},
+	"file_type_caddy": {
+		"color": "blue",
+		"syntaxes": [
+			{
+				"extensions": [
+					"Caddyfile"
+				],
+				"name": "Plain Text (Caddyfile)",
+				"scope": "source.Caddyfile"
+			}
+		]
+	},
 	"file_type_dart": {
 		"color": "cyan",
 		"syntaxes": [

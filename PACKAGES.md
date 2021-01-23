@@ -21,6 +21,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [BazelSyntax](https://packagecontrol.io/packages/BazelSyntax)
 
+## Caddyfile
+
+- [Caddyfile Syntax](https://packagecontrol.io/packages/Caddyfile%20Syntax)
+
 ## COBOL
 
 - [COBOL](https://packagecontrol.io/packages/COBOL%20Syntax)
