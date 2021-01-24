@@ -17,9 +17,17 @@ This file contains a list of possible packages you may need to install to see th
 - [Arduino](https://packagecontrol.io/packages/Arduino)
 - [Arduino-like IDE](https://packagecontrol.io/packages/Arduino-like%20IDE)
 
+## Autolisp
+
+- [Autolisp](https://github.com/divtiply/autolisp-sublime)
+
 ## Bazel
 
 - [BazelSyntax](https://packagecontrol.io/packages/BazelSyntax)
+
+## Caddyfile
+
+- [Caddyfile Syntax](https://packagecontrol.io/packages/Caddyfile%20Syntax)
 
 ## COBOL
 

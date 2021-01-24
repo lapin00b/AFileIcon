@@ -2,11 +2,11 @@
 <plist version="1.0">
 	<dict>
 		<key>scope</key>
-		<string>binary.powerpoint</string>
+		<string>source.Caddyfile</string>
 		<key>settings</key>
 		<dict>
 			<key>icon</key>
-			<string>file_type_powerpoint</string>
+			<string>file_type_caddy</string>
 		</dict>
 	</dict>
 </plist>

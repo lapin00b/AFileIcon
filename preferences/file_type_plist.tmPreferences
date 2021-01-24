@@ -2,7 +2,7 @@
 <plist version="1.0">
 	<dict>
 		<key>scope</key>
-		<string>text.plist</string>
+		<string>text.plist, text.xml.plist</string>
 		<key>settings</key>
 		<dict>
 			<key>icon</key>
