@@ -17,8 +17,8 @@
 					"maf",
 					"laccdb"
 				],
-				"name": "Plain Text (Microsoft Access)",
-				"scope": "text.plain.access"
+				"name": "Binary (Microsoft Access)",
+				"scope": "binary.access"
 			}
 		],
 		"color": "red"
@@ -53,8 +53,8 @@
 					"aep",
 					"aet"
 				],
-				"name": "Plain Text (Adobe After Effects)",
-				"scope": "text.plain.ae"
+				"name": "Binary (Adobe After Effects)",
+				"scope": "binary.ae"
 			}
 		],
 		"color": "purple"
@@ -65,8 +65,8 @@
 				"extensions": [
 					"ai"
 				],
-				"name": "Plain Text (Adobe Illustrator)",
-				"scope": "text.plain.ai"
+				"name": "Binary (Adobe Illustrator)",
+				"scope": "binary.ai"
 			}
 		],
 		"color": "orange"
@@ -142,8 +142,8 @@
 					"wim",
 					"zip"
 				],
-				"name": "Plain Text (Archive)",
-				"scope": "text.plain.archive"
+				"name": "Binary (Archive)",
+				"scope": "binary.archive"
 			}
 		],
 		"color": "graphite"
@@ -182,8 +182,8 @@
 					"wav",
 					"wma"
 				],
-				"name": "Plain Text (Audio)",
-				"scope": "text.plain.audio"
+				"name": "Binary (Audio)",
+				"scope": "binary.audio"
 			}
 		],
 		"color": "red"
@@ -727,8 +727,8 @@
 					"xlsb",
 					"xlt"
 				],
-				"name": "Plain Text (Microsoft Excel)",
-				"scope": "text.plain.excel"
+				"name": "Binary (Microsoft Excel)",
+				"scope": "binary.excel"
 			}
 		],
 		"color": "green"
@@ -761,8 +761,8 @@
 					"woff",
 					"woff2"
 				],
-				"name": "Plain Text (Font)",
-				"scope": "text.plain.font"
+				"name": "Binary (Font)",
+				"scope": "binary.font"
 			}
 		],
 		"color": "green"
@@ -1019,8 +1019,8 @@
 					"xbm",
 					"xpm"
 				],
-				"name": "Plain Text (Image)",
-				"scope": "text.plain.image"
+				"name": "Binary (Image)",
+				"scope": "binary.image"
 			}
 		],
 		"color": "green"
@@ -1036,8 +1036,8 @@
 					"inx",
 					"idml"
 				],
-				"name": "Plain Text (Adobe InDesign)",
-				"scope": "text.plain.indesign"
+				"name": "Binary (Adobe InDesign)",
+				"scope": "binary.indesign"
 			}
 		],
 		"color": "pink"
@@ -1458,8 +1458,8 @@
 				"extensions": [
 					"one"
 				],
-				"name": "Plain Text (Microsoft OneNote)",
-				"scope": "text.plain.onenote"
+				"name": "Binary (Microsoft OneNote)",
+				"scope": "binary.onenote"
 			}
 		],
 		"color": "purple"
@@ -1482,8 +1482,8 @@
 				"extensions": [
 					"pdf"
 				],
-				"name": "Plain Text (PDF)",
-				"scope": "text.plain.pdf"
+				"name": "Binary (PDF)",
+				"scope": "binary.pdf"
 			}
 		],
 		"color": "red"
@@ -1571,8 +1571,8 @@
 					"pps",
 					"ppsx"
 				],
-				"name": "Plain Text (Microsoft PowerPoint)",
-				"scope": "text.plain.powerpoint"
+				"name": "Binary (Microsoft PowerPoint)",
+				"scope": "binary.powerpoint"
 			}
 		],
 		"color": "orange"
@@ -1604,8 +1604,8 @@
 					"prproj",
 					"psq"
 				],
-				"name": "Plain Text (Adobe Premiere Pro)",
-				"scope": "text.plain.premiere"
+				"name": "Binary (Adobe Premiere Pro)",
+				"scope": "binary.premiere"
 			}
 		],
 		"color": "purple"
@@ -1650,8 +1650,8 @@
 					"psb",
 					"psd"
 				],
-				"name": "Plain Text (Adobe Photoshop)",
-				"scope": "text.plain.ps"
+				"name": "Binary (Adobe Photoshop)",
+				"scope": "binary.ps"
 			}
 		],
 		"color": "sky"
@@ -2449,8 +2449,8 @@
 					"3gpp",
 					"ogm"
 				],
-				"name": "Plain Text (Video)",
-				"scope": "text.plain.video"
+				"name": "Binary (Video)",
+				"scope": "binary.video"
 			}
 		],
 		"color": "purple"
@@ -2550,8 +2550,8 @@
 				"extensions": [
 					"lnk"
 				],
-				"name": "Plain Text (Windows Shortcut)",
-				"scope": "text.plain.lnk"
+				"name": "Binary (Windows Shortcut)",
+				"scope": "binary.lnk"
 			}
 		],
 		"color": "sky",
@@ -2574,8 +2574,8 @@
 					"dotx",
 					"wri"
 				],
-				"name": "Plain Text (Microsoft Word)",
-				"scope": "text.plain.word"
+				"name": "Binary (Microsoft Word)",
+				"scope": "binary.word"
 			}
 		],
 		"color": "blue"
