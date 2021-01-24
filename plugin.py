@@ -27,7 +27,6 @@ if int(sublime.version()) >= 3114:
         sublime.set_timeout_async(plugin_loaded_async)
 
     def plugin_unloaded():
-
         def cleanup():
             try:
                 clean_all()
@@ -37,6 +36,7 @@ if int(sublime.version()) >= 3114:
         clear_listener()
         disable_overlay()
         sublime.set_timeout_async(cleanup)
+
 
 else:
     raise ImportWarning("Doesn't support Sublime Text versions prior to 3114")
