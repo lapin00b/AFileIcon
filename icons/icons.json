@@ -233,6 +233,21 @@
 			}
 		]
 	},
+	"file_type_blender": {
+		"color": "orange",
+		"aliases": [
+			{
+				"extensions": [
+					"blend",
+					"blend1",
+					"blend2",
+					"blend3"
+				],
+				"name": "Binary (Blender)",
+				"scope": "binary.blender"
+			}
+		]
+	},
 	"file_type_bower": {
 		"aliases": [
 			{
