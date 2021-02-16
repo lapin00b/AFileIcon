@@ -205,6 +205,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Puppet](https://packagecontrol.io/packages/Puppet)
 
+## Qt
+
+- [QML](https://packagecontrol.io/packages/QML)
+
 ## Reach
 
 - [Reach IDE](https://packagecontrol.io/packages/Reach%20IDE)
