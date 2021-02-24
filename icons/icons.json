@@ -1725,6 +1725,40 @@
 			}
 		]
 	},
+	"file_type_qt": {
+		"aliases": [
+			{
+				"extensions": [
+					"qm",
+					"qmlc"
+				],
+				"name": "Binary (Qt)",
+				"scope": "binary.qt"
+			},
+			{
+				"extensions": [
+					"qbs",
+					"qbs.user",
+					"qrc",
+					"rcc"
+				],
+				"name": "Plain Text (Qt)",
+				"scope": "text.plain.qt"
+			}
+		],
+		"color": "green",
+		"syntaxes": [
+			{
+				"extensions": [
+					"qml",
+					"qmlproject",
+					"qmlproject.user"
+				],
+				"name": "Plain Text (QML)",
+				"scope": "source.qml"
+			}
+		]
+	},
 	"file_type_r": {
 		"color": "blue",
 		"syntaxes": [
