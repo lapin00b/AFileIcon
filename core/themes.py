@@ -26,22 +26,25 @@ def patch(settings, overwrite=False):
 
     patched = set()
 
-    log("Patching themes")
-    for package, themes in theme_packages.items():
-        if package in supported:
-            icons.copy_missing(general, specific, package)
-            patched.update(
-                _patch_themes(
-                    themes,
-                    os.path.join(specific, package, color),
-                    specific_patch,
-                    overwrite,
+    if theme_packages:
+        log("Patching themes")
+        for package, themes in theme_packages.items():
+            if package in supported:
+                icons.copy_missing(general, specific, package)
+                patched.update(
+                    _patch_themes(
+                        themes,
+                        os.path.join(specific, package, color),
+                        specific_patch,
+                        overwrite,
+                    )
                 )
-            )
-        else:
-            patched.update(
-                _patch_themes(themes, general_dest, general_patch, overwrite)
-            )
+            else:
+                patched.update(
+                    _patch_themes(themes, general_dest, general_patch, overwrite)
+                )
+    else:
+        log("No themes to patch!")
 
     log("Removing obsolete theme patches")
     for dirpath, dirnames, filenames in os.walk(path.overlay_patches_path()):
@@ -66,13 +69,12 @@ def _customizable_themes():
     log("Getting the list of theme packages with customization support")
 
     customizable = set()
-    for res in _find_package_resources(".supports-a-file-icon-customization"):
-        try:
-            _, package, _ = res.split("/")
-        except ValueError:
-            pass
-        else:
-            customizable.add(package)
+    for res in sublime.find_resources(".supports-a-file-icon-customization"):
+        if not res.startswith("Packages/"):
+            continue
+
+        _, package, _ = res.split("/")
+        customizable.add(package)
 
     dump(customizable)
     return customizable
@@ -84,7 +86,10 @@ def _installed_themes():
     found_themes = set()
     theme_packages = {}
 
-    for res in _find_package_resources("*.sublime-theme"):
+    for res in sublime.find_resources("*.sublime-theme"):
+        if not res.startswith("Packages/"):
+            continue
+
         _, package, *_, theme = res.split("/")
         if package != path.OVERLAY_ROOT:
             if theme not in found_themes:
@@ -93,14 +98,6 @@ def _installed_themes():
 
     dump(theme_packages)
     return theme_packages
-
-
-def _find_package_resources(pattern):
-    return (
-        resource
-        for resource in sublime.find_resources(pattern)
-        if resource.startswith("Packages/")
-    )
 
 
 def _patch_themes(themes, dest, text, overwrite):

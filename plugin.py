@@ -24,7 +24,7 @@ if int(sublime.version()) >= 3114:
             add_listener()
             enable_overlay()
 
-        sublime.set_timeout_async(plugin_loaded_async)
+        sublime.set_timeout_async(plugin_loaded_async, 200)
 
     def plugin_unloaded():
         def cleanup():
