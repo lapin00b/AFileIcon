@@ -22,6 +22,7 @@ def disable_overlay():
     ignored = prefs.get("ignored_packages", [])
     if OVERLAY_ROOT not in ignored:
         prefs.set("ignored_packages", ignored + [OVERLAY_ROOT])
+        sublime.save_settings("Preferences.sublime-settings")
 
 
 def enable_overlay():
@@ -30,3 +31,4 @@ def enable_overlay():
     if OVERLAY_ROOT in ignored:
         ignored.remove(OVERLAY_ROOT)
         prefs.set("ignored_packages", ignored)
+        sublime.save_settings("Preferences.sublime-settings")
