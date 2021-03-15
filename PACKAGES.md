@@ -47,6 +47,10 @@ This file contains a list of possible packages you may need to install to see th
 - [CFML](https://packagecontrol.io/packages/CFML)
 - [ColdFusion](https://github.com/SublimeText/ColdFusion/tree/st3-readme)
 
+## Coreboot
+
+- [Coreboot Syntax](https://packagecontrol.io/packages/Coreboot%20syntax)
+
 ## CSV
 
 - [Advanced CSV](https://packagecontrol.io/packages/Advanced%20CSV)

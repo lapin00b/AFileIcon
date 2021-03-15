@@ -408,6 +408,18 @@
 		],
 		"color": "orange"
 	},
+	"file_type_coreboot": {
+		"color": "sky",
+		"syntaxes": [
+			{
+				"extensions": [
+					"cb"
+				],
+				"name": "Plain Text (Coreboot)",
+				"scope": "source.cb"
+			}
+		]
+	},
 	"file_type_cpp": {
 		"color": "sky",
 		"syntaxes": [
