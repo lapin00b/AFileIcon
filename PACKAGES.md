@@ -29,14 +29,14 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Caddyfile Syntax](https://packagecontrol.io/packages/Caddyfile%20Syntax)
 
-## COBOL
-
-- [COBOL](https://packagecontrol.io/packages/COBOL%20Syntax)
-
 ## CMake
 
 - [CMake](https://packagecontrol.io/packages/CMake)
 - [CMakeEditor](https://packagecontrol.io/packages/CMakeEditor)
+
+## COBOL
+
+- [COBOL](https://packagecontrol.io/packages/COBOL%20Syntax)
 
 ## CoffeeScript
 
