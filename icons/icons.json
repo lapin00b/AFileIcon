@@ -2178,6 +2178,18 @@
 			}
 		]
 	},
+	"file_type_tailwind": {
+		"color": "cyan",
+		"syntaxes": [
+			{
+				"extensions": [
+					"tailwind.css"
+				],
+				"name": "CSS",
+				"scope": "source.css.tailwind"
+			}
+		]
+	},
 	"file_type_tcl": {
 		"color": "yellow",
 		"syntaxes": [

@@ -263,6 +263,10 @@ This file contains a list of possible packages you may need to install to see th
 - [Swift](https://packagecontrol.io/packages/Swift)
 - [Swift for F\*ing Sublime](https://packagecontrol.io/packages/Swift%20for%20F*ing%20Sublime)
 
+## Tailwind CSS
+
+- [Tailwind CSS](https://packagecontrol.io/packages/Tailwind%20CSS)
+
 ## Terraform
 
 - [Terraform](https://github.com/tmichel/sublime-terraform)
