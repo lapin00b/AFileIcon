@@ -1308,6 +1308,15 @@
 			}
 		]
 	},
+	"file_type_mp3tag": {
+		"color": "yellow",
+		"syntaxes": [
+			{
+				"name": "Plain Text (MP3tag)",
+				"scope": "source.mp3tagwsf, text.mp3tag"
+			}
+		]
+	},
 	"file_type_mustache": {
 		"color": "orange",
 		"syntaxes": [
