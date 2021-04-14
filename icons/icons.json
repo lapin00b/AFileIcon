@@ -420,6 +420,18 @@
 			}
 		]
 	},
+	"file_type_cottle": {
+		"color": "orange",
+		"syntaxes": [
+			{
+				"extensions": [
+					"cottle"
+				],
+				"name": "Plain Text (Cottle)",
+				"scope": "source.cottle"
+			}
+		]
+	},
 	"file_type_cpp": {
 		"color": "sky",
 		"syntaxes": [
