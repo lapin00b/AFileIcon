@@ -408,6 +408,30 @@
 		],
 		"color": "orange"
 	},
+	"file_type_coreboot": {
+		"color": "sky",
+		"syntaxes": [
+			{
+				"extensions": [
+					"cb"
+				],
+				"name": "Plain Text (Coreboot)",
+				"scope": "source.cb"
+			}
+		]
+	},
+	"file_type_cottle": {
+		"color": "orange",
+		"syntaxes": [
+			{
+				"extensions": [
+					"cottle"
+				],
+				"name": "Plain Text (Cottle)",
+				"scope": "source.cottle"
+			}
+		]
+	},
 	"file_type_cpp": {
 		"color": "sky",
 		"syntaxes": [
@@ -1296,6 +1320,15 @@
 			}
 		]
 	},
+	"file_type_mp3tag": {
+		"color": "yellow",
+		"syntaxes": [
+			{
+				"name": "Plain Text (MP3tag)",
+				"scope": "source.mp3tagwsf, text.mp3tag"
+			}
+		]
+	},
 	"file_type_mustache": {
 		"color": "orange",
 		"syntaxes": [
@@ -2163,6 +2196,18 @@
 				],
 				"name": "Plain Text (Swift)",
 				"scope": "source.swift"
+			}
+		]
+	},
+	"file_type_tailwind": {
+		"color": "cyan",
+		"syntaxes": [
+			{
+				"extensions": [
+					"tailwind.css"
+				],
+				"name": "CSS",
+				"scope": "source.css.tailwind"
 			}
 		]
 	},

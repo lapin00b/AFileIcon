@@ -29,14 +29,14 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Caddyfile Syntax](https://packagecontrol.io/packages/Caddyfile%20Syntax)
 
-## COBOL
-
-- [COBOL](https://packagecontrol.io/packages/COBOL%20Syntax)
-
 ## CMake
 
 - [CMake](https://packagecontrol.io/packages/CMake)
 - [CMakeEditor](https://packagecontrol.io/packages/CMakeEditor)
+
+## COBOL
+
+- [COBOL](https://packagecontrol.io/packages/COBOL%20Syntax)
 
 ## CoffeeScript
 
@@ -46,6 +46,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [CFML](https://packagecontrol.io/packages/CFML)
 - [ColdFusion](https://github.com/SublimeText/ColdFusion/tree/st3-readme)
+
+## Coreboot
+
+- [Coreboot Syntax](https://packagecontrol.io/packages/Coreboot%20syntax)
 
 ## CSV
 
@@ -258,6 +262,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Swift](https://packagecontrol.io/packages/Swift)
 - [Swift for F\*ing Sublime](https://packagecontrol.io/packages/Swift%20for%20F*ing%20Sublime)
+
+## Tailwind CSS
+
+- [Tailwind CSS](https://packagecontrol.io/packages/Tailwind%20CSS)
 
 ## Terraform
 
