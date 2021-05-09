@@ -1019,7 +1019,7 @@
 		"syntaxes": [
 			{
 				"name": "HTML",
-				"scope": "text.html.basic"
+				"scope": "text.html.basic, text.html.plain"
 			}
 		]
 	},
