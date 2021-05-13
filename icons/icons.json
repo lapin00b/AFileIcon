@@ -970,7 +970,7 @@
 				"extensions": [
 					"haml"
 				],
-				"name": "Ruby Haml",
+				"name": "HAML (Rails)",
 				"scope": "text.haml"
 			}
 		]
@@ -1019,7 +1019,7 @@
 		"syntaxes": [
 			{
 				"name": "HTML",
-				"scope": "text.html.basic"
+				"scope": "text.html.basic, text.html.plain"
 			}
 		]
 	},
@@ -1805,12 +1805,12 @@
 		"color": "red",
 		"syntaxes": [
 			{
-				"name": "Rails",
+				"name": "Ruby (Rails)",
 				"scope": "source.ruby.rails"
 			},
 			{
 				"name": "HTML (Rails)",
-				"scope": "text.html.ruby"
+				"scope": "text.html.rails, text.html.ruby"
 			}
 		]
 	},
