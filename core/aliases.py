@@ -148,7 +148,7 @@ class AsyncAliasCreator(threading.Thread):
         alias_resource = path.overlay_aliases_resource_path(alias_name)
         for window in sublime.windows():
             for view in window.views():
-                syntax = view.settings().get('syntax')
+                syntax = view.settings().get("syntax")
                 if syntax and syntax == alias_resource:
                     view.assign_syntax(real_syntax)
 
