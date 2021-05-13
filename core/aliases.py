@@ -91,36 +91,30 @@ class AsyncAliasCreator(threading.Thread):
             log("Enabling aliases")
 
         if HAS_FIND_SYNTAX:
-            # Built a set of scopes from visible/real syntaxes.
+            # Built a dict of { scope: syntax } from visible/real syntaxes.
             # Note: Existing aliases in the overlay are hidden and thus excluded
             #       by default. Also ignore possible aliases or special purpose
             #       syntaxes from 3rd-party packages.
             self.real_syntax = {
-                s.scope for s in sublime.list_syntaxes() if not s.hidden
+                s.scope: s.path for s in sublime.list_syntaxes() if not s.hidden
             }
 
             for file_type in icons_json_content().values():
-                self._create_aliases(file_type.get("aliases", []))
-                self._create_aliases(file_type.get("syntaxes", []))
+                self._check_aliases(file_type.get("aliases", []))
+                self._check_aliases(file_type.get("syntaxes", []))
 
         else:
             # Sublime Text does not support on demand alias creation.
-            self.real_syntax = set()
+            self.real_syntax = {}
 
             for file_type in icons_json_content().values():
-                self._create_aliases(file_type.get("aliases", []))
+                self._check_aliases(file_type.get("aliases", []))
 
-    def _has_real_syntax(self, selector):
-        selector = [s.strip() for s in selector.split(",")]
-        for scope in selector:
-            if scope.strip() in self.real_syntax:
-                return True
-        return False
-
-    def _create_aliases(self, syntaxes):
+    def _check_aliases(self, syntaxes):
         for syntax in syntaxes:
-            if self._has_real_syntax(syntax["scope"]):
-                self._delete_alias_file(syntax)
+            real_syntax = self._real_syntax_for(syntax["scope"])
+            if real_syntax:
+                self._delete_alias_file(syntax, real_syntax)
             elif "extensions" in syntax:
                 self._create_alias_file(syntax)
 
@@ -140,14 +134,35 @@ class AsyncAliasCreator(threading.Thread):
         except FileExistsError:
             pass
         except Exception as error:
-            dump(error)
+            dump("+ {}.sublime-syntax | {}".format(name, error))
+        else:
+            dump("+ {}.sublime-syntax".format(name))
 
-    def _delete_alias_file(self, alias):
-        alias_path = os.path.join(self.dest_path, alias["name"] + ".sublime-syntax")
+    def _delete_alias_file(self, alias, real_syntax):
+        alias_name = alias["name"] + ".sublime-syntax"
+        alias_path = os.path.join(self.dest_path, alias_name)
+        if not os.path.exists(alias_path):
+            return
 
+        # reassign real syntax to any open view, which uses the alias
+        alias_resource = path.overlay_aliases_resource_path(alias_name)
+        for window in sublime.windows():
+            for view in window.views():
+                syntax = view.settings().get('syntax')
+                if syntax and syntax == alias_resource:
+                    view.assign_syntax(real_syntax)
+
+        # actually delete the alias syntax
         try:
             os.remove(alias_path)
-        except FileNotFoundError:
-            pass
         except Exception as error:
-            dump(error)
+            dump("- {}.sublime-syntax | {}".format(alias_name, error))
+        else:
+            dump("- {}.sublime-syntax".format(alias_name))
+
+    def _real_syntax_for(self, selector):
+        for scope in selector.split(","):
+            real_syntax = self.real_syntax.get(scope.strip())
+            if real_syntax:
+                return real_syntax
+        return None

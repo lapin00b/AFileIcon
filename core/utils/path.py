@@ -43,3 +43,7 @@ def overlay_patches_general_path():
 
 def overlay_patches_specific_path():
     return os.path.join(sublime.packages_path(), OVERLAY_ROOT, "patches", "specific")
+
+
+def overlay_aliases_resource_path(file_name):
+    return "Packages/{}/aliases/{}".format(OVERLAY_ROOT, file_name)
