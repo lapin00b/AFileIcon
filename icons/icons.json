@@ -1497,6 +1497,15 @@
 		],
 		"color": "purple"
 	},
+	"file_type_pawn": {
+		"color": "orange",
+		"syntaxes": [
+			{
+				"name": "Plain Text (SourcePawn)",
+				"scope": "source.pawn, source.sp"
+			}
+		]
+	},
 	"file_type_pcb": {
 		"aliases": [
 			{
