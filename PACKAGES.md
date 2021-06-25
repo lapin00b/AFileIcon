@@ -185,6 +185,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [PackageDev](https://packagecontrol.io/packages/PackageDev)
 
+## Pawn
+
+- [SourcePawn](https://packagecontrol.io/packages/SourcePawn%20Syntax%20Highlighting)
+
 ## PHP
 
 - [Laravel Blade Highlighter](https://packagecontrol.io/packages/Laravel%20Blade%20Highlighter)

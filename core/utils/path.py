@@ -29,8 +29,8 @@ def overlay_cache_path():
     return os.path.join(sublime.cache_path(), OVERLAY_ROOT)
 
 
-def overlay_aliases_path():
-    return os.path.join(sublime.packages_path(), OVERLAY_ROOT, "aliases")
+def overlay_aliases_path(file_name=""):
+    return os.path.join(sublime.packages_path(), OVERLAY_ROOT, "aliases", file_name)
 
 
 def overlay_patches_path():
@@ -45,5 +45,5 @@ def overlay_patches_specific_path():
     return os.path.join(sublime.packages_path(), OVERLAY_ROOT, "patches", "specific")
 
 
-def overlay_aliases_resource_path(file_name):
+def overlay_aliases_resource_path(file_name=""):
     return "Packages/{}/aliases/{}".format(OVERLAY_ROOT, file_name)

@@ -1,5 +1,6 @@
 import sys
 import sublime
+import sublime_plugin
 
 if int(sublime.version()) >= 3114:
 
@@ -15,27 +16,41 @@ if int(sublime.version()) >= 3114:
         del sys.modules[module_name]
     prefix = None
 
-    from .core.cleaning import AfiRevertCommand, clean_all
-    from .core.settings import add_listener, clear_listener
-    from .core.utils.overlay import disable_overlay, enable_overlay
+    from .core import aliases
+    from .core import overlay
+    from .core import settings
+
+    class AfiRevertCommand(sublime_plugin.ApplicationCommand):
+        def run(self):
+            def remove_aliases():
+                try:
+                    aliases.disable()
+                finally:
+                    overlay.disable_overlay()
+                    sublime.set_timeout_async(remove_overlay, overlay.IGNORE_DELAY)
+
+            def remove_overlay():
+                try:
+                    overlay.clear_overlay()
+                finally:
+                    settings.add_listener()
+                    overlay.enable_overlay()
+
+            settings.clear_listener()
+            sublime.set_timeout_async(remove_aliases)
 
     def plugin_loaded():
-        def plugin_loaded_async():
-            add_listener()
-            enable_overlay()
+        def setup_overlay():
+            settings.add_listener()
+            overlay.enable_overlay()
 
-        sublime.set_timeout_async(plugin_loaded_async, 200)
+        # run delayed to prevent race condition with previous plugin_unloaded
+        sublime.set_timeout_async(setup_overlay, overlay.IGNORE_DELAY)
 
     def plugin_unloaded():
-        def cleanup():
-            try:
-                clean_all()
-            finally:
-                enable_overlay()
-
-        clear_listener()
-        disable_overlay()
-        sublime.set_timeout_async(cleanup)
+        settings.clear_listener()
+        aliases.disable()
+        overlay.safe_clear_overlay()
 
 
 else:
