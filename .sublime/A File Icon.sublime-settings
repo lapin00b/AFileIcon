@@ -1,11 +1,6 @@
+// A File Icon Preferences – Default
+// ================================================================
 {
-	// A File Icon Preferences – Default
-	// ================================================================
-
-	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	// ! PLEASE RESTART SUBLIME TEXT FOR THESE CHANGES TO TAKE EFFECT !
-	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 	// File type icons have different colors by default. However you
 	// can make them single colored by providing a color in:
 	// - CSS: "white"
