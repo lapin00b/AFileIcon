@@ -163,6 +163,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [MDX Syntax Highlighting](https://packagecontrol.io/packages/MDX%20Syntax%20Highlighting)
 
+## Mint
+
+- [Mint Lang](https://packagecontrol.io/packages/Mint%20Lang)
+
 ## Mustache & Handlebars
 
 - [HTML Mustache](https://packagecontrol.io/packages/HTML%20Mustache)

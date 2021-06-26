@@ -1332,6 +1332,18 @@
 			}
 		]
 	},
+	"file_type_mint": {
+		"color": "green",
+		"syntaxes": [
+			{
+				"extensions": [
+					"mint"
+				],
+				"name": "Plain Text (Mint)",
+				"scope": "source.mint"
+			}
+		]
+	},
 	"file_type_mp3tag": {
 		"color": "yellow",
 		"syntaxes": [
