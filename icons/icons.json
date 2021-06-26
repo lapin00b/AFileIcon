@@ -445,6 +445,18 @@
 			}
 		]
 	},
+	"file_type_crystal": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"cr"
+				],
+				"name": "Plain Text (Crystal)",
+				"scope": "source.crystal"
+			}
+		]
+	},
 	"file_type_csharp": {
 		"color": "blue",
 		"syntaxes": [
