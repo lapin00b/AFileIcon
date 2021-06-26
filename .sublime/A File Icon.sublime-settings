@@ -21,10 +21,10 @@
 	"color_on_select": "",
 
 	// The opacity level of the default icon state.
-	"opacity": 0.75,
+	"opacity": 0.9,
 
 	// The opacity level of the hovered icon state.
-	"opacity_on_hover": 0.5,
+	"opacity_on_hover": 0.7,
 
 	// The opacity level of the selected icon state.
 	"opacity_on_select": 1.0,
