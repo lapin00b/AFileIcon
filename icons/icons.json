@@ -2239,7 +2239,7 @@
 				"extensions": [
 					"tailwind.css"
 				],
-				"name": "CSS",
+				"name": "Plain Text (Tailwind CSS)",
 				"scope": "source.css.tailwind"
 			}
 		]
