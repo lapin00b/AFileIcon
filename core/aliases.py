@@ -170,6 +170,6 @@ def delete_alias_file(alias, real_syntax):
     try:
         os.remove(alias_path)
     except Exception as error:
-        dump("- {}.sublime-syntax | {}".format(alias_name, error))
+        dump("- {} | {}".format(alias_name, error))
     else:
-        dump("- {}.sublime-syntax".format(alias_name))
+        dump("- {}".format(alias_name))
