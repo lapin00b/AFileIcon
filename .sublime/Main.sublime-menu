@@ -33,7 +33,7 @@
 						"command": "edit_settings",
 						"args": {
 							"base_file": "${packages}/A File Icon/.sublime/A File Icon.sublime-settings",
-							"default": "{\n  // A File Icon Preferences – User\n  // ================================================================\n\n  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n  // ! PLEASE RESTART SUBLIME TEXT FOR THESE CHANGES TO TAKE EFFECT !\n  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n  $0\n}\n"
+							"default": "// A File Icon Preferences – User\n// ================================================================\n{\n\t$0\n}\n"
 						}
 					}
 				]

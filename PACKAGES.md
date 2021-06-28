@@ -34,6 +34,10 @@ This file contains a list of possible packages you may need to install to see th
 - [CMake](https://packagecontrol.io/packages/CMake)
 - [CMakeEditor](https://packagecontrol.io/packages/CMakeEditor)
 
+## Crystal
+
+- [Crystal](https://packagecontrol.io/packages/Crystal)
+
 ## COBOL
 
 - [COBOL](https://packagecontrol.io/packages/COBOL%20Syntax)
@@ -158,6 +162,10 @@ This file contains a list of possible packages you may need to install to see th
 ## MDX
 
 - [MDX Syntax Highlighting](https://packagecontrol.io/packages/MDX%20Syntax%20Highlighting)
+
+## Mint
+
+- [Mint Lang](https://packagecontrol.io/packages/Mint%20Lang)
 
 ## Mustache & Handlebars
 

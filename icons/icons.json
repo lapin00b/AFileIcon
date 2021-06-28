@@ -445,6 +445,18 @@
 			}
 		]
 	},
+	"file_type_crystal": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"cr"
+				],
+				"name": "Plain Text (Crystal)",
+				"scope": "source.crystal"
+			}
+		]
+	},
 	"file_type_csharp": {
 		"color": "blue",
 		"syntaxes": [
@@ -1317,6 +1329,18 @@
 				],
 				"name": "Plain Text (MEL)",
 				"scope": "source.mel"
+			}
+		]
+	},
+	"file_type_mint": {
+		"color": "green",
+		"syntaxes": [
+			{
+				"extensions": [
+					"mint"
+				],
+				"name": "Plain Text (Mint)",
+				"scope": "source.mint"
 			}
 		]
 	},
@@ -2215,7 +2239,7 @@
 				"extensions": [
 					"tailwind.css"
 				],
-				"name": "CSS",
+				"name": "Plain Text (Tailwind CSS)",
 				"scope": "source.css.tailwind"
 			}
 		]

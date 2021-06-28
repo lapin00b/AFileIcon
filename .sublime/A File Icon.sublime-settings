@@ -1,11 +1,6 @@
+// A File Icon Preferences – Default
+// ================================================================
 {
-	// A File Icon Preferences – Default
-	// ================================================================
-
-	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	// ! PLEASE RESTART SUBLIME TEXT FOR THESE CHANGES TO TAKE EFFECT !
-	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 	// File type icons have different colors by default. However you
 	// can make them single colored by providing a color in:
 	// - CSS: "white"
@@ -26,10 +21,10 @@
 	"color_on_select": "",
 
 	// The opacity level of the default icon state.
-	"opacity": 0.75,
+	"opacity": 0.9,
 
 	// The opacity level of the hovered icon state.
-	"opacity_on_hover": 0.5,
+	"opacity_on_hover": 0.7,
 
 	// The opacity level of the selected icon state.
 	"opacity_on_select": 1.0,
