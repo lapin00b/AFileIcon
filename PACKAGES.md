@@ -116,6 +116,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Gradle_Language](https://packagecontrol.io/packages/Gradle_Language)
 
+## GraphQL
+
+- [GraphQL](https://packagecontrol.io/packages/GraphQL)
+
 ## Haml
 
 - [Haml](https://packagecontrol.io/packages/Haml)

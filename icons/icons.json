@@ -922,6 +922,20 @@
 			}
 		]
 	},
+	"file_type_graphql": {
+		"color": "pink",
+		"syntaxes": [
+			{
+				"extensions": [
+					"graphql",
+					"graphqls",
+					"gql"
+				],
+				"name": "Plain Text (GraphQL)",
+				"scope": "source.graphql"
+			}
+		]
+	},
 	"file_type_graphviz": {
 		"color": "cyan",
 		"syntaxes": [
