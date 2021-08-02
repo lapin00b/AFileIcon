@@ -2246,6 +2246,19 @@
 			}
 		]
 	},
+	"file_type_taskfile": {
+		"aliases": [
+			{
+				"base": "source.json",
+				"extensions": [
+					"Taskfile"
+				],
+				"name": "YAML (Taskfile)",
+				"scope": "source.yaml.taskfile"
+			}
+		],
+		"color": "cyan"
+	},
 	"file_type_tailwind": {
 		"color": "cyan",
 		"syntaxes": [
