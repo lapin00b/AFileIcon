@@ -2174,6 +2174,7 @@
 					".sublime-project",
 					"hidden-color-scheme",
 					"hidden-theme",
+					"sublime-build",
 					"sublime-color-scheme",
 					"sublime-commands",
 					"sublime-completions",
