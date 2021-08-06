@@ -8,6 +8,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Ada](https://packagecontrol.io/packages/Ada)
 
+## AdonisJS
+
+- [Edge Template extension](https://packagecontrol.io/packages/Edge%20templates%20extension)
+
 ## AngularJS
 
 - [AngularJS](https://packagecontrol.io/packages/AngularJS)

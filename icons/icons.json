@@ -46,6 +46,29 @@
 			}
 		]
 	},
+	"file_type_adonisjs": {
+		"aliases": [
+			{
+				"base": "source.json",
+				"extensions": [
+					".adonisrc.json"
+				],
+				"name": "JSON (AdonisRC)",
+				"scope": "source.json.adonisrc"
+			}
+		],
+		"color": "purple",
+		"syntaxes": [
+			{
+				"extensions": [
+					"edge",
+					"edge.html"
+				],
+				"name": "Plain Text (Edge)",
+				"scope": "text.html.edge"
+			}
+		]
+	},
 	"file_type_ae": {
 		"aliases": [
 			{
