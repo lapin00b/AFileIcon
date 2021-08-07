@@ -100,7 +100,7 @@ This package contains icons provided by:
 - [Icomoon](https://icomoon.io/)
 - [Octicons](https://octicons.github.com/)
 
-Source icons are provided in SVG format (Sublime Text doesn't currently support it). We convert them to @1x and @2x PNG assets before each release via a custom `gulp` task. 
+Source icons are provided in SVG format (Sublime Text doesn't currently support it). They are convert to @1x and @2x PNG assets before each release via python build script `py build -i`.
 
 Rasterized icons can be found in `icons` folder.
 
