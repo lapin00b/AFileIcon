@@ -8,6 +8,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Ada](https://packagecontrol.io/packages/Ada)
 
+## AdonisJS
+
+- [Edge Template extension](https://packagecontrol.io/packages/Edge%20templates%20extension)
+
 ## AngularJS
 
 - [AngularJS](https://packagecontrol.io/packages/AngularJS)
@@ -115,6 +119,10 @@ This file contains a list of possible packages you may need to install to see th
 ## Gradle
 
 - [Gradle_Language](https://packagecontrol.io/packages/Gradle_Language)
+
+## GraphQL
+
+- [GraphQL](https://packagecontrol.io/packages/GraphQL)
 
 ## Haml
 
