@@ -2081,7 +2081,7 @@
 					"fish"
 				],
 				"name": "Plain Text (Fish)",
-				"scope": "source.fish"
+				"scope": "source.shell.fish"
 			}
 		]
 	},
