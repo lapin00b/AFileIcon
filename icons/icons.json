@@ -1072,6 +1072,18 @@
 			}
 		]
 	},
+	"file_type_http": {
+		"color": "purple",
+		"syntaxes": [
+			{
+				"extensions": [
+					"http"
+				],
+				"name": "Plain Text (HTTP)",
+				"scope": "source.http, text.http-request-response"
+			}
+		]
+	},
 	"file_type_image": {
 		"aliases": [
 			{
@@ -2779,5 +2791,17 @@
 			}
 		],
 		"color": "blue"
+	},
+	"file_type_zig": {
+		"color": "yellow",
+		"syntaxes": [
+			{
+				"extensions": [
+					"zig"
+				],
+				"name": "Zig",
+				"scope": "source.zig"
+			}
+		]
 	}
 }

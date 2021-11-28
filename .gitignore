@@ -1,16 +1,14 @@
 # Development
 # =============================
 
+.venv/
+
 *.sublime-project
 *.sublime-workspace
 *.sublime-theme
 *.log
 *cache
 *.pyc
-
-node_modules/
-
-package-lock.json
 
 # OS
 # =============================

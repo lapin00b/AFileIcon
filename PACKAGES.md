@@ -136,6 +136,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Haxe](https://packagecontrol.io/packages/Haxe)
 
+## HTTP
+
+- [RESTer HTTP Client](https://packagecontrol.io/packages/RESTer%20HTTP%20Client)
+
 ## JavaScript
 
 - [AngularJS](https://packagecontrol.io/packages/AngularJS)
@@ -330,3 +334,7 @@ This file contains a list of possible packages you may need to install to see th
 ## Vue.js
 
 - [Vue Syntax Highlight](https://packagecontrol.io/packages/Vue%20Syntax%20Highlight)
+
+## Zig
+
+- [Zig Syntax Highlight](https://packagecontrol.io/packages/Zig%20Language)
