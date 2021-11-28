@@ -2779,5 +2779,17 @@
 			}
 		],
 		"color": "blue"
+	},
+	"file_type_zig": {
+		"color": "yellow",
+		"syntaxes": [
+			{
+				"extensions": [
+					"zig"
+				],
+				"name": "Zig",
+				"scope": "source.zig"
+			}
+		]
 	}
 }

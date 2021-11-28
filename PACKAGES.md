@@ -330,3 +330,7 @@ This file contains a list of possible packages you may need to install to see th
 ## Vue.js
 
 - [Vue Syntax Highlight](https://packagecontrol.io/packages/Vue%20Syntax%20Highlight)
+
+## Zig
+
+- [Zig Syntax Highlight](https://packagecontrol.io/packages/Zig%20Language)
