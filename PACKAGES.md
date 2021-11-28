@@ -136,6 +136,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Haxe](https://packagecontrol.io/packages/Haxe)
 
+## HTTP
+
+- [RESTer HTTP Client](https://packagecontrol.io/packages/RESTer%20HTTP%20Client)
+
 ## JavaScript
 
 - [AngularJS](https://packagecontrol.io/packages/AngularJS)
