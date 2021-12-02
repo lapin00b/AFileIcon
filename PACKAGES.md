@@ -385,6 +385,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Stata Enhanced](https://packagecontrol.io/packages/Stata%20Enhanced)
 
+## STPlayer
+
+- STPlayer syntax highlighter
+
 ## Stylus
 
 - [Stylus](https://packagecontrol.io/packages/Stylus)

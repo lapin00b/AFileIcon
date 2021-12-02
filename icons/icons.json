@@ -3059,6 +3059,18 @@
 			}
 		]
 	},
+	"file_type_stplayer": {
+		"color": "blue",
+		"syntaxes": [
+			{
+				"extensions": [
+					"sco"
+				],
+				"name": "STPlayer",
+				"scope": "source.sco"
+			}
+		]
+	},
 	"file_type_stylelint": {
 		"aliases": [
 			{
