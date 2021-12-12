@@ -2551,6 +2551,19 @@
 			}
 		]
 	},
+	"file_type_v": {
+		"color": "cyan",
+		"syntaxes": [
+			{
+				"extensions": [
+					"v",
+					"vlang"
+				],
+				"name": "Plain Text (V)",
+				"scope": "source.v"
+			}
+		]
+	},
 	"file_type_vala": {
 		"color": "sky",
 		"syntaxes": [
