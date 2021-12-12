@@ -156,7 +156,13 @@ def _create_specific_patch(settings):
     theme_content = []
 
     color = convert_color_value(settings.get("color"))
-    theme_content.append(_patch_icon(None, color))
+    icon = _patch_icon(None, color)
+
+    size = settings.get("size")
+    if size:
+        icon["content_margin"] = [size, size]
+
+    theme_content.append(icon)
 
     if color:
         color_on_hover = convert_color_value(settings.get("color_on_hover"))
@@ -172,7 +178,9 @@ def _create_specific_patch(settings):
 
 
 def _patch_icon(attrib, color=None, opacity=None):
-    icon = {"class": "icon_file_type", "layer0.tint": color}
+    icon = {"class": "icon_file_type"}
+    if color:
+        icon["layer0.tint"] = color
     if attrib:
         icon["parents"] = [{"class": "tree_row", "attributes": [attrib]}]
     if opacity:
