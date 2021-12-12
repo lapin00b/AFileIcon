@@ -52,6 +52,5 @@ if int(sublime.version()) >= 3114:
         aliases.disable()
         overlay.safe_clear_overlay()
 
-
 else:
     raise ImportWarning("Doesn't support Sublime Text versions prior to 3114")

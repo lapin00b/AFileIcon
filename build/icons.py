@@ -16,7 +16,10 @@ except ImportError:
 try:
     import png
 except ImportError:
-    print("Error: pyPNG not installed!\n" "       Run `pip install pypng`!")
+    print(
+        "Error: pyPNG not installed!\n"
+        "       Run `pip install pypng`!"
+    )
 
 
 PACKAGE_ROOT = os.path.dirname(os.path.dirname(__file__))
