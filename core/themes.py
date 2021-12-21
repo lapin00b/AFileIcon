@@ -178,11 +178,20 @@ def _create_specific_patch(settings):
 
 
 def _patch_icon(attrib, color=None, opacity=None):
-    icon = {"class": "icon_file_type"}
-    if color:
-        icon["layer0.tint"] = color
+    """Built an icon theme rule
+
+    :attrib:
+        The tree row's state attribute the returned rule applies to.
+    :color:
+        The color to tint the icon with.
+        It is always required to override any theme settings. The default value of
+        `none` removes any tinting specified by a theme to display colored icons.
+    :opacity:
+        If specified overwrites theme's opacity setting.
+    """
+    icon = {"class": "icon_file_type", "layer0.tint": color}
     if attrib:
         icon["parents"] = [{"class": "tree_row", "attributes": [attrib]}]
-    if opacity:
+    if opacity is not None:
         icon["layer0.opacity"] = opacity
     return icon
