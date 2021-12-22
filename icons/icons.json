@@ -1822,6 +1822,19 @@
 			}
 		]
 	},
+	"file_type_purebasic": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"pb",
+					"pbi"
+				],
+				"name": "Plain Text (PureBasic)",
+				"scope": "source.purebasic"
+			}
+		]
+	},
 	"file_type_python": {
 		"aliases": [
 			{

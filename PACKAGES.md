@@ -233,6 +233,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Puppet](https://packagecontrol.io/packages/Puppet)
 
+## PureBasic
+
+- [PureBasic](https://packagecontrol.io/packages/PureBasic)
+
 ## Qt
 
 - [QML](https://packagecontrol.io/packages/QML)

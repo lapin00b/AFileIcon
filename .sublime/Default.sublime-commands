@@ -1,9 +1,5 @@
 [
 	{
-		"caption": "A File Icon: Revert to a Freshly Installed State",
-		"command": "afi_revert"
-	},
-	{
 		"caption": "Preferences: A File Icon Settings",
 		"command": "edit_settings", "args":
 		{
