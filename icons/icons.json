@@ -1737,6 +1737,18 @@
 		],
 		"color": "purple"
 	},
+	"file_type_prisma": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"prisma"
+				],
+				"name": "Plain Text (Prisma Scheme)",
+				"scope": "source.prisma"
+			}
+		]
+	},
 	"file_type_procfile": {
 		"aliases": [
 			{
