@@ -1012,6 +1012,18 @@
 		],
 		"color": "pink"
 	},
+	"file_type_hack": {
+		"color": "yellow",
+		"syntaxes": [
+			{
+				"extensions": [
+					"hack"
+				],
+				"name": "Plain Text (Hack)",
+				"scope": "source.hack, text.html.hack"
+			}
+		]
+	},
 	"file_type_haml": {
 		"color": "yellow",
 		"syntaxes": [
