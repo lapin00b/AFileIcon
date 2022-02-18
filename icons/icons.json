@@ -827,6 +827,18 @@
 			}
 		]
 	},
+	"file_type_docg": {
+		"color": "sky",
+		"syntaxes": [
+			{
+				"extensions": [
+					"docg"
+				],
+				"name": "DocG",
+				"scope": "source.docg"
+			}
+		]
+	},
 	"file_type_docker": {
 		"aliases": [
 			{
