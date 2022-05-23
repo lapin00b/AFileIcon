@@ -184,6 +184,18 @@
 			}
 		]
 	},
+	"file_type_astro": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"astro"
+				],
+				"name": "Plain Text (Astro)",
+				"scope": "source.astro, text.html.astro"
+			}
+		]
+	},
 	"file_type_audio": {
 		"aliases": [
 			{
