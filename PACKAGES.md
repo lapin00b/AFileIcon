@@ -21,6 +21,10 @@ This file contains a list of possible packages you may need to install to see th
 - [Arduino](https://packagecontrol.io/packages/Arduino)
 - [Arduino-like IDE](https://packagecontrol.io/packages/Arduino-like%20IDE)
 
+## Astro
+
+- [Astro](https://packagecontrol.io/packages/Astro)
+
 ## Autolisp
 
 - [Autolisp](https://github.com/divtiply/autolisp-sublime)
@@ -220,6 +224,10 @@ This file contains a list of possible packages you may need to install to see th
 ## PostCSS
 
 - [Syntax Highlighting for Post​CSS](https://packagecontrol.io/packages/Syntax%20Highlighting%20for%20PostCSS)
+
+## Prisma Scheme
+
+- [Prisma](https://packagecontrol.io/packages/Prisma)
 
 ## Protobuf
 
