@@ -1405,6 +1405,19 @@
 			}
 		]
 	},
+	"file_type_meson": {
+		"color": "blue",
+		"syntaxes": [
+			{
+				"extensions": [
+					"meson.build",
+					"meson_options.txt"
+				],
+				"name": "Plain Text (Meson)",
+				"scope": "source.meson"
+			}
+		]
+	},
 	"file_type_mint": {
 		"color": "green",
 		"syntaxes": [
