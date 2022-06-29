@@ -2081,11 +2081,24 @@
 			{
 				"base": "source.json",
 				"extensions": [
+					".htmlhintrc",
 					".jshintrc",
-					".jsbeautifyrc"
+					".jsbeautifyrc",
+					".prettierrc",
+					".releaserc"
 				],
 				"name": "JSON (Settings)",
 				"scope": "source.json.settings"
+			},
+			{
+				"extensions": [
+					".htmlhintignore",
+					".jshintignore",
+					".jsbeautifyignore",
+					".prettierignore"
+				],
+				"name": "Plain Text (Settings)",
+				"scope": "text.plain.settings"
 			}
 		],
 		"color": "graphite",
