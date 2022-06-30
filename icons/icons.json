@@ -480,6 +480,23 @@
 			}
 		]
 	},
+	"file_type_cppheader": {
+		"aliases": [
+			{
+				"base": "source.c++",
+				"extensions": [
+					"h",
+					"h++",
+					"hh",
+					"hpp",
+					"hxx"
+				],
+				"name": "C++ (Header)",
+				"scope": "source.c++.header"
+			}
+		],
+		"color": "sky"
+	},
 	"file_type_crystal": {
 		"color": "graphite",
 		"syntaxes": [
