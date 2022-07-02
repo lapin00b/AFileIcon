@@ -1,7 +1,7 @@
 import json
 import os
 import re
-
+import subprocess
 
 try:
     import cairosvg
@@ -67,3 +67,10 @@ def create_icons(icons):
                 write_to=icons_path("single", icon_name + suffix),
                 size=size * 16,
             )
+
+    # recreate icons overlay
+    # note: requires `subl` to be registered on $PATH
+    try:
+        subprocess.call(["subl", "--command", "afi_revert"])
+    except:
+        pass
