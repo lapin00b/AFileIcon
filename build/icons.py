@@ -1,7 +1,7 @@
 import json
 import os
 import re
-
+import subprocess
 
 try:
     import cairosvg
@@ -34,7 +34,7 @@ def replace_color(text, color, new_color):
 
 
 def create_png(bytestring, write_to, size):
-    width, height, rows, info = png.Reader(
+    _, _, rows, info = png.Reader(
         bytes=cairosvg.svg2png(
             bytestring=bytestring, parent_height=size, parent_width=size
         )
@@ -49,11 +49,11 @@ def create_icons(icons):
 
     for icon_name, icon_data in icons.items():
         with open(icons_path("svg", icon_name + ".svg")) as fp:
+            svg_multi = fp.read()
+            svg_mono = replace_color(svg_multi, ".+?", "#fff")
             color = colors.get(icon_data["color"])
-            svg_raw = fp.read()
-            svg_mono = replace_color(svg_raw, ".+?", "#fff")
             if color:
-                svg_multi = replace_color(svg_raw, "#000", color)
+                svg_multi = replace_color(svg_multi, "#000", color)
 
         for size in (1, 2, 3):
             suffix = "@{}x.png".format(size) if size > 1 else ".png"
@@ -67,3 +67,10 @@ def create_icons(icons):
                 write_to=icons_path("single", icon_name + suffix),
                 size=size * 16,
             )
+
+    # recreate icons overlay
+    # note: requires `subl` to be registered on $PATH
+    try:
+        subprocess.call(["subl", "--command", "afi_revert"])
+    except:
+        pass

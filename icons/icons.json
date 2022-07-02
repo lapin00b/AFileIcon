@@ -480,6 +480,23 @@
 			}
 		]
 	},
+	"file_type_cppheader": {
+		"aliases": [
+			{
+				"base": "source.c++",
+				"extensions": [
+					"h",
+					"h++",
+					"hh",
+					"hpp",
+					"hxx"
+				],
+				"name": "C++ (Header)",
+				"scope": "source.c++.header"
+			}
+		],
+		"color": "sky"
+	},
 	"file_type_crystal": {
 		"color": "graphite",
 		"syntaxes": [
@@ -1405,6 +1422,19 @@
 			}
 		]
 	},
+	"file_type_meson": {
+		"color": "blue",
+		"syntaxes": [
+			{
+				"extensions": [
+					"meson.build",
+					"meson_options.txt"
+				],
+				"name": "Plain Text (Meson)",
+				"scope": "source.meson"
+			}
+		]
+	},
 	"file_type_mint": {
 		"color": "green",
 		"syntaxes": [
@@ -2068,11 +2098,24 @@
 			{
 				"base": "source.json",
 				"extensions": [
+					".htmlhintrc",
 					".jshintrc",
-					".jsbeautifyrc"
+					".jsbeautifyrc",
+					".prettierrc",
+					".releaserc"
 				],
 				"name": "JSON (Settings)",
 				"scope": "source.json.settings"
+			},
+			{
+				"extensions": [
+					".htmlhintignore",
+					".jshintignore",
+					".jsbeautifyignore",
+					".prettierignore"
+				],
+				"name": "Plain Text (Settings)",
+				"scope": "text.plain.settings"
 			}
 		],
 		"color": "graphite",
@@ -2722,6 +2765,7 @@
 		"aliases": [
 			{
 				"extensions": [
+					".coverage",
 					"idl",
 					"sln"
 				],
