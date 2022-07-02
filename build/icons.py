@@ -34,7 +34,7 @@ def replace_color(text, color, new_color):
 
 
 def create_png(bytestring, write_to, size):
-    width, height, rows, info = png.Reader(
+    _, _, rows, info = png.Reader(
         bytes=cairosvg.svg2png(
             bytestring=bytestring, parent_height=size, parent_width=size
         )
