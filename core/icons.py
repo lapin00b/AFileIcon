@@ -135,6 +135,19 @@ def _icons_path(package):
 
 
 def icons_json_content():
-    return json.loads(
-        sublime.load_resource("Packages/" + path.PACKAGE_NAME + "/icons/icons.json")
-    )
+    try:
+        # Cache content to keep it available as we need it
+        # to clear aliases, if package is unloaded.
+        return icons_json_content.cache
+    except AttributeError:
+        try:
+            icons_json = json.loads(
+                sublime.load_resource(
+                    "Packages/" + path.PACKAGE_NAME + "/icons/icons.json"
+                )
+            )
+            icons_json_content.cache = icons_json
+            return icons_json
+        except FileNotFoundError as e:
+            log(e)
+            return {}
