@@ -1260,6 +1260,18 @@
 			}
 		]
 	},
+	"file_type_ksp": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"ksp"
+				],
+				"name": "Plain Text (ksp)",
+				"scope": "source.ksp"
+			}
+		]
+	},
 	"file_type_less": {
 		"color": "blue",
 		"syntaxes": [
