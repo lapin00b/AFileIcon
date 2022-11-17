@@ -1191,6 +1191,41 @@
 		],
 		"color": "cyan"
 	},
+	"file_type_jest": {
+		"aliases": [
+			{
+				"base": "source.js",
+				"extensions": [
+					"jest.config.js",
+					"jest.config.cjs",
+					"jest.config.mjs",
+					"jest.setup.js"
+				],
+				"name": "JavaScript (Jest)",
+				"scope": "source.js.jest"
+			},
+			{
+				"base": "source.ts",
+				"extensions": [
+					"jest.config.ts",
+					"jest.config.cts",
+					"jest.config.mts",
+					"jest.setup.ts"
+				],
+				"name": "TypeScript (Jest)",
+				"scope": "source.ts.jest"
+			},
+			{
+				"base": "source.json",
+				"extensions": [
+					"jest.config.json"
+				],
+				"name": "JSON (Jest)",
+				"scope": "source.json.jest"
+			}
+		],
+		"color": "red"
+	},
 	"file_type_js": {
 		"color": "yellow",
 		"syntaxes": [
