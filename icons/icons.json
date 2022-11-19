@@ -2128,6 +2128,24 @@
 			}
 		]
 	},
+	"file_type_scheme": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"ms",
+					"rkt",
+					"sc",
+					"sch",
+					"scm",
+					"ss",
+					"scheme"
+				],
+				"name": "Plain Text (Scheme)",
+				"scope": "source.scheme"
+			}
+		]
+	},
 	"file_type_scss": {
 		"color": "pink",
 		"syntaxes": [

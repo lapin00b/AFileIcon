@@ -272,6 +272,10 @@ This file contains a list of possible packages you may need to install to see th
 - [Syntax Highlighting for Sass](https://packagecontrol.io/packages/Syntax%20Highlighting%20for%20Sass)
 - [SCSS](https://packagecontrol.io/packages/SCSS)
 
+## Scheme
+
+- [Scheme](https://packagecontrol.io/packages/Scheme)
+
 ## Settings
 
 - [ApacheConf](https://packagecontrol.io/packages/ApacheConf.tmLanguage)
