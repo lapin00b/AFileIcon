@@ -1191,6 +1191,41 @@
 		],
 		"color": "cyan"
 	},
+	"file_type_jest": {
+		"aliases": [
+			{
+				"base": "source.js",
+				"extensions": [
+					"jest.config.js",
+					"jest.config.cjs",
+					"jest.config.mjs",
+					"jest.setup.js"
+				],
+				"name": "JavaScript (Jest)",
+				"scope": "source.js.jest"
+			},
+			{
+				"base": "source.ts",
+				"extensions": [
+					"jest.config.ts",
+					"jest.config.cts",
+					"jest.config.mts",
+					"jest.setup.ts"
+				],
+				"name": "TypeScript (Jest)",
+				"scope": "source.ts.jest"
+			},
+			{
+				"base": "source.json",
+				"extensions": [
+					"jest.config.json"
+				],
+				"name": "JSON (Jest)",
+				"scope": "source.json.jest"
+			}
+		],
+		"color": "red"
+	},
 	"file_type_js": {
 		"color": "yellow",
 		"syntaxes": [
@@ -1257,6 +1292,18 @@
 				],
 				"name": "Plain Text (Kotlin)",
 				"scope": "source.Kotlin"
+			}
+		]
+	},
+	"file_type_ksp": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"ksp"
+				],
+				"name": "Plain Text (ksp)",
+				"scope": "source.ksp"
 			}
 		]
 	},
@@ -2078,6 +2125,24 @@
 			{
 				"name": "Scala",
 				"scope": "source.scala"
+			}
+		]
+	},
+	"file_type_scheme": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"ms",
+					"rkt",
+					"sc",
+					"sch",
+					"scm",
+					"ss",
+					"scheme"
+				],
+				"name": "Plain Text (Scheme)",
+				"scope": "source.scheme"
 			}
 		]
 	},
