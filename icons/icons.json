@@ -1671,6 +1671,18 @@
 		],
 		"color": "purple"
 	},
+	"file_type_parquet": {
+		"color": "sky",
+		"syntaxes": [
+			{
+				"extensions": [
+					"parquet"
+				],
+				"name": "Plain Text (Parquet)",
+				"scope": "source.parquet"
+			}
+		]
+	},
 	"file_type_pawn": {
 		"color": "orange",
 		"syntaxes": [
