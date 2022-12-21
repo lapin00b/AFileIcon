@@ -2902,6 +2902,18 @@
 		],
 		"color": "blue"
 	},
+	"file_type_wgsl": {
+		"color": "sky",
+		"syntaxes": [
+			{
+				"extensions": [
+					"wgsl"
+				],
+				"name": "WGSL",
+				"scope": "source.wgsl"
+			}
+		]
+	},
 	"file_type_windows": {
 		"aliases": [
 			{

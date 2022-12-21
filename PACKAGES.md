@@ -359,6 +359,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Vue Syntax Highlight](https://packagecontrol.io/packages/Vue%20Syntax%20Highlight)
 
+## WGSL
+
+- [WGSL](https://packagecontrol.io/packages/WGSL)
+
 ## Zig
 
 - [Zig Syntax Highlight](https://packagecontrol.io/packages/Zig%20Language)
