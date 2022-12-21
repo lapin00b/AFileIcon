@@ -115,6 +115,21 @@
 			}
 		]
 	},
+	"file_type_ansible": {
+		"color": "red",
+		"syntaxes": [
+			{
+				"base": "source.yaml",
+				"extensions": [
+					"ansible",
+					"ansible.yml",
+					"ansible.yaml"
+				],
+				"name": "YAML (Ansible)",
+				"scope": "source.ansible"
+			}
+		]
+	},
 	"file_type_apache": {
 		"color": "yellow",
 		"syntaxes": [
