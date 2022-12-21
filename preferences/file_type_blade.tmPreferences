@@ -2,7 +2,7 @@
 <plist version="1.0">
 	<dict>
 		<key>scope</key>
-		<string>text.blade</string>
+		<string>text.blade, text.html.blade</string>
 		<key>settings</key>
 		<dict>
 			<key>icon</key>
