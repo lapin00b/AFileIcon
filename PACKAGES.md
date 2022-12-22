@@ -16,6 +16,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [AngularJS](https://packagecontrol.io/packages/AngularJS)
 
+## Ansible
+
+- [Ansible](https://packagecontrol.io/packages/Ansible)
+
 ## Arduino
 
 - [Arduino](https://packagecontrol.io/packages/Arduino)
@@ -358,6 +362,10 @@ This file contains a list of possible packages you may need to install to see th
 ## Vue.js
 
 - [Vue Syntax Highlight](https://packagecontrol.io/packages/Vue%20Syntax%20Highlight)
+
+## WGSL
+
+- [WGSL](https://packagecontrol.io/packages/WGSL)
 
 ## Zig
 

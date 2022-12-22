@@ -115,6 +115,21 @@
 			}
 		]
 	},
+	"file_type_ansible": {
+		"color": "red",
+		"syntaxes": [
+			{
+				"base": "source.yaml",
+				"extensions": [
+					"ansible",
+					"ansible.yml",
+					"ansible.yaml"
+				],
+				"name": "YAML (Ansible)",
+				"scope": "source.ansible"
+			}
+		]
+	},
 	"file_type_apache": {
 		"color": "yellow",
 		"syntaxes": [
@@ -263,8 +278,8 @@
 					"blade",
 					"blade.php"
 				],
-				"name": "Plain Text (Laravel Blade)",
-				"scope": "text.blade"
+				"name": "Plain Text (Blade)",
+				"scope": "text.blade, text.html.blade"
 			}
 		]
 	},
@@ -1671,6 +1686,18 @@
 		],
 		"color": "purple"
 	},
+	"file_type_parquet": {
+		"color": "sky",
+		"syntaxes": [
+			{
+				"extensions": [
+					"parquet"
+				],
+				"name": "Plain Text (Parquet)",
+				"scope": "source.parquet"
+			}
+		]
+	},
 	"file_type_pawn": {
 		"color": "orange",
 		"syntaxes": [
@@ -2889,6 +2916,18 @@
 			}
 		],
 		"color": "blue"
+	},
+	"file_type_wgsl": {
+		"color": "sky",
+		"syntaxes": [
+			{
+				"extensions": [
+					"wgsl"
+				],
+				"name": "WGSL",
+				"scope": "source.wgsl"
+			}
+		]
 	},
 	"file_type_windows": {
 		"aliases": [

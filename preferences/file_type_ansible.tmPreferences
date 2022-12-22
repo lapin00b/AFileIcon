@@ -2,11 +2,11 @@
 <plist version="1.0">
 	<dict>
 		<key>scope</key>
-		<string>text.blade, text.html.blade</string>
+		<string>source.ansible</string>
 		<key>settings</key>
 		<dict>
 			<key>icon</key>
-			<string>file_type_blade</string>
+			<string>file_type_ansible</string>
 		</dict>
 	</dict>
 </plist>
