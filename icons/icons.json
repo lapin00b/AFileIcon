@@ -2901,6 +2901,19 @@
 			}
 		]
 	},
+	"file_type_wast": {
+		"color": "purple",
+		"syntaxes": [
+			{
+				"extensions": [
+					"wast",
+					"wat"
+				],
+				"name": "WAST",
+				"scope": "source.wast"
+			}
+		]
+	},
 	"file_type_webpack": {
 		"aliases": [
 			{
