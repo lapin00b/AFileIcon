@@ -2480,6 +2480,24 @@
 		"color": "cyan"
 	},
 	"file_type_tailwind": {
+		"aliases": [
+			{
+				"name": "JavaScript (Tailwind CSS)",
+				"scope": "source.js.tailwind",
+				"base": "source.js",
+				"extensions": [
+					"tailwind.config.js"
+				]
+			},
+			{
+				"name": "TypeScript (Tailwind CSS)",
+				"scope": "source.ts.tailwind",
+				"base": "source.ts",
+				"extensions": [
+					"tailwind.config.ts"
+				]
+			}
+		],
 		"color": "cyan",
 		"syntaxes": [
 			{
