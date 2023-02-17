@@ -2960,6 +2960,27 @@
 			}
 		]
 	},
+	"file_type_windicss": {
+		"aliases": [
+			{
+				"name": "JavaScript (Windi CSS)",
+				"scope": "source.js.windi",
+				"base": "source.js",
+				"extensions": [
+					"windi.config.js"
+				]
+			},
+			{
+				"name": "TypeScript (Windi CSS)",
+				"scope": "source.ts.windi",
+				"base": "source.ts",
+				"extensions": [
+					"windi.config.ts"
+				]
+			}
+		],
+		"color": "sky"
+	},
 	"file_type_word": {
 		"aliases": [
 			{
