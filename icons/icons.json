@@ -1805,6 +1805,19 @@
 			}
 		]
 	},
+	"file_type_postscript": {
+		"color": "red",
+		"syntaxes": [
+			{
+				"extensions": [
+					"ps",
+					"eps"
+				],
+				"name": "Plain Text (PostScript)",
+				"scope": "source.ps,source.postscript"
+			}
+		]
+	},
 	"file_type_powerpoint": {
 		"aliases": [
 			{

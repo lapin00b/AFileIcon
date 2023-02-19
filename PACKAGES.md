@@ -233,6 +233,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Syntax Highlighting for Post​CSS](https://packagecontrol.io/packages/Syntax%20Highlighting%20for%20PostCSS)
 
+## PostScript
+
+- [PostScript](https://packagecontrol.io/packages/PostScript)
+
 ## Prisma Scheme
 
 - [Prisma](https://packagecontrol.io/packages/Prisma)
