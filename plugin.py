@@ -3,7 +3,6 @@ import sublime
 import sublime_plugin
 
 if int(sublime.version()) >= 3114:
-
     __all__ = ["AfiRevertCommand", "plugin_loaded", "plugin_unloaded"]
 
     # Clear module cache to force reloading all modules of this package.
