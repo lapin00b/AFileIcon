@@ -2,11 +2,11 @@
 <plist version="1.0">
 	<dict>
 		<key>scope</key>
-		<string>source.css.tailwind, source.js.tailwind, source.ts.tailwind</string>
+		<string>source.js.windi, source.ts.windi</string>
 		<key>settings</key>
 		<dict>
 			<key>icon</key>
-			<string>file_type_tailwind</string>
+			<string>file_type_windicss</string>
 		</dict>
 	</dict>
 </plist>

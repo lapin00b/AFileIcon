@@ -1805,6 +1805,19 @@
 			}
 		]
 	},
+	"file_type_postscript": {
+		"color": "red",
+		"syntaxes": [
+			{
+				"extensions": [
+					"ps",
+					"eps"
+				],
+				"name": "Plain Text (PostScript)",
+				"scope": "source.ps,source.postscript"
+			}
+		]
+	},
 	"file_type_powerpoint": {
 		"aliases": [
 			{
@@ -2480,6 +2493,24 @@
 		"color": "cyan"
 	},
 	"file_type_tailwind": {
+		"aliases": [
+			{
+				"name": "JavaScript (Tailwind CSS)",
+				"scope": "source.js.tailwind",
+				"base": "source.js",
+				"extensions": [
+					"tailwind.config.js"
+				]
+			},
+			{
+				"name": "TypeScript (Tailwind CSS)",
+				"scope": "source.ts.tailwind",
+				"base": "source.ts",
+				"extensions": [
+					"tailwind.config.ts"
+				]
+			}
+		],
 		"color": "cyan",
 		"syntaxes": [
 			{
@@ -2901,6 +2932,19 @@
 			}
 		]
 	},
+	"file_type_wast": {
+		"color": "purple",
+		"syntaxes": [
+			{
+				"extensions": [
+					"wast",
+					"wat"
+				],
+				"name": "WAST",
+				"scope": "source.wast"
+			}
+		]
+	},
 	"file_type_webpack": {
 		"aliases": [
 			{
@@ -2946,6 +2990,27 @@
 				"scope": "source.dosbatch"
 			}
 		]
+	},
+	"file_type_windicss": {
+		"aliases": [
+			{
+				"name": "JavaScript (Windi CSS)",
+				"scope": "source.js.windi",
+				"base": "source.js",
+				"extensions": [
+					"windi.config.js"
+				]
+			},
+			{
+				"name": "TypeScript (Windi CSS)",
+				"scope": "source.ts.windi",
+				"base": "source.ts",
+				"extensions": [
+					"windi.config.ts"
+				]
+			}
+		],
+		"color": "sky"
 	},
 	"file_type_word": {
 		"aliases": [
