@@ -2135,6 +2135,14 @@
 			{
 				"name": "Ruby",
 				"scope": "source.ruby"
+			},
+			{
+				"base": "source.rbs",
+				"extensions": [
+					"rbs"
+				],
+				"name": "Plain Text (RBS)",
+				"scope": "text.plain.rbs"
 			}
 		]
 	},

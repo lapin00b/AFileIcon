@@ -261,6 +261,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [QML](https://packagecontrol.io/packages/QML)
 
+## RBS
+
+- [RBS](https://packagecontrol.io/packages/RBS)
+
 ## Reach
 
 - [Reach IDE](https://packagecontrol.io/packages/Reach%20IDE)
