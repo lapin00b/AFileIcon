@@ -13,6 +13,11 @@ def init():
     log("Initializing icons")
 
     try:
+        # create hidden overlay package
+        overlay_path = path.overlay_path()
+        os.makedirs(overlay_path, exist_ok=True)
+        open(os.path.join(overlay_path, ".hidden-sublime-package"), "a").close()
+
         general_path = path.overlay_patches_general_path()
         if os.path.isdir(general_path):
             dump("All the necessary icons are provided")
