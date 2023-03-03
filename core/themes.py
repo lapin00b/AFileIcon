@@ -123,6 +123,10 @@ def _create_general_patch(settings):
     log("Preparing general patch")
     theme_content = []
 
+    row_padding = settings.get("row_padding")
+    if row_padding:
+        theme_content.append({"class": "sidebar_tree", "row_padding": row_padding})
+
     color = convert_color_value(settings.get("color"))
     opacity = settings.get("opacity")
     icon = _patch_icon(None, color, opacity)
@@ -130,10 +134,6 @@ def _create_general_patch(settings):
     size = settings.get("size")
     if size:
         icon["content_margin"] = [size, size]
-
-    row_padding = settings.get("row_padding")
-    if row_padding:
-        icon["row_padding"] = row_padding
 
     theme_content.append(icon)
 
@@ -154,6 +154,10 @@ def _create_general_patch(settings):
 def _create_specific_patch(settings):
     log("Preparing specific patch")
     theme_content = []
+
+    row_padding = settings.get("row_padding")
+    if row_padding:
+        theme_content.append({"class": "sidebar_tree", "row_padding": row_padding})
 
     color = convert_color_value(settings.get("color"))
     icon = _patch_icon(None, color)
