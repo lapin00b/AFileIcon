@@ -958,6 +958,18 @@
 			}
 		]
 	},
+	"file_type_gleam": {
+		"color": "pink",
+		"syntaxes": [
+			{
+				"extensions": [
+					"gleam"
+				],
+				"name": "Gleam",
+				"scope": "source.gleam"
+			}
+		]
+	},
 	"file_type_go": {
 		"color": "sky",
 		"syntaxes": [

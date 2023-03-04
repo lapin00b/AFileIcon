@@ -124,6 +124,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [GitSyntaxes](https://packagecontrol.io/packages/GitSyntaxes)
 
+## Gleam
+
+- [Gleam](https://packagecontrol.io/packages/Gleam)
+
 ## Gradle
 
 - [Gradle_Language](https://packagecontrol.io/packages/Gradle_Language)
