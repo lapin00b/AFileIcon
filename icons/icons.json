@@ -602,6 +602,21 @@
 			}
 		]
 	},
+	"file_type_email": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"eml",
+					"msg",
+					"mbx",
+					"mboxz"
+				],
+				"name": "Plain Text (Email)",
+				"scope": "text.email, text.eml"
+			}
+		]
+	},
 	"file_type_dart": {
 		"color": "cyan",
 		"syntaxes": [
