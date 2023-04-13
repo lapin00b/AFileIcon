@@ -101,6 +101,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Elm Language Support](https://packagecontrol.io/packages/Elm%20Language%20Support)
 
+## Email
+
+- [EML](https://packagecontrol.io/packages/EML%20(E-Mail))
+
 ## EmberScript
 
 - [EmberScript](https://packagecontrol.io/packages/EmberScript)
@@ -123,6 +127,10 @@ This file contains a list of possible packages you may need to install to see th
 ## Git
 
 - [GitSyntaxes](https://packagecontrol.io/packages/GitSyntaxes)
+
+## Gleam
+
+- [Gleam](https://packagecontrol.io/packages/Gleam)
 
 ## Gradle
 
@@ -212,6 +220,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [NSIS](https://packagecontrol.io/packages/NSIS)
 - [BridleNSIS](https://packagecontrol.io/packages/BridleNSIS)
+
+## Odin
+
+- [Odin](https://packagecontrol.io/packages/Odin)
 
 ## PackageDev
 

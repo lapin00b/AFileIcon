@@ -602,6 +602,21 @@
 			}
 		]
 	},
+	"file_type_email": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"eml",
+					"msg",
+					"mbx",
+					"mboxz"
+				],
+				"name": "Plain Text (Email)",
+				"scope": "text.email, text.eml"
+			}
+		]
+	},
 	"file_type_dart": {
 		"color": "cyan",
 		"syntaxes": [
@@ -955,6 +970,18 @@
 			{
 				"name": "Shell Script (Git)",
 				"scope": "source.shell.git"
+			}
+		]
+	},
+	"file_type_gleam": {
+		"color": "pink",
+		"syntaxes": [
+			{
+				"extensions": [
+					"gleam"
+				],
+				"name": "Gleam",
+				"scope": "source.gleam"
 			}
 		]
 	},
@@ -1671,6 +1698,18 @@
 			{
 				"name": "camlp4",
 				"scope": "source.camlp4.ocaml"
+			}
+		]
+	},
+	"file_type_odin": {
+		"color": "blue",
+		"syntaxes": [
+			{
+				"extensions": [
+					"odin"
+				],
+				"name": "Plain Text (Odin)",
+				"scope": "source.odin"
 			}
 		]
 	},
