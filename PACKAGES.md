@@ -221,6 +221,10 @@ This file contains a list of possible packages you may need to install to see th
 - [NSIS](https://packagecontrol.io/packages/NSIS)
 - [BridleNSIS](https://packagecontrol.io/packages/BridleNSIS)
 
+## Odin
+
+- [Odin](https://packagecontrol.io/packages/Odin)
+
 ## PackageDev
 
 - [PackageDev](https://packagecontrol.io/packages/PackageDev)

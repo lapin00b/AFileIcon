@@ -1701,6 +1701,18 @@
 			}
 		]
 	},
+	"file_type_odin": {
+		"color": "blue",
+		"syntaxes": [
+			{
+				"extensions": [
+					"odin"
+				],
+				"name": "Plain Text (Odin)",
+				"scope": "source.odin"
+			}
+		]
+	},
 	"file_type_onenote": {
 		"aliases": [
 			{
