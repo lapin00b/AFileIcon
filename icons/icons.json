@@ -1337,6 +1337,19 @@
 			}
 		]
 	},
+	"file_type_kotlin_gradle": {
+		"aliases": [
+			{
+				"base": "source.Kotlin",
+				"extensions": [
+					"gradle.kts"
+				],
+				"name": "Kotlin (Gradle)",
+				"scope": "source.Kotlin.gradle"
+			}
+		],
+		"color": "blue"
+	},
 	"file_type_ksp": {
 		"color": "graphite",
 		"syntaxes": [
