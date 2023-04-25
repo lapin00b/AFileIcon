@@ -2,11 +2,11 @@
 <plist version="1.0">
 	<dict>
 		<key>scope</key>
-		<string>source.shell.yarn, source.yaml.yarn</string>
+		<string>source.Kotlin.gradle</string>
 		<key>settings</key>
 		<dict>
 			<key>icon</key>
-			<string>file_type_yarn</string>
+			<string>file_type_kotlin_gradle</string>
 		</dict>
 	</dict>
 </plist>
