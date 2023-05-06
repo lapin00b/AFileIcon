@@ -212,6 +212,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [NimLime](https://packagecontrol.io/packages/NimLime)
 
+## Nix
+
+- [Nix](https://packagecontrol.io/packages/Nix)
+
 ## Notes
 
 - [PlainNotes](https://packagecontrol.io/packages/PlainNotes)

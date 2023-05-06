@@ -1637,6 +1637,18 @@
 			}
 		]
 	},
+	"file_type_nix": {
+		"color": "sky",
+		"syntaxes": [
+			{
+				"extensions": [
+					"nix"
+				],
+				"name": "Plain Text (Nix)",
+				"scope": "source.nix"
+			}
+		]
+	},
 	"file_type_nodejs": {
 		"aliases": [
 			{
