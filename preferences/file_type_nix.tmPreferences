@@ -2,11 +2,11 @@
 <plist version="1.0">
 	<dict>
 		<key>scope</key>
-		<string>source.git, source.shell.git, text.git, text.git.blame, text.git.description, text.git.keep</string>
+		<string>source.nix</string>
 		<key>settings</key>
 		<dict>
 			<key>icon</key>
-			<string>file_type_git</string>
+			<string>file_type_nix</string>
 		</dict>
 	</dict>
 </plist>

@@ -951,6 +951,14 @@
 			},
 			{
 				"extensions": [
+					"description",
+					".gitdescription"
+				],
+				"name": "Git Description",
+				"scope": "text.git.description"
+			},
+			{
+				"extensions": [
 					".gitkeep"
 				],
 				"name": "Git Keep",
@@ -1626,6 +1634,18 @@
 				],
 				"name": "Plain Text (Nim Filter)",
 				"scope": "source.nim_filter"
+			}
+		]
+	},
+	"file_type_nix": {
+		"color": "sky",
+		"syntaxes": [
+			{
+				"extensions": [
+					"nix"
+				],
+				"name": "Plain Text (Nix)",
+				"scope": "source.nix"
 			}
 		]
 	},
@@ -2798,6 +2818,18 @@
 			{
 				"name": "TypeScript",
 				"scope": "source.js.typescript"
+			}
+		]
+	},
+	"file_type_typst": {
+		"color": "cyan",
+		"syntaxes": [
+			{
+				"extensions": [
+					"typ"
+				],
+				"name": "Typst",
+				"scope": "source.typst"
 			}
 		]
 	},
