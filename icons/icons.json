@@ -2537,7 +2537,7 @@
 	"file_type_svg": {
 		"aliases": [
 			{
-				"base": "text.xml",
+				"base": "text.html.basic",
 				"extensions": [
 					"svg"
 				],
