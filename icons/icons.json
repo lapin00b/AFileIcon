@@ -3037,6 +3037,18 @@
 			}
 		]
 	},
+	"file_type_vyper": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"vy"
+				],
+				"name": "Plain Text (Vyper)",
+				"scope": "source.vyper"
+			}
+		]
+	},
 	"file_type_wast": {
 		"color": "purple",
 		"syntaxes": [
