@@ -199,6 +199,19 @@
 			}
 		]
 	},
+	"file_type_asciidoc": {
+		"color": "cyan",
+		"syntaxes": [
+			{
+				"extensions": [
+					"asciidoc",
+					"adoc"
+				],
+				"name": "Plain Text (AsciiDoc)",
+				"scope": "text.asciidoc, text.html.asciidoc"
+			}
+		]
+	},
 	"file_type_astro": {
 		"color": "graphite",
 		"syntaxes": [
