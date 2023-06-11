@@ -2,11 +2,11 @@
 <plist version="1.0">
 	<dict>
 		<key>scope</key>
-		<string>text.html.markdown.jsx</string>
+		<string>text.html.markdown.jsx, text.html.markdown.mdx</string>
 		<key>settings</key>
 		<dict>
 			<key>icon</key>
-			<string>file_type_markdownx</string>
+			<string>file_type_mdx</string>
 		</dict>
 	</dict>
 </plist>

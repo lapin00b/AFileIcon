@@ -1496,18 +1496,6 @@
 			}
 		]
 	},
-	"file_type_markdownx": {
-		"color": "cyan",
-		"syntaxes": [
-			{
-				"extensions": [
-					"mdx"
-				],
-				"name": "Plain Text (Markdown JSX)",
-				"scope": "text.html.markdown.jsx"
-			}
-		]
-	},
 	"file_type_markup": {
 		"color": "purple"
 	},
@@ -1529,6 +1517,18 @@
 				],
 				"name": "Plain Text (MEL)",
 				"scope": "source.mel"
+			}
+		]
+	},
+	"file_type_mdx": {
+		"color": "cyan",
+		"syntaxes": [
+			{
+				"extensions": [
+					"mdx"
+				],
+				"name": "Plain Text (MDX)",
+				"scope": "text.html.markdown.jsx, text.html.markdown.mdx"
 			}
 		]
 	},
