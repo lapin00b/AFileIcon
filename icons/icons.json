@@ -2412,6 +2412,26 @@
 			}
 		]
 	},
+	"file_type_solidity": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"sol"
+				],
+				"name": "Plain Text (Solidity)",
+				"scope": "source.solidity"
+			},
+			{
+				"extensions": [
+					"yul",
+					"yulp"
+				],
+				"name": "Plain Text (Yul)",
+				"scope": "source.yul"
+			}
+		]
+	},
 	"file_type_source": {
 		"color": "sky"
 	},

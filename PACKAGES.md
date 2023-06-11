@@ -318,6 +318,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Ruby Slim](https://packagecontrol.io/packages/Ruby%20Slim)
 
+## Solidity
+
+- [Eutherium](https://packagecontrol.io/packages/Ethereum)
+
 ## Stata
 
 - [Stata Enhanced](https://packagecontrol.io/packages/Stata%20Enhanced)
