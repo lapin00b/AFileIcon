@@ -338,6 +338,18 @@
 			}
 		]
 	},
+	"file_type_cairo": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"cairo"
+				],
+				"name": "Plain Text (Cairo)",
+				"scope": "source.cairo"
+			}
+		]
+	},
 	"file_type_c": {
 		"color": "purple",
 		"syntaxes": [

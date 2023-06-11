@@ -41,6 +41,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Caddyfile Syntax](https://packagecontrol.io/packages/Caddyfile%20Syntax)
 
+## Cairo
+
+- [Eutherium](https://packagecontrol.io/packages/Ethereum)
+
 ## CMake
 
 - [CMake](https://packagecontrol.io/packages/CMake)
