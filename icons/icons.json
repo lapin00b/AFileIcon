@@ -229,6 +229,18 @@
 		]
 	},
 	"file_type_astro": {
+		"aliases": [
+			{
+				"base": "source.js",
+				"extensions": [
+					"astro.config.js",
+					"astro.config.cjs",
+					"astro.config.mjs"
+				],
+				"name": "JavaScript (Astro)",
+				"scope": "source.js.astro"
+			}
+		],
 		"color": "graphite",
 		"syntaxes": [
 			{
