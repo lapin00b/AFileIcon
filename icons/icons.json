@@ -1712,6 +1712,20 @@
 			}
 		]
 	},
+	"file_type_nextjs": {
+		"aliases": [
+			{
+				"base": "source.js",
+				"extensions": [
+					"next.config.js",
+					"next.config.cjs"
+				],
+				"name": "JavaScript (Next.js)",
+				"scope": "source.js.nextjs"
+			}
+		],
+		"color": "sky"
+	},
 	"file_type_nginx": {
 		"color": "green",
 		"syntaxes": [
