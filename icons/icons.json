@@ -3325,7 +3325,8 @@
 				"base": "source.yaml",
 				"extensions": [
 					"yarn.lock",
-					".yarnrc.yml"
+					".yarnrc.yml",
+					".yarnrc.yaml"
 				],
 				"name": "YAML (Yarn)",
 				"scope": "source.yaml.yarn"
