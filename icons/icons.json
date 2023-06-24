@@ -576,6 +576,20 @@
 			}
 		]
 	},
+	"file_type_cuda": {
+		"color": "green",
+		"syntaxes": [
+			{
+				"base": "source.c++",
+				"extensions": [
+					"cu",
+					"cuh"
+				],
+				"name": "C++ (Cuda)",
+				"scope": "source.cuda-c++, source.c++.cuda"
+			}
+		]
+	},
 	"file_type_cppheader": {
 		"aliases": [
 			{
