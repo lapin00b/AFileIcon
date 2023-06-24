@@ -2725,7 +2725,7 @@
 	"file_type_taskfile": {
 		"aliases": [
 			{
-				"base": "source.json",
+				"base": "source.yaml",
 				"extensions": [
 					"Taskfile"
 				],
