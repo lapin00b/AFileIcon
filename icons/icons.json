@@ -3311,6 +3311,21 @@
 		],
 		"color": "blue"
 	},
+	"file_type_wolfram": {
+		"color": "red",
+		"syntaxes": [
+			{
+				"extensions": [
+					"wl",
+					"wls",
+					"wlt",
+					"mt"
+				],
+				"name": "Text Plain (Wolfram)",
+				"scope": "source.wolfram"
+			}
+		]
+	},
 	"file_type_xsl": {
 		"color": "sky",
 		"syntaxes": [

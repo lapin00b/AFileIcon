@@ -415,6 +415,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [WGSL](https://packagecontrol.io/packages/WGSL)
 
+## Wolfram
+
+- [WolframLanguage](https://packagecontrol.io/packages/WolframLanguage)
+
 ## Zig
 
 - [Zig Syntax Highlight](https://packagecontrol.io/packages/Zig%20Language)
