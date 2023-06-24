@@ -1237,6 +1237,35 @@
 			}
 		]
 	},
+	"file_type_heroku": {
+		"color": "purple",
+		"syntaxes": [
+			{
+				"extensions": [
+					".buildpacks"
+				],
+				"name": "Plain Text (Buildpacks)",
+				"scope": "text.plain.buildpacks"
+			},
+			{
+				"base": "source.yaml",
+				"extensions": [
+					"heroku.yml",
+					"heroku.yaml"
+				],
+				"name": "YAML (Heroku)",
+				"scope": "source.yaml.heroku"
+			},
+			{
+				"base": "source.yaml",
+				"extensions": [
+					"Procfile"
+				],
+				"name": "YAML (Procfile)",
+				"scope": "source.yaml.procfile"
+			}
+		]
+	},
 	"file_type_html": {
 		"color": "orange",
 		"syntaxes": [
@@ -2032,26 +2061,6 @@
 				"scope": "source.prisma"
 			}
 		]
-	},
-	"file_type_procfile": {
-		"aliases": [
-			{
-				"base": "source.yaml",
-				"extensions": [
-					"Procfile"
-				],
-				"name": "YAML (Procfile)",
-				"scope": "source.yaml.procfile"
-			},
-			{
-				"extensions": [
-					".buildpacks"
-				],
-				"name": "Plain Text (Buildpacks)",
-				"scope": "text.plain.buildpacks"
-			}
-		],
-		"color": "purple"
 	},
 	"file_type_protobuf": {
 		"color": "graphite",
