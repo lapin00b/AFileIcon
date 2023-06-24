@@ -267,6 +267,20 @@
 		],
 		"color": "red"
 	},
+	"file_type_azure": {
+		"color": "sky",
+		"syntaxes": [
+			{
+				"base": "source.yaml",
+				"extensions": [
+					"azure-pipelines.yml",
+					"azure-pipelines.yaml"
+				],
+				"name": "YAML (Azure)",
+				"scope": "source.yaml.azure"
+			}
+		]
+	},
 	"file_type_babel": {
 		"aliases": [
 			{
