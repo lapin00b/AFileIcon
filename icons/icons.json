@@ -871,7 +871,9 @@
 			{
 				"base": "source.js",
 				"extensions": [
-					".eslintrc.js"
+					".eslintrc.js",
+					".eslintrc.cjs",
+					".eslintrc.mjs"
 				],
 				"name": "JavaScript (ESLint)",
 				"scope": "source.js.eslint"
@@ -1030,12 +1032,16 @@
 				"extensions": [
 					"gatsby-browser.js",
 					"gatsby-browser.cjs",
+					"gatsby-browser.mjs",
 					"gatsby-config.js",
 					"gatsby-config.cjs",
+					"gatsby-config.mjs",
 					"gatsby-node.js",
 					"gatsby-node.cjs",
+					"gatsby-node.mjs",
 					"gatsby-ssr.js",
-					"gatsby-ssr.cjs"
+					"gatsby-ssr.cjs",
+					"gatsby-ssr.mjs"
 				],
 				"name": "JavaScript (Gatsby)",
 				"scope": "source.js.gatsby"
@@ -1165,7 +1171,9 @@
 			{
 				"base": "source.js",
 				"extensions": [
-					"gruntfile.js"
+					"gruntfile.js",
+					"gruntfile.cjs",
+					"gruntfile.mjs"
 				],
 				"name": "JavaScript (Gruntfile)",
 				"scope": "source.js.gruntfile"
@@ -1179,7 +1187,11 @@
 				"base": "source.js",
 				"extensions": [
 					"gulpfile.js",
-					"gulpfile.babel.js"
+					"gulpfile.cjs",
+					"gulpfile.mjs",
+					"gulpfile.babel.js",
+					"gulpfile.babel.cjs",
+					"gulpfile.babel.mjs"
 				],
 				"name": "JavaScript (Gulpfile)",
 				"scope": "source.js.gulpfile"
@@ -1382,7 +1394,11 @@
 					"jest.config.js",
 					"jest.config.cjs",
 					"jest.config.mjs",
-					"jest.setup.js"
+					"jest.config.mjs",
+					"jest.setup.js",
+					"jest.setup.cjs",
+					"jest.setup.mjs",
+					"jest.setup.mjs"
 				],
 				"name": "JavaScript (Jest)",
 				"scope": "source.js.jest"
@@ -1393,7 +1409,9 @@
 					"jest.config.ts",
 					"jest.config.cts",
 					"jest.config.mts",
-					"jest.setup.ts"
+					"jest.setup.ts",
+					"jest.setup.cts",
+					"jest.setup.mts"
 				],
 				"name": "TypeScript (Jest)",
 				"scope": "source.ts.jest"
@@ -1738,7 +1756,8 @@
 				"base": "source.js",
 				"extensions": [
 					"next.config.js",
-					"next.config.cjs"
+					"next.config.cjs",
+					"next.config.mjs"
 				],
 				"name": "JavaScript (Next.js)",
 				"scope": "source.js.nextjs"
@@ -1866,7 +1885,8 @@
 				"base": "source.js",
 				"extensions": [
 					"nuxt.config.js",
-					"nuxt.config.cjs"
+					"nuxt.config.cjs",
+					"nuxt.config.mjs"
 				],
 				"name": "JavaScript (Nuxt)",
 				"scope": "source.js.nuxt"
@@ -2015,8 +2035,10 @@
 				"extensions": [
 					".pnpmfile.js",
 					".pnpmfile.cjs",
+					".pnpmfile.mjs",
 					"global_pnpmfile.js",
-					"global_pnpmfile.cjs"
+					"global_pnpmfile.cjs",
+					"global_pnpmfile.mjs"
 				],
 				"name": "JavaScript (pnpm)",
 				"scope": "source.js.pnpm"
@@ -2047,7 +2069,9 @@
 			{
 				"base": "source.js",
 				"extensions": [
-					"postcss.config.js"
+					"postcss.config.js",
+					"postcss.config.cjs",
+					"postcss.config.mjs"
 				],
 				"name": "JavaScript (Post CSS)",
 				"scope": "source.js.postcss"
@@ -2178,7 +2202,9 @@
 			{
 				"base": "source.js",
 				"extensions": [
-					".pug-lintrc.js"
+					".pug-lintrc.js",
+					".pug-lintrc.cjs",
+					".pug-lintrc.mjs"
 				],
 				"name": "JavaScript (Puglint)",
 				"scope": "source.js.puglint"
@@ -2368,7 +2394,8 @@
 				"base": "source.js",
 				"extensions": [
 					"rollup.config.js",
-					"rollup.config.cjs"
+					"rollup.config.cjs",
+					"rollup.config.mjs"
 				],
 				"name": "JavaScript (Rollup)",
 				"scope": "source.js.rollup"
@@ -2665,7 +2692,11 @@
 				"base": "source.js",
 				"extensions": [
 					".stylelintrc.js",
-					"stylelint.config.js"
+					".stylelintrc.cjs",
+					".stylelintrc.mjs",
+					"stylelint.config.js",
+					"stylelint.config.cjs",
+					"stylelint.config.mjs"
 				],
 				"name": "JavaScript (Stylelint)",
 				"scope": "source.js.stylelint"
@@ -2805,7 +2836,9 @@
 				"scope": "source.js.tailwind",
 				"base": "source.js",
 				"extensions": [
-					"tailwind.config.js"
+					"tailwind.config.js",
+					"tailwind.config.cjs",
+					"tailwind.config.mjs"
 				]
 			},
 			{
@@ -2813,7 +2846,9 @@
 				"scope": "source.ts.tailwind",
 				"base": "source.ts",
 				"extensions": [
-					"tailwind.config.ts"
+					"tailwind.config.ts",
+					"tailwind.config.cts",
+					"tailwind.config.mts"
 				]
 			}
 		],
@@ -2879,7 +2914,11 @@
 				"base": "source.js",
 				"extensions": [
 					"spec.js",
-					"test.js"
+					"spec.cjs",
+					"spec.mjs",
+					"test.js",
+					"test.cjs",
+					"test.mjs"
 				],
 				"name": "UnitTest (JavaScript)",
 				"scope": "source.js.unittest"
@@ -2921,7 +2960,11 @@
 				"base": "source.ts",
 				"extensions": [
 					"spec.ts",
-					"test.ts"
+					"spec.cts",
+					"spec.mts",
+					"test.ts",
+					"test.cts",
+					"test.mts"
 				],
 				"name": "UnitTest (TypeScript)",
 				"scope": "source.ts.unittest"
@@ -3295,9 +3338,17 @@
 				"base": "source.js",
 				"extensions": [
 					"webpack.config.js",
+					"webpack.config.cjs",
+					"webpack.config.mjs",
 					"webpack.config.babel.js",
+					"webpack.config.babel.cjs",
+					"webpack.config.babel.mjs",
 					"webpack.dev.js",
-					"webpack.mix.js"
+					"webpack.dev.cjs",
+					"webpack.dev.mjs",
+					"webpack.mix.js",
+					"webpack.mix.cjs",
+					"webpack.mix.mjs"
 				],
 				"name": "JavaScript (Webpack)",
 				"scope": "source.js.webpack"
@@ -3342,7 +3393,9 @@
 				"scope": "source.js.windi",
 				"base": "source.js",
 				"extensions": [
-					"windi.config.js"
+					"windi.config.js",
+					"windi.config.cjs",
+					"windi.config.mjs"
 				]
 			},
 			{
@@ -3350,7 +3403,9 @@
 				"scope": "source.ts.windi",
 				"base": "source.ts",
 				"extensions": [
-					"windi.config.ts"
+					"windi.config.ts",
+					"windi.config.cts",
+					"windi.config.mts"
 				]
 			}
 		],
