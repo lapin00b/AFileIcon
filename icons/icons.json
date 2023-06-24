@@ -2917,6 +2917,20 @@
 			}
 		]
 	},
+	"file_type_travis": {
+		"color": "orange",
+		"syntaxes": [
+			{
+				"base": "source.yaml",
+				"extensions": [
+					".travis.yml",
+					".travis.yaml"
+				],
+				"name": "YAML (Travis CI)",
+				"scope": "source.yaml.travis"
+			}
+		]
+	},
 	"file_type_tsx": {
 		"color": "sky",
 		"syntaxes": [
