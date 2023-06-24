@@ -710,6 +710,20 @@
 			}
 		]
 	},
+	"file_type_dependabot": {
+		"color": "sky",
+		"syntaxes": [
+			{
+				"base": "source.yaml",
+				"extensions": [
+					"dependabot.yml",
+					"dependabot.yaml"
+				],
+				"name": "YAML (Dependabot)",
+				"scope": "source.yaml.dependabot"
+			}
+		]
+	},
 	"file_type_diff": {
 		"color": "yellow",
 		"syntaxes": [
