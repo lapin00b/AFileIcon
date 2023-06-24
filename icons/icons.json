@@ -1958,6 +1958,33 @@
 			}
 		]
 	},
+	"file_type_pnpm": {
+		"color": "purple",
+		"syntaxes": [
+			{
+				"base": "source.js",
+				"extensions": [
+					".pnpmfile.js",
+					".pnpmfile.cjs",
+					"global_pnpmfile.js",
+					"global_pnpmfile.cjs"
+				],
+				"name": "JavaScript (pnpm)",
+				"scope": "source.js.pnpm"
+			},
+			{
+				"base": "source.yaml",
+				"extensions": [
+					"pnpm-lock.yml",
+					"pnpm-lock.yaml",
+					"pnpm-workspace.yml",
+					"pnpm-workspace.yaml"
+				],
+				"name": "YAML (pnpm)",
+				"scope": "source.yaml.pnpm"
+			}
+		]
+	},
 	"file_type_postcss": {
 		"aliases": [
 			{
