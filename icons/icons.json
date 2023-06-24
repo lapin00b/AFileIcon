@@ -3186,6 +3186,31 @@
 			}
 		]
 	},
+	"file_type_vercel": {
+		"aliases": [
+			{
+				"base": "source.js",
+				"extensions": [
+					"vercel.config.js",
+					"vercel.config.cjs",
+					"vercel.config.mjs"
+				],
+				"name": "JavaScript (Vercel)",
+				"scope": "source.js.vercel"
+			}
+		],
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"base": "source.json",
+				"extensions": [
+					"vercel.json"
+				],
+				"name": "JSON (Vercel)",
+				"scope": "source.json.vercel"
+			}
+		]
+	},
 	"file_type_vhdl": {
 		"color": "blue",
 		"syntaxes": [
