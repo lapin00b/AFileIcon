@@ -1023,6 +1023,26 @@
 			}
 		]
 	},
+	"file_type_gatsby": {
+		"aliases": [
+			{
+				"base": "source.js",
+				"extensions": [
+					"gatsby-browser.js",
+					"gatsby-browser.cjs",
+					"gatsby-config.js",
+					"gatsby-config.cjs",
+					"gatsby-node.js",
+					"gatsby-node.cjs",
+					"gatsby-ssr.js",
+					"gatsby-ssr.cjs"
+				],
+				"name": "JavaScript (Gatsby)",
+				"scope": "source.js.gatsby"
+			}
+		],
+		"color": "purple"
+	},
 	"file_type_git": {
 		"aliases": [
 			{
