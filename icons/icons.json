@@ -165,6 +165,22 @@
 			}
 		]
 	},
+	"file_type_appveyor": {
+		"color": "sky",
+		"syntaxes": [
+			{
+				"base": "source.yaml",
+				"extensions": [
+					"appveyor.yml",
+					"appveyor.yaml",
+					".appveyor.yml",
+					".appveyor.yaml"
+				],
+				"name": "YAML (AppVeyor)",
+				"scope": "source.yaml.appveyor"
+			}
+		]
+	},
 	"file_type_archive": {
 		"aliases": [
 			{
