@@ -245,6 +245,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Laravel Blade Highlighter](https://packagecontrol.io/packages/Laravel%20Blade%20Highlighter)
 
+## Playlist
+
+- [M3U Syntax](https://packagecontrol.io/packages/M3U%20Syntax)
+
 ## Plist
 
 - [plist](https://packagecontrol.io/packages/plist)
