@@ -2362,6 +2362,20 @@
 			}
 		]
 	},
+	"file_type_rollup": {
+		"aliases": [
+			{
+				"base": "source.js",
+				"extensions": [
+					"rollup.config.js",
+					"rollup.config.cjs"
+				],
+				"name": "JavaScript (Rollup)",
+				"scope": "source.js.rollup"
+			}
+		],
+		"color": "red"
+	},
 	"file_type_rss": {
 		"aliases": [
 			{
