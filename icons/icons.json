@@ -483,6 +483,20 @@
 			}
 		]
 	},
+	"file_type_codecov": {
+		"color": "red",
+		"syntaxes": [
+			{
+				"base": "source.yaml",
+				"extensions": [
+					"codecov.yml",
+					"codecov.yaml"
+				],
+				"name": "YAML (CodeCov)",
+				"scope": "source.yaml.codecov"
+			}
+		]
+	},
 	"file_type_coffeescript": {
 		"color": "orange",
 		"syntaxes": [
