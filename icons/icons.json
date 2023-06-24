@@ -3211,6 +3211,21 @@
 			}
 		]
 	},
+	"file_type_vite": {
+		"aliases": [
+			{
+				"base": "source.js",
+				"extensions": [
+					"vite.config.js",
+					"vite.config.cjs",
+					"vite.config.mjs"
+				],
+				"name": "JavaScript (Vite)",
+				"scope": "source.js.vite"
+			}
+		],
+		"color": "sky"
+	},
 	"file_type_vhdl": {
 		"color": "blue",
 		"syntaxes": [
