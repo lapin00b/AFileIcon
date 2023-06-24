@@ -1840,6 +1840,20 @@
 			}
 		]
 	},
+	"file_type_nuxt": {
+		"aliases": [
+			{
+				"base": "source.js",
+				"extensions": [
+					"nuxt.config.js",
+					"nuxt.config.cjs"
+				],
+				"name": "JavaScript (Nuxt)",
+				"scope": "source.js.nuxt"
+			}
+		],
+		"color": "sky"
+	},
 	"file_type_ocaml": {
 		"color": "yellow",
 		"syntaxes": [
