@@ -766,9 +766,10 @@
 			{
 				"extensions": [
 					"Dockerfile",
-					"dockerfile"
+					"dockerfile",
+					".Dockerfile"
 				],
-				"name": "Dockerfile",
+				"name": "Plain Text (Dockerfile)",
 				"scope": "source.dockerfile"
 			}
 		]
