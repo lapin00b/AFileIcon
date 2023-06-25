@@ -278,6 +278,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Prisma](https://packagecontrol.io/packages/Prisma)
 
+## Prolog
+
+- [Prolog](https://packagecontrol.io/packages/Prolog)
+
 ## Protobuf
 
 - [Protobuf Syntax Hightlighting](https://packagecontrol.io/packages/Protobuf%20Syntax%20Hightlighting)

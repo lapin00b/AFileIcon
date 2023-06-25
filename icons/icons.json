@@ -2266,6 +2266,21 @@
 			}
 		]
 	},
+	"file_type_prolog": {
+		"color": "red",
+		"syntaxes": [
+			{
+				"extensions": [
+					"pro",
+					"prolog",
+					"swiplrc",
+					"ecl"
+				],
+				"name": "Plain Text (Prolog)",
+				"scope": "source.prolog, source.prolog.eclipse"
+			}
+		]
+	},
 	"file_type_protobuf": {
 		"color": "graphite",
 		"syntaxes": [
