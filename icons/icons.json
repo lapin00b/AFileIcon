@@ -2073,6 +2073,18 @@
 			}
 		]
 	},
+	"file_type_pine": {
+		"color": "green",
+		"syntaxes": [
+			{
+				"extensions": [
+					"pine"
+				],
+				"name": "Plain Text (PineScript)",
+				"scope": "source.pine"
+			}
+		]
+	},
 	"file_type_playlist": {
 		"color": "blue",
 		"syntaxes": [
