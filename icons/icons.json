@@ -2012,8 +2012,18 @@
 		"color": "orange",
 		"syntaxes": [
 			{
+				"extensions": [
+					"pwn"
+				],
+				"name": "Plain Text (Pawn)",
+				"scope": "source.pawn"
+			},
+			{
+				"extensions": [
+					"sp"
+				],
 				"name": "Plain Text (SourcePawn)",
-				"scope": "source.pawn, source.sp"
+				"scope": "source.sp"
 			}
 		]
 	},

@@ -243,6 +243,7 @@ This file contains a list of possible packages you may need to install to see th
 
 ## Pawn
 
+- [Pawn Syntax](https://packagecontrol.io/packages/Pawn%20syntax)
 - [SourcePawn](https://packagecontrol.io/packages/SourcePawn%20Syntax%20Highlighting)
 
 ## PHP
