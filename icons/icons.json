@@ -165,6 +165,22 @@
 			}
 		]
 	},
+	"file_type_appveyor": {
+		"color": "sky",
+		"syntaxes": [
+			{
+				"base": "source.yaml",
+				"extensions": [
+					"appveyor.yml",
+					"appveyor.yaml",
+					".appveyor.yml",
+					".appveyor.yaml"
+				],
+				"name": "YAML (AppVeyor)",
+				"scope": "source.yaml.appveyor"
+			}
+		]
+	},
 	"file_type_archive": {
 		"aliases": [
 			{
@@ -199,7 +215,32 @@
 			}
 		]
 	},
+	"file_type_asciidoc": {
+		"color": "cyan",
+		"syntaxes": [
+			{
+				"extensions": [
+					"asciidoc",
+					"adoc"
+				],
+				"name": "Plain Text (AsciiDoc)",
+				"scope": "text.asciidoc, text.html.asciidoc"
+			}
+		]
+	},
 	"file_type_astro": {
+		"aliases": [
+			{
+				"base": "source.js",
+				"extensions": [
+					"astro.config.js",
+					"astro.config.cjs",
+					"astro.config.mjs"
+				],
+				"name": "JavaScript (Astro)",
+				"scope": "source.js.astro"
+			}
+		],
 		"color": "graphite",
 		"syntaxes": [
 			{
@@ -237,6 +278,20 @@
 			}
 		],
 		"color": "red"
+	},
+	"file_type_azure": {
+		"color": "sky",
+		"syntaxes": [
+			{
+				"base": "source.yaml",
+				"extensions": [
+					"azure-pipelines.yml",
+					"azure-pipelines.yaml"
+				],
+				"name": "YAML (Azure)",
+				"scope": "source.yaml.azure"
+			}
+		]
 	},
 	"file_type_babel": {
 		"aliases": [
@@ -322,6 +377,18 @@
 				],
 				"name": "Plain Text (Cabal)",
 				"scope": "source.cabal"
+			}
+		]
+	},
+	"file_type_cairo": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"cairo"
+				],
+				"name": "Plain Text (Cairo)",
+				"scope": "source.cairo"
 			}
 		]
 	},
@@ -428,6 +495,20 @@
 			}
 		]
 	},
+	"file_type_codecov": {
+		"color": "red",
+		"syntaxes": [
+			{
+				"base": "source.yaml",
+				"extensions": [
+					"codecov.yml",
+					"codecov.yaml"
+				],
+				"name": "YAML (CodeCov)",
+				"scope": "source.yaml.codecov"
+			}
+		]
+	},
 	"file_type_coffeescript": {
 		"color": "orange",
 		"syntaxes": [
@@ -492,6 +573,20 @@
 			{
 				"name": "Objective C++",
 				"scope": "source.objc++"
+			}
+		]
+	},
+	"file_type_cuda": {
+		"color": "green",
+		"syntaxes": [
+			{
+				"base": "source.c++",
+				"extensions": [
+					"cu",
+					"cuh"
+				],
+				"name": "C++ (Cuda)",
+				"scope": "source.cuda-c++, source.c++.cuda"
 			}
 		]
 	},
@@ -641,6 +736,20 @@
 			}
 		]
 	},
+	"file_type_dependabot": {
+		"color": "sky",
+		"syntaxes": [
+			{
+				"base": "source.yaml",
+				"extensions": [
+					"dependabot.yml",
+					"dependabot.yaml"
+				],
+				"name": "YAML (Dependabot)",
+				"scope": "source.yaml.dependabot"
+			}
+		]
+	},
 	"file_type_diff": {
 		"color": "yellow",
 		"syntaxes": [
@@ -683,9 +792,10 @@
 			{
 				"extensions": [
 					"Dockerfile",
-					"dockerfile"
+					"dockerfile",
+					".Dockerfile"
 				],
-				"name": "Dockerfile",
+				"name": "Plain Text (Dockerfile)",
 				"scope": "source.dockerfile"
 			}
 		]
@@ -787,7 +897,9 @@
 			{
 				"base": "source.js",
 				"extensions": [
-					".eslintrc.js"
+					".eslintrc.js",
+					".eslintrc.cjs",
+					".eslintrc.mjs"
 				],
 				"name": "JavaScript (ESLint)",
 				"scope": "source.js.eslint"
@@ -939,6 +1051,30 @@
 			}
 		]
 	},
+	"file_type_gatsby": {
+		"aliases": [
+			{
+				"base": "source.js",
+				"extensions": [
+					"gatsby-browser.js",
+					"gatsby-browser.cjs",
+					"gatsby-browser.mjs",
+					"gatsby-config.js",
+					"gatsby-config.cjs",
+					"gatsby-config.mjs",
+					"gatsby-node.js",
+					"gatsby-node.cjs",
+					"gatsby-node.mjs",
+					"gatsby-ssr.js",
+					"gatsby-ssr.cjs",
+					"gatsby-ssr.mjs"
+				],
+				"name": "JavaScript (Gatsby)",
+				"scope": "source.js.gatsby"
+			}
+		],
+		"color": "purple"
+	},
 	"file_type_git": {
 		"aliases": [
 			{
@@ -1061,7 +1197,9 @@
 			{
 				"base": "source.js",
 				"extensions": [
-					"gruntfile.js"
+					"gruntfile.js",
+					"gruntfile.cjs",
+					"gruntfile.mjs"
 				],
 				"name": "JavaScript (Gruntfile)",
 				"scope": "source.js.gruntfile"
@@ -1075,7 +1213,11 @@
 				"base": "source.js",
 				"extensions": [
 					"gulpfile.js",
-					"gulpfile.babel.js"
+					"gulpfile.cjs",
+					"gulpfile.mjs",
+					"gulpfile.babel.js",
+					"gulpfile.babel.cjs",
+					"gulpfile.babel.mjs"
 				],
 				"name": "JavaScript (Gulpfile)",
 				"scope": "source.js.gulpfile"
@@ -1151,6 +1293,35 @@
 				],
 				"name": "Plain Text (Haxe)",
 				"scope": "source.haxe"
+			}
+		]
+	},
+	"file_type_heroku": {
+		"color": "purple",
+		"syntaxes": [
+			{
+				"extensions": [
+					".buildpacks"
+				],
+				"name": "Plain Text (Buildpacks)",
+				"scope": "text.plain.buildpacks"
+			},
+			{
+				"base": "source.yaml",
+				"extensions": [
+					"heroku.yml",
+					"heroku.yaml"
+				],
+				"name": "YAML (Heroku)",
+				"scope": "source.yaml.heroku"
+			},
+			{
+				"base": "source.yaml",
+				"extensions": [
+					"Procfile"
+				],
+				"name": "YAML (Procfile)",
+				"scope": "source.yaml.procfile"
 			}
 		]
 	},
@@ -1249,7 +1420,11 @@
 					"jest.config.js",
 					"jest.config.cjs",
 					"jest.config.mjs",
-					"jest.setup.js"
+					"jest.config.mjs",
+					"jest.setup.js",
+					"jest.setup.cjs",
+					"jest.setup.mjs",
+					"jest.setup.mjs"
 				],
 				"name": "JavaScript (Jest)",
 				"scope": "source.js.jest"
@@ -1260,7 +1435,9 @@
 					"jest.config.ts",
 					"jest.config.cts",
 					"jest.config.mts",
-					"jest.setup.ts"
+					"jest.setup.ts",
+					"jest.setup.cts",
+					"jest.setup.mts"
 				],
 				"name": "TypeScript (Jest)",
 				"scope": "source.ts.jest"
@@ -1275,6 +1452,20 @@
 			}
 		],
 		"color": "red"
+	},
+	"file_type_jinja": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"j2",
+					"jinja",
+					"jinja2"
+				],
+				"name": "Plain Text (Jinja)",
+				"scope": "text.jinja"
+			}
+		]
 	},
 	"file_type_js": {
 		"color": "yellow",
@@ -1329,6 +1520,18 @@
 				],
 				"name": "Plain Text (Julia)",
 				"scope": "source.julia"
+			}
+		]
+	},
+	"file_type_kdl": {
+		"color": "purple",
+		"syntaxes": [
+			{
+				"extensions": [
+					"kdl"
+				],
+				"name": "Plain Text (KDL)",
+				"scope": "source.kdl"
 			}
 		]
 	},
@@ -1496,18 +1699,6 @@
 			}
 		]
 	},
-	"file_type_markdownx": {
-		"color": "cyan",
-		"syntaxes": [
-			{
-				"extensions": [
-					"mdx"
-				],
-				"name": "Plain Text (Markdown JSX)",
-				"scope": "text.html.markdown.jsx"
-			}
-		]
-	},
 	"file_type_markup": {
 		"color": "purple"
 	},
@@ -1529,6 +1720,18 @@
 				],
 				"name": "Plain Text (MEL)",
 				"scope": "source.mel"
+			}
+		]
+	},
+	"file_type_mdx": {
+		"color": "cyan",
+		"syntaxes": [
+			{
+				"extensions": [
+					"mdx"
+				],
+				"name": "Plain Text (MDX)",
+				"scope": "text.html.markdown.jsx, text.html.markdown.mdx"
 			}
 		]
 	},
@@ -1598,6 +1801,21 @@
 				"scope": "source.hamlbars"
 			}
 		]
+	},
+	"file_type_nextjs": {
+		"aliases": [
+			{
+				"base": "source.js",
+				"extensions": [
+					"next.config.js",
+					"next.config.cjs",
+					"next.config.mjs"
+				],
+				"name": "JavaScript (Next.js)",
+				"scope": "source.js.nextjs"
+			}
+		],
+		"color": "sky"
 	},
 	"file_type_nginx": {
 		"color": "green",
@@ -1713,6 +1931,21 @@
 			}
 		]
 	},
+	"file_type_nuxt": {
+		"aliases": [
+			{
+				"base": "source.js",
+				"extensions": [
+					"nuxt.config.js",
+					"nuxt.config.cjs",
+					"nuxt.config.mjs"
+				],
+				"name": "JavaScript (Nuxt)",
+				"scope": "source.js.nuxt"
+			}
+		],
+		"color": "sky"
+	},
 	"file_type_ocaml": {
 		"color": "yellow",
 		"syntaxes": [
@@ -1758,6 +1991,37 @@
 		],
 		"color": "purple"
 	},
+	"file_type_opengl": {
+		"color": "orange",
+		"syntaxes": [
+			{
+				"extensions": [
+					"vsh",
+					"fsh",
+					"gsh",
+					"vshader",
+					"fshader",
+					"gshader",
+					"vert",
+					"frag",
+					"geom",
+					"tesc",
+					"tese",
+					"comp",
+					"glsl",
+					"mesh",
+					"rgen",
+					"rint",
+					"rahit",
+					"rchit",
+					"rmiss",
+					"rcall"
+				],
+				"name": "Plain Text (GLSL)",
+				"scope": "source.glsl"
+			}
+		]
+	},
 	"file_type_parquet": {
 		"color": "sky",
 		"syntaxes": [
@@ -1774,8 +2038,18 @@
 		"color": "orange",
 		"syntaxes": [
 			{
+				"extensions": [
+					"pwn"
+				],
+				"name": "Plain Text (Pawn)",
+				"scope": "source.pawn"
+			},
+			{
+				"extensions": [
+					"sp"
+				],
 				"name": "Plain Text (SourcePawn)",
-				"scope": "source.pawn, source.sp"
+				"scope": "source.sp"
 			}
 		]
 	},
@@ -1825,6 +2099,31 @@
 			}
 		]
 	},
+	"file_type_pine": {
+		"color": "green",
+		"syntaxes": [
+			{
+				"extensions": [
+					"pine"
+				],
+				"name": "Plain Text (PineScript)",
+				"scope": "source.pine"
+			}
+		]
+	},
+	"file_type_playlist": {
+		"color": "blue",
+		"syntaxes": [
+			{
+				"extensions": [
+					"m3u",
+					"m3u8"
+				],
+				"name": "Plain Text (M3U)",
+				"scope": "text.m3u"
+			}
+		]
+	},
 	"file_type_plist": {
 		"color": "cyan",
 		"syntaxes": [
@@ -1846,6 +2145,35 @@
 			}
 		]
 	},
+	"file_type_pnpm": {
+		"color": "purple",
+		"syntaxes": [
+			{
+				"base": "source.js",
+				"extensions": [
+					".pnpmfile.js",
+					".pnpmfile.cjs",
+					".pnpmfile.mjs",
+					"global_pnpmfile.js",
+					"global_pnpmfile.cjs",
+					"global_pnpmfile.mjs"
+				],
+				"name": "JavaScript (pnpm)",
+				"scope": "source.js.pnpm"
+			},
+			{
+				"base": "source.yaml",
+				"extensions": [
+					"pnpm-lock.yml",
+					"pnpm-lock.yaml",
+					"pnpm-workspace.yml",
+					"pnpm-workspace.yaml"
+				],
+				"name": "YAML (pnpm)",
+				"scope": "source.yaml.pnpm"
+			}
+		]
+	},
 	"file_type_postcss": {
 		"aliases": [
 			{
@@ -1859,7 +2187,9 @@
 			{
 				"base": "source.js",
 				"extensions": [
-					"postcss.config.js"
+					"postcss.config.js",
+					"postcss.config.cjs",
+					"postcss.config.mjs"
 				],
 				"name": "JavaScript (Post CSS)",
 				"scope": "source.js.postcss"
@@ -1950,25 +2280,20 @@
 			}
 		]
 	},
-	"file_type_procfile": {
-		"aliases": [
-			{
-				"base": "source.yaml",
-				"extensions": [
-					"Procfile"
-				],
-				"name": "YAML (Procfile)",
-				"scope": "source.yaml.procfile"
-			},
+	"file_type_prolog": {
+		"color": "red",
+		"syntaxes": [
 			{
 				"extensions": [
-					".buildpacks"
+					"pro",
+					"prolog",
+					"swiplrc",
+					"ecl"
 				],
-				"name": "Plain Text (Buildpacks)",
-				"scope": "text.plain.buildpacks"
+				"name": "Plain Text (Prolog)",
+				"scope": "source.prolog, source.prolog.eclipse"
 			}
-		],
-		"color": "purple"
+		]
 	},
 	"file_type_protobuf": {
 		"color": "graphite",
@@ -2010,7 +2335,9 @@
 			{
 				"base": "source.js",
 				"extensions": [
-					".pug-lintrc.js"
+					".pug-lintrc.js",
+					".pug-lintrc.cjs",
+					".pug-lintrc.mjs"
 				],
 				"name": "JavaScript (Puglint)",
 				"scope": "source.js.puglint"
@@ -2121,6 +2448,18 @@
 			}
 		]
 	},
+	"file_type_racket": {
+		"color": "red",
+		"syntaxes": [
+			{
+				"extensions": [
+					"rkt"
+				],
+				"name": "Plain Text (Racket)",
+				"scope": "source.racket"
+			}
+		]
+	},
 	"file_type_rails": {
 		"color": "red",
 		"syntaxes": [
@@ -2181,6 +2520,34 @@
 				"scope": "text.html.riot"
 			}
 		]
+	},
+	"file_type_rollup": {
+		"aliases": [
+			{
+				"base": "source.js",
+				"extensions": [
+					"rollup.config.js",
+					"rollup.config.cjs",
+					"rollup.config.mjs"
+				],
+				"name": "JavaScript (Rollup)",
+				"scope": "source.js.rollup"
+			}
+		],
+		"color": "red"
+	},
+	"file_type_rss": {
+		"aliases": [
+			{
+				"base": "text.xml",
+				"extensions": [
+					"rss"
+				],
+				"name": "XMS (RSS)",
+				"scope": "text.xml.rss"
+			}
+		],
+		"color": "orange"
 	},
 	"file_type_ruby": {
 		"aliases": [
@@ -2254,7 +2621,6 @@
 			{
 				"extensions": [
 					"ms",
-					"rkt",
 					"sc",
 					"sch",
 					"scm",
@@ -2399,6 +2765,26 @@
 			}
 		]
 	},
+	"file_type_solidity": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"sol"
+				],
+				"name": "Plain Text (Solidity)",
+				"scope": "source.solidity"
+			},
+			{
+				"extensions": [
+					"yul",
+					"yulp"
+				],
+				"name": "Plain Text (Yul)",
+				"scope": "source.yul"
+			}
+		]
+	},
 	"file_type_source": {
 		"color": "sky"
 	},
@@ -2439,7 +2825,11 @@
 				"base": "source.js",
 				"extensions": [
 					".stylelintrc.js",
-					"stylelint.config.js"
+					".stylelintrc.cjs",
+					".stylelintrc.mjs",
+					"stylelint.config.js",
+					"stylelint.config.cjs",
+					"stylelint.config.mjs"
 				],
 				"name": "JavaScript (Stylelint)",
 				"scope": "source.js.stylelint"
@@ -2537,7 +2927,7 @@
 	"file_type_svg": {
 		"aliases": [
 			{
-				"base": "text.xml",
+				"base": "text.html.basic",
 				"extensions": [
 					"svg"
 				],
@@ -2562,7 +2952,7 @@
 	"file_type_taskfile": {
 		"aliases": [
 			{
-				"base": "source.json",
+				"base": "source.yaml",
 				"extensions": [
 					"Taskfile"
 				],
@@ -2579,7 +2969,9 @@
 				"scope": "source.js.tailwind",
 				"base": "source.js",
 				"extensions": [
-					"tailwind.config.js"
+					"tailwind.config.js",
+					"tailwind.config.cjs",
+					"tailwind.config.mjs"
 				]
 			},
 			{
@@ -2587,7 +2979,9 @@
 				"scope": "source.ts.tailwind",
 				"base": "source.ts",
 				"extensions": [
-					"tailwind.config.ts"
+					"tailwind.config.ts",
+					"tailwind.config.cts",
+					"tailwind.config.mts"
 				]
 			}
 		],
@@ -2653,7 +3047,11 @@
 				"base": "source.js",
 				"extensions": [
 					"spec.js",
-					"test.js"
+					"spec.cjs",
+					"spec.mjs",
+					"test.js",
+					"test.cjs",
+					"test.mjs"
 				],
 				"name": "UnitTest (JavaScript)",
 				"scope": "source.js.unittest"
@@ -2695,7 +3093,11 @@
 				"base": "source.ts",
 				"extensions": [
 					"spec.ts",
-					"test.ts"
+					"spec.cts",
+					"spec.mts",
+					"test.ts",
+					"test.cts",
+					"test.mts"
 				],
 				"name": "UnitTest (TypeScript)",
 				"scope": "source.ts.unittest"
@@ -2775,6 +3177,20 @@
 				],
 				"name": "Plain Text (TOML)",
 				"scope": "source.toml"
+			}
+		]
+	},
+	"file_type_travis": {
+		"color": "orange",
+		"syntaxes": [
+			{
+				"base": "source.yaml",
+				"extensions": [
+					".travis.yml",
+					".travis.yaml"
+				],
+				"name": "YAML (Travis CI)",
+				"scope": "source.yaml.travis"
 			}
 		]
 	},
@@ -2858,6 +3274,18 @@
 			}
 		]
 	},
+	"file_type_unreal": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"uc"
+				],
+				"name": "Plain Text (UnrealScript)",
+				"scope": "source.uc"
+			}
+		]
+	},
 	"file_type_v": {
 		"color": "cyan",
 		"syntaxes": [
@@ -2890,6 +3318,46 @@
 				"scope": "source.vala"
 			}
 		]
+	},
+	"file_type_vercel": {
+		"aliases": [
+			{
+				"base": "source.js",
+				"extensions": [
+					"vercel.config.js",
+					"vercel.config.cjs",
+					"vercel.config.mjs"
+				],
+				"name": "JavaScript (Vercel)",
+				"scope": "source.js.vercel"
+			}
+		],
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"base": "source.json",
+				"extensions": [
+					"vercel.json"
+				],
+				"name": "JSON (Vercel)",
+				"scope": "source.json.vercel"
+			}
+		]
+	},
+	"file_type_vite": {
+		"aliases": [
+			{
+				"base": "source.js",
+				"extensions": [
+					"vite.config.js",
+					"vite.config.cjs",
+					"vite.config.mjs"
+				],
+				"name": "JavaScript (Vite)",
+				"scope": "source.js.vite"
+			}
+		],
+		"color": "sky"
 	},
 	"file_type_vhdl": {
 		"color": "blue",
@@ -3024,6 +3492,18 @@
 			}
 		]
 	},
+	"file_type_vyper": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"vy"
+				],
+				"name": "Plain Text (Vyper)",
+				"scope": "source.vyper"
+			}
+		]
+	},
 	"file_type_wast": {
 		"color": "purple",
 		"syntaxes": [
@@ -3043,9 +3523,17 @@
 				"base": "source.js",
 				"extensions": [
 					"webpack.config.js",
+					"webpack.config.cjs",
+					"webpack.config.mjs",
 					"webpack.config.babel.js",
+					"webpack.config.babel.cjs",
+					"webpack.config.babel.mjs",
 					"webpack.dev.js",
-					"webpack.mix.js"
+					"webpack.dev.cjs",
+					"webpack.dev.mjs",
+					"webpack.mix.js",
+					"webpack.mix.cjs",
+					"webpack.mix.mjs"
 				],
 				"name": "JavaScript (Webpack)",
 				"scope": "source.js.webpack"
@@ -3090,7 +3578,9 @@
 				"scope": "source.js.windi",
 				"base": "source.js",
 				"extensions": [
-					"windi.config.js"
+					"windi.config.js",
+					"windi.config.cjs",
+					"windi.config.mjs"
 				]
 			},
 			{
@@ -3098,7 +3588,9 @@
 				"scope": "source.ts.windi",
 				"base": "source.ts",
 				"extensions": [
-					"windi.config.ts"
+					"windi.config.ts",
+					"windi.config.cts",
+					"windi.config.mts"
 				]
 			}
 		],
@@ -3121,6 +3613,21 @@
 			}
 		],
 		"color": "blue"
+	},
+	"file_type_wolfram": {
+		"color": "red",
+		"syntaxes": [
+			{
+				"extensions": [
+					"wl",
+					"wls",
+					"wlt",
+					"mt"
+				],
+				"name": "Text Plain (Wolfram)",
+				"scope": "source.wolfram"
+			}
+		]
 	},
 	"file_type_xsl": {
 		"color": "sky",
@@ -3160,7 +3667,8 @@
 				"base": "source.yaml",
 				"extensions": [
 					"yarn.lock",
-					".yarnrc.yml"
+					".yarnrc.yml",
+					".yarnrc.yaml"
 				],
 				"name": "YAML (Yarn)",
 				"scope": "source.yaml.yarn"

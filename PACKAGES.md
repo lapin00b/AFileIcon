@@ -41,6 +41,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Caddyfile Syntax](https://packagecontrol.io/packages/Caddyfile%20Syntax)
 
+## Cairo
+
+- [Eutherium](https://packagecontrol.io/packages/Ethereum)
+
 ## CMake
 
 - [CMake](https://packagecontrol.io/packages/CMake)
@@ -163,9 +167,17 @@ This file contains a list of possible packages you may need to install to see th
 - [JSX](https://packagecontrol.io/packages/JSX)
 - [NGX](https://packagecontrol.io/packages/Ngx%20HTML)
 
+## Jinja
+
+- [Jinja2](https://packagecontrol.io/packages/Jinja2)
+
 ## Julia
 
 - [Julia](https://packagecontrol.io/packages/Julia)
+
+## KDL
+
+- [KDL](https://packagecontrol.io/packages/KDL)
 
 ## Kotlin
 
@@ -229,17 +241,30 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Odin](https://packagecontrol.io/packages/Odin)
 
+## OpenGL
+
+- [OpenGL Shading Language (GLSL)](https://packagecontrol.io/packages/OpenGL%20Shading%20Language%20(GLSL))
+
 ## PackageDev
 
 - [PackageDev](https://packagecontrol.io/packages/PackageDev)
 
 ## Pawn
 
+- [Pawn Syntax](https://packagecontrol.io/packages/Pawn%20syntax)
 - [SourcePawn](https://packagecontrol.io/packages/SourcePawn%20Syntax%20Highlighting)
 
 ## PHP
 
 - [Laravel Blade Highlighter](https://packagecontrol.io/packages/Laravel%20Blade%20Highlighter)
+
+## Pine
+
+- [Pine](https://packagecontrol.io/packages/Pine)
+
+## Playlist
+
+- [M3U Syntax](https://packagecontrol.io/packages/M3U%20Syntax)
 
 ## Plist
 
@@ -256,6 +281,10 @@ This file contains a list of possible packages you may need to install to see th
 ## Prisma Scheme
 
 - [Prisma](https://packagecontrol.io/packages/Prisma)
+
+## Prolog
+
+- [Prolog](https://packagecontrol.io/packages/Prolog)
 
 ## Protobuf
 
@@ -276,6 +305,10 @@ This file contains a list of possible packages you may need to install to see th
 ## Qt
 
 - [QML](https://packagecontrol.io/packages/QML)
+
+## Racket
+
+- [Racket](https://packagecontrol.io/packages/Racket)
 
 ## RBS
 
@@ -317,6 +350,10 @@ This file contains a list of possible packages you may need to install to see th
 ## Slim
 
 - [Ruby Slim](https://packagecontrol.io/packages/Ruby%20Slim)
+
+## Solidity
+
+- [Eutherium](https://packagecontrol.io/packages/Ethereum)
 
 ## Stata
 
@@ -364,6 +401,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Typst](https://github.com/hyrious/typst-syntax-highlight)
 
+## Unreal
+
+- [UnrealScriptIDE](https://packagecontrol.io/packages/UnrealScriptIDE)
+
 ## V
 
 - [V](https://packagecontrol.io/packages/V)
@@ -391,6 +432,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Vue Syntax Highlight](https://packagecontrol.io/packages/Vue%20Syntax%20Highlight)
 
+## Vyper
+
+- [Eutherium](https://packagecontrol.io/packages/Ethereum)
+
 ## WAST
 
 - [WebAssembly Text Syntax](https://packagecontrol.io/packages/WebAssembly%20Text%20Syntax)
@@ -398,6 +443,10 @@ This file contains a list of possible packages you may need to install to see th
 ## WGSL
 
 - [WGSL](https://packagecontrol.io/packages/WGSL)
+
+## Wolfram
+
+- [WolframLanguage](https://packagecontrol.io/packages/WolframLanguage)
 
 ## Zig
 
