@@ -3233,6 +3233,18 @@
 			}
 		]
 	},
+	"file_type_unreal": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"uc"
+				],
+				"name": "Plain Text (UnrealScript)",
+				"scope": "source.uc"
+			}
+		]
+	},
 	"file_type_v": {
 		"color": "cyan",
 		"syntaxes": [

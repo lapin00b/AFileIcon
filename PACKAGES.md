@@ -389,6 +389,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Typst](https://github.com/hyrious/typst-syntax-highlight)
 
+## Unreal
+
+- [UnrealScriptIDE](https://packagecontrol.io/packages/UnrealScriptIDE)
+
 ## V
 
 - [V](https://packagecontrol.io/packages/V)
