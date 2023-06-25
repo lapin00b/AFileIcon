@@ -171,6 +171,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Julia](https://packagecontrol.io/packages/Julia)
 
+## KDL
+
+- [KDL](https://packagecontrol.io/packages/KDL)
+
 ## Kotlin
 
 - [Kotlin](https://packagecontrol.io/packages/Kotlin)
