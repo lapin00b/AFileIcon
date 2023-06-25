@@ -1965,6 +1965,37 @@
 		],
 		"color": "purple"
 	},
+	"file_type_opengl": {
+		"color": "orange",
+		"syntaxes": [
+			{
+				"extensions": [
+					"vsh",
+					"fsh",
+					"gsh",
+					"vshader",
+					"fshader",
+					"gshader",
+					"vert",
+					"frag",
+					"geom",
+					"tesc",
+					"tese",
+					"comp",
+					"glsl",
+					"mesh",
+					"rgen",
+					"rint",
+					"rahit",
+					"rchit",
+					"rmiss",
+					"rcall"
+				],
+				"name": "Plain Text (GLSL)",
+				"scope": "source.glsl"
+			}
+		]
+	},
 	"file_type_parquet": {
 		"color": "sky",
 		"syntaxes": [

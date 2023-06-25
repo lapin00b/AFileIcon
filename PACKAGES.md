@@ -233,6 +233,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Odin](https://packagecontrol.io/packages/Odin)
 
+## OpenGL
+
+- [OpenGL Shading Language (GLSL)](https://packagecontrol.io/packages/OpenGL%20Shading%20Language%20(GLSL))
+
 ## PackageDev
 
 - [PackageDev](https://packagecontrol.io/packages/PackageDev)
