@@ -167,6 +167,10 @@ This file contains a list of possible packages you may need to install to see th
 - [JSX](https://packagecontrol.io/packages/JSX)
 - [NGX](https://packagecontrol.io/packages/Ngx%20HTML)
 
+## Jinja
+
+- [Jinja2](https://packagecontrol.io/packages/Jinja2)
+
 ## Julia
 
 - [Julia](https://packagecontrol.io/packages/Julia)

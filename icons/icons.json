@@ -1453,6 +1453,20 @@
 		],
 		"color": "red"
 	},
+	"file_type_jinja": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"j2",
+					"jinja",
+					"jinja2"
+				],
+				"name": "Plain Text (Jinja)",
+				"scope": "text.jinja"
+			}
+		]
+	},
 	"file_type_js": {
 		"color": "yellow",
 		"syntaxes": [
