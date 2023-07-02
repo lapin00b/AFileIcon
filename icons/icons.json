@@ -3245,7 +3245,7 @@
 					"typ"
 				],
 				"name": "Typst",
-				"scope": "source.typst"
+				"scope": "text.typst"
 			}
 		]
 	},
