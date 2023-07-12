@@ -791,6 +791,13 @@
 		"syntaxes": [
 			{
 				"extensions": [
+					"Containerfile"
+				],
+				"name": "Plain Text (Containerfile)",
+				"scope": "source.containerfile"
+			},
+			{
+				"extensions": [
 					"Dockerfile",
 					"dockerfile",
 					".Dockerfile"

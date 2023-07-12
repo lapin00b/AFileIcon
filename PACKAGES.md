@@ -86,6 +86,7 @@ This file contains a list of possible packages you may need to install to see th
 
 ## Docker
 
+- [Containerfile](https://packagecontrol.io/packages/Containerfile)
 - [Dockerfile Syntax Highlighting](https://packagecontrol.io/packages/Dockerfile%20Syntax%20Highlighting)
 
 ## EditorConfig
