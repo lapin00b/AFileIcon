@@ -1599,7 +1599,13 @@
 				"extensions": [
 					"copying",
 					"copyright",
-					"license"
+					"license",
+					"license.apache",
+					"license.bsd",
+					"license.mit",
+					"license.gpl",
+					"license.gpl2",
+					"license.gpl3"
 				],
 				"name": "Plain Text (License)",
 				"scope": "text.plain.license"
