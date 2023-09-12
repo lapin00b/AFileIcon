@@ -367,6 +367,29 @@
 		],
 		"color": "yellow"
 	},
+	"file_type_bun": {
+		"aliases": [
+			{
+				"base": "source.ts",
+				"extensions": [
+					"bun",
+					"lockdb"
+				],
+				"name": "TypeScript (Bun)",
+				"scope": "source.ts.bun"
+			},
+			{
+				"base": "source.toml",
+				"extensions": [
+					".bunfig.toml",
+					"bunfig.toml"
+				],
+				"name": "TOML (Bunfig)",
+				"scope": "source.toml.bunfig"
+			}
+		],
+		"color": "yellow"
+	},
 	"file_type_cabal": {
 		"color": "blue",
 		"syntaxes": [
