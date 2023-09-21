@@ -1497,6 +1497,18 @@
 			}
 		]
 	},
+	"file_type_jq": {
+		"color": "orange",
+		"syntaxes": [
+			{
+				"extensions": [
+					"jq"
+				],
+				"name": "Plain Text (JQ)",
+				"scope": "text.jq"
+			}
+		]
+	},
 	"file_type_js": {
 		"color": "yellow",
 		"syntaxes": [

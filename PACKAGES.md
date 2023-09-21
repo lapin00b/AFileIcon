@@ -172,6 +172,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Jinja2](https://packagecontrol.io/packages/Jinja2)
 
+## JQ
+
+- [JQ Syntax](https://packagecontrol.io/packages/JQ%20Syntax)
+
 ## Julia
 
 - [Julia](https://packagecontrol.io/packages/Julia)
