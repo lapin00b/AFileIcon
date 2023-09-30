@@ -120,6 +120,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [DotENV](https://packagecontrol.io/packages/DotENV)
 
+## Fabric Engine
+
+- [FabricEngine](https://packagecontrol.io/packages/FabricEngine)
+
 ## Fortran
 
 - [Fortran](https://packagecontrol.io/packages/Fortran)

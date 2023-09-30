@@ -993,6 +993,15 @@
 		],
 		"color": "green"
 	},
+	"file_type_fabricengine": {
+		"color": "purple",
+		"syntaxes": [
+			{
+				"name": "Plain Text (Fabric)",
+				"scope": "source.fabricengine"
+			}
+		]
+	},
 	"file_type_fastq": {
 		"aliases": [
 			{
