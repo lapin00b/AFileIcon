@@ -367,6 +367,29 @@
 		],
 		"color": "yellow"
 	},
+	"file_type_bun": {
+		"aliases": [
+			{
+				"base": "source.ts",
+				"extensions": [
+					"bun",
+					"lockdb"
+				],
+				"name": "TypeScript (Bun)",
+				"scope": "source.ts.bun"
+			},
+			{
+				"base": "source.toml",
+				"extensions": [
+					".bunfig.toml",
+					"bunfig.toml"
+				],
+				"name": "TOML (Bunfig)",
+				"scope": "source.toml.bunfig"
+			}
+		],
+		"color": "yellow"
+	},
 	"file_type_cabal": {
 		"color": "blue",
 		"syntaxes": [
@@ -791,6 +814,13 @@
 		"syntaxes": [
 			{
 				"extensions": [
+					"Containerfile"
+				],
+				"name": "Plain Text (Containerfile)",
+				"scope": "source.containerfile"
+			},
+			{
+				"extensions": [
 					"Dockerfile",
 					"dockerfile",
 					".Dockerfile"
@@ -962,6 +992,15 @@
 			}
 		],
 		"color": "green"
+	},
+	"file_type_fabricengine": {
+		"color": "purple",
+		"syntaxes": [
+			{
+				"name": "Plain Text (Fabric)",
+				"scope": "source.fabricengine"
+			}
+		]
 	},
 	"file_type_fastq": {
 		"aliases": [
@@ -1467,6 +1506,18 @@
 			}
 		]
 	},
+	"file_type_jq": {
+		"color": "orange",
+		"syntaxes": [
+			{
+				"extensions": [
+					"jq"
+				],
+				"name": "Plain Text (JQ)",
+				"scope": "text.jq"
+			}
+		]
+	},
 	"file_type_js": {
 		"color": "yellow",
 		"syntaxes": [
@@ -1592,7 +1643,13 @@
 				"extensions": [
 					"copying",
 					"copyright",
-					"license"
+					"license",
+					"license.apache",
+					"license.bsd",
+					"license.mit",
+					"license.gpl",
+					"license.gpl2",
+					"license.gpl3"
 				],
 				"name": "Plain Text (License)",
 				"scope": "text.plain.license"

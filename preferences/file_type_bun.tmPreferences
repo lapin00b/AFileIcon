@@ -2,11 +2,11 @@
 <plist version="1.0">
 	<dict>
 		<key>scope</key>
-		<string>source.containerfile, source.dockerfile, source.shell.docker, source.yaml.docker</string>
+		<string>source.toml.bunfig, source.ts.bun</string>
 		<key>settings</key>
 		<dict>
 			<key>icon</key>
-			<string>file_type_docker</string>
+			<string>file_type_bun</string>
 		</dict>
 	</dict>
 </plist>

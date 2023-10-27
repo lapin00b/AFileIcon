@@ -86,6 +86,7 @@ This file contains a list of possible packages you may need to install to see th
 
 ## Docker
 
+- [Containerfile](https://packagecontrol.io/packages/Containerfile)
 - [Dockerfile Syntax Highlighting](https://packagecontrol.io/packages/Dockerfile%20Syntax%20Highlighting)
 
 ## EditorConfig
@@ -118,6 +119,10 @@ This file contains a list of possible packages you may need to install to see th
 ## Env
 
 - [DotENV](https://packagecontrol.io/packages/DotENV)
+
+## Fabric Engine
+
+- [FabricEngine](https://packagecontrol.io/packages/FabricEngine)
 
 ## Fortran
 
@@ -170,6 +175,10 @@ This file contains a list of possible packages you may need to install to see th
 ## Jinja
 
 - [Jinja2](https://packagecontrol.io/packages/Jinja2)
+
+## JQ
+
+- [JQ Syntax](https://packagecontrol.io/packages/JQ%20Syntax)
 
 ## Julia
 

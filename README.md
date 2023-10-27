@@ -7,8 +7,13 @@ This package adds file-specific icons to Sublime Text for improved visual greppi
 
 Its aims are:
 
-* To be a `tmPreferences` storage for UI themes those support file-specific icons.
-* To provide icons for themes those don't (fully) support file-specific icons.
+* Provide globally available file type specific icons for each UI themes, whether they provide their own file type specific icons or not.
+
+* Workaround a ST core bug, which causes no icons to be displayed for file types an installed but not selected/active theme provides definitions for via `tmPreferences` files.
+
+* Display file icons, even if required syntax definition is not installed.
+
+* Display specific icons for files, no dedicated syntax definition exists for.
 
 If you have any problems, please search for a similar issue first, before creating [a new one][new-issue]. 
 
