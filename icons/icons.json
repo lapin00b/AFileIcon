@@ -1693,6 +1693,19 @@
 			}
 		]
 	},
+	"file_type_llvm": {
+		"aliases": [
+			{
+				"base": "source.yaml",
+				"extensions": [
+					".clang-format"
+				],
+				"name": "YAML (clang-format)",
+				"scope": "source.yaml.clang-format"
+			}
+		],
+		"color": "blue"
+	},
 	"file_type_lock": {
 		"aliases": [
 			{
