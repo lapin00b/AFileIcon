@@ -1224,6 +1224,27 @@
 			}
 		]
 	},
+	"file_type_gradle_wrapper": {
+		"aliases": [
+			{
+				"base": "source.dosbatch",
+				"extensions": [
+					"gradlew.bat"
+				],
+				"name": "Batch File (Gradle)",
+				"scope": "source.dosbatch.gradle"
+			},
+			{
+				"base": "source.shell",
+				"extensions": [
+					"gradlew"
+				],
+				"name": "Shell Script (Gradle)",
+				"scope": "source.shell.gradle"
+			}
+		],
+		"color": "purple"
+	},
 	"file_type_graphql": {
 		"color": "pink",
 		"syntaxes": [
@@ -1819,6 +1840,27 @@
 			}
 		],
 		"color": "red"
+	},
+	"file_type_maven_wrapper": {
+		"aliases": [
+			{
+				"base": "source.dosbatch",
+				"extensions": [
+					"mvnw.cmd"
+				],
+				"name": "Batch File (Maven)",
+				"scope": "source.dosbatch.maven"
+			},
+			{
+				"base": "source.shell",
+				"extensions": [
+					"mvnw"
+				],
+				"name": "Shell Script (Maven)",
+				"scope": "source.shell.maven"
+			}
+		],
+		"color": "purple"
 	},
 	"file_type_maya": {
 		"color": "cyan",
@@ -3784,6 +3826,27 @@
 			}
 		],
 		"color": "blue"
+	},
+	"file_type_yarn_wrapper": {
+		"aliases": [
+			{
+				"base": "source.dosbatch",
+				"extensions": [
+					"yarnw.cmd"
+				],
+				"name": "Batch File (Yarn)",
+				"scope": "source.dosbatch.yarn"
+			},
+			{
+				"base": "source.shell",
+				"extensions": [
+					"yarnw"
+				],
+				"name": "Shell Script (Yarn)",
+				"scope": "source.shell.yarn"
+			}
+		],
+		"color": "purple"
 	},
 	"file_type_zig": {
 		"color": "yellow",
