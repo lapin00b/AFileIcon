@@ -24,12 +24,13 @@ def main(argv=None):
         options.icons = True
         options.preferences = True
 
-    if options.icons:
-        print("building icons...")
-        create_icons(icons)
     if options.preferences:
         print("building preferences...")
         create_preferences(icons)
+
+    if options.icons:
+        print("building icons...")
+        create_icons(icons)
 
 
 if __name__ == "__main__":
