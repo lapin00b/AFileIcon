@@ -2601,7 +2601,8 @@
 		"aliases": [
 			{
 				"extensions": [
-					".python-version"
+					".python-version",
+					"py.typed"
 				],
 				"name": "Plain Text (Python)",
 				"scope": "text.plain.python"
