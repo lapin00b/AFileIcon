@@ -2110,7 +2110,7 @@
 					".npmrc",
 					"npmrc"
 				],
-				"name": "Plain Text (NPM)",
+				"name": "INI (NPM)",
 				"scope": "source.ini.npm"
 			},
 			{
