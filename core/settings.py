@@ -16,7 +16,7 @@ _uuid = "9ebcce78-4cac-4089-8bd7-d551c634b052"
 
 def add_listener():
     log("Initializing settings")
-    path = "Packages/{0}/.sublime/{1}".format(PACKAGE_NAME, PACKAGE_SETTINGS)
+    path = "Packages/{0}/{1}".format(PACKAGE_NAME, PACKAGE_SETTINGS)
     settings = sublime.load_settings(PACKAGE_SETTINGS)
     for key in sublime.decode_value(sublime.load_resource(path)).keys():
         if key not in ("dev_mode", "dev_trace"):
