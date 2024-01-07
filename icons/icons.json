@@ -130,6 +130,19 @@
 			}
 		]
 	},
+	"file_type_antlr": {
+		"color": "orange",
+		"syntaxes": [
+			{
+				"extensions": [
+					"g",
+					"g4"
+				],
+				"name": "Plain Text (ANTLR)",
+				"scope": "source.antlr"
+			}
+		]
+	},
 	"file_type_apache": {
 		"color": "yellow",
 		"syntaxes": [
@@ -1193,6 +1206,19 @@
 			}
 		]
 	},
+	"file_type_glyphs": {
+		"aliases": [
+			{
+				"base": "source.plist",
+				"extensions": [
+					"glyphs"
+				],
+				"name": "Glyphs (Property List)",
+				"scope": "source.plist.glyphs"
+			}
+		],
+		"color": "green"
+	},
 	"file_type_go": {
 		"color": "sky",
 		"syntaxes": [
@@ -1223,6 +1249,27 @@
 				"scope": "source.gradle"
 			}
 		]
+	},
+	"file_type_gradle_wrapper": {
+		"aliases": [
+			{
+				"base": "source.dosbatch",
+				"extensions": [
+					"gradlew.bat"
+				],
+				"name": "Batch File (Gradle)",
+				"scope": "source.dosbatch.gradle"
+			},
+			{
+				"base": "source.shell",
+				"extensions": [
+					"gradlew"
+				],
+				"name": "Shell Script (Gradle)",
+				"scope": "source.shell.gradle"
+			}
+		],
+		"color": "purple"
 	},
 	"file_type_graphql": {
 		"color": "pink",
@@ -1360,6 +1407,19 @@
 			}
 		]
 	},
+	"file_type_haxelib": {
+		"aliases": [
+			{
+				"base": "source.json",
+				"extensions": [
+					"haxelib.json"
+				],
+				"name": "JSON (Haxelib)",
+				"scope": "source.json.haxelib"
+			}
+		],
+		"color": "red"
+	},
 	"file_type_heroku": {
 		"color": "purple",
 		"syntaxes": [
@@ -1407,6 +1467,18 @@
 				],
 				"name": "Plain Text (HTTP)",
 				"scope": "source.http, text.http-request-response"
+			}
+		]
+	},
+	"file_type_hxml": {
+		"color": "blue",
+		"syntaxes": [
+			{
+				"extensions": [
+					"hxml"
+				],
+				"name": "Plain Text (HXML)",
+				"scope": "source.hxml"
 			}
 		]
 	},
@@ -1820,6 +1892,27 @@
 		],
 		"color": "red"
 	},
+	"file_type_maven_wrapper": {
+		"aliases": [
+			{
+				"base": "source.dosbatch",
+				"extensions": [
+					"mvnw.cmd"
+				],
+				"name": "Batch File (Maven)",
+				"scope": "source.dosbatch.maven"
+			},
+			{
+				"base": "source.shell",
+				"extensions": [
+					"mvnw"
+				],
+				"name": "Shell Script (Maven)",
+				"scope": "source.shell.maven"
+			}
+		],
+		"color": "purple"
+	},
 	"file_type_maya": {
 		"color": "cyan",
 		"syntaxes": [
@@ -2006,11 +2099,19 @@
 			{
 				"base": "source.shell",
 				"extensions": [
-					".npmignore",
-					".npmrc"
+					".npmignore"
 				],
 				"name": "Shell Script (NPM)",
 				"scope": "source.shell.npm"
+			},
+			{
+				"base": "source.ini",
+				"extensions": [
+					".npmrc",
+					"npmrc"
+				],
+				"name": "INI (NPM)",
+				"scope": "source.ini.npm"
 			},
 			{
 				"base": "source.json",
@@ -2500,7 +2601,8 @@
 		"aliases": [
 			{
 				"extensions": [
-					".python-version"
+					".python-version",
+					"py.typed"
 				],
 				"name": "Plain Text (Python)",
 				"scope": "text.plain.python"
@@ -3728,12 +3830,12 @@
 		"syntaxes": [
 			{
 				"extensions": [
+					"mt",
 					"wl",
 					"wls",
-					"wlt",
-					"mt"
+					"wlt"
 				],
-				"name": "Text Plain (Wolfram)",
+				"name": "Plain Text (Wolfram)",
 				"scope": "source.wolfram"
 			}
 		]
@@ -3765,19 +3867,28 @@
 	"file_type_yarn": {
 		"aliases": [
 			{
-				"base": "source.shell",
 				"extensions": [
+					".yarnclean",
 					".yarnrc"
 				],
-				"name": "Shell Script (Yarn)",
-				"scope": "source.shell.yarn"
+				"name": "Plain Text (Yarn)",
+				"scope": "text.plain.yarn"
+			},
+			{
+				"base": "source.json",
+				"extensions": [
+					".yarn-integrity",
+					".yarn-metadata.json"
+				],
+				"name": "JSON (Yarn)",
+				"scope": "source.json.yarn"
 			},
 			{
 				"base": "source.yaml",
 				"extensions": [
-					"yarn.lock",
+					".yarnrc.yaml",
 					".yarnrc.yml",
-					".yarnrc.yaml"
+					"yarn.lock"
 				],
 				"name": "YAML (Yarn)",
 				"scope": "source.yaml.yarn"
@@ -3785,12 +3896,34 @@
 		],
 		"color": "blue"
 	},
+	"file_type_yarn_wrapper": {
+		"aliases": [
+			{
+				"base": "source.dosbatch",
+				"extensions": [
+					"yarnw.cmd"
+				],
+				"name": "Batch File (Yarn)",
+				"scope": "source.dosbatch.yarn"
+			},
+			{
+				"base": "source.shell",
+				"extensions": [
+					"yarnw"
+				],
+				"name": "Shell Script (Yarn)",
+				"scope": "source.shell.yarn"
+			}
+		],
+		"color": "purple"
+	},
 	"file_type_zig": {
 		"color": "yellow",
 		"syntaxes": [
 			{
 				"extensions": [
-					"zig"
+					"zig",
+					"zon"
 				],
 				"name": "Zig",
 				"scope": "source.zig"

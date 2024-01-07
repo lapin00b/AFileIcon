@@ -16,19 +16,21 @@ def main(argv=None):
         "-p", "--preferences", action="store_true", help="create preferences"
     )
 
-    options = parser.parse_args(argv)
-    if not options.icons and not options.preferences:
-        return parser.print_help()
-
     with open(icons_path("icons.json")) as fp:
         icons = json.load(fp)
+
+    options = parser.parse_args(argv)
+    if not options.icons and not options.preferences:
+        options.icons = True
+        options.preferences = True
+
+    if options.preferences:
+        print("building preferences...")
+        create_preferences(icons)
 
     if options.icons:
         print("building icons...")
         create_icons(icons)
-    if options.preferences:
-        print("building preferences...")
-        create_preferences(icons)
 
 
 if __name__ == "__main__":
