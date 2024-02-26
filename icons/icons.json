@@ -3375,6 +3375,18 @@
 			}
 		]
 	},
+	"file_type_toit": {
+		"color": "orange",
+		"syntaxes": [
+			{
+				"extensions": [
+					"toit"
+				],
+				"name": "Plain Text (TOIT)",
+				"scope": "source.toit"
+			}
+		]
+	},
 	"file_type_toml": {
 		"color": "cyan",
 		"syntaxes": [

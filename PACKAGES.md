@@ -397,6 +397,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [PlainTasks](https://packagecontrol.io/packages/PlainTasks)
 
+## Toit
+
+- [Toit](https://packagecontrol.io/packages/Toit)
+
 ## TOML
 
 - [TOML](https://packagecontrol.io/packages/TOML)
