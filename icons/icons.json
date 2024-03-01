@@ -2321,6 +2321,19 @@
 			}
 		]
 	},
+	"file_type_pkl": {
+		"color": "green",
+		"syntaxes": [
+			{
+				"extensions": [
+					"pkl",
+					"pcf"
+				],
+				"name": "Plain Text (Pkl)",
+				"scope": "source.pkl"
+			}
+		]
+	},
 	"file_type_playlist": {
 		"color": "blue",
 		"syntaxes": [

@@ -275,6 +275,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Pine](https://packagecontrol.io/packages/Pine)
 
+## Pkl
+
+- [Pkl (Pickle)](https://packagecontrol.io/packages/Pkl%20(Pickle))
+
 ## Playlist
 
 - [M3U Syntax](https://packagecontrol.io/packages/M3U%20Syntax)
