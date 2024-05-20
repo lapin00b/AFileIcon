@@ -3857,6 +3857,18 @@
 		],
 		"color": "sky"
 	},
+	"file_type_wit": {
+		"color": "pink",
+		"syntaxes": [
+			{
+				"extensions": [
+					"wit"
+				],
+				"name": "Plain Text (WIT)",
+				"scope": "source.wit"
+			}
+		]
+	},
 	"file_type_word": {
 		"aliases": [
 			{

@@ -474,6 +474,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [WGSL](https://packagecontrol.io/packages/WGSL)
 
+## WIT
+
+- [WASM Interface Type](https://packagecontrol.io/packages/WASM%20Interface%20Type)
+
 ## Wolfram
 
 - [WolframLanguage](https://packagecontrol.io/packages/WolframLanguage)
