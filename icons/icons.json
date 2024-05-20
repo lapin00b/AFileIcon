@@ -725,7 +725,7 @@
 		"color": "green",
 		"syntaxes": [
 			{
-				"name": "Advanced CSV",
+				"name": "Plain Text (Advanced CSV)",
 				"scope": "text.advanced_csv"
 			}
 		]
@@ -1101,15 +1101,15 @@
 				"scope": "source.fortran"
 			},
 			{
-				"name": "Fortran Namelist",
+				"name": "Plain Text (Fortran Namelist)",
 				"scope": "source.fortran-namelist"
 			},
 			{
-				"name": "Fixed Form Fortran",
+				"name": "Plain Text (Fixed Form Fortran)",
 				"scope": "source.fixedform-fortran"
 			},
 			{
-				"name": "Modern Fortran",
+				"name": "Plain Text (Modern Fortran)",
 				"scope": "source.modern-fortran"
 			}
 		]
@@ -1201,7 +1201,7 @@
 				"extensions": [
 					"gleam"
 				],
-				"name": "Gleam",
+				"name": "Plain Text (Gleam)",
 				"scope": "source.gleam"
 			}
 		]
@@ -3480,7 +3480,7 @@
 				"extensions": [
 					"typ"
 				],
-				"name": "Typst",
+				"name": "Plain Text (Typst)",
 				"scope": "text.typst"
 			}
 		]
@@ -3748,7 +3748,7 @@
 					"wast",
 					"wat"
 				],
-				"name": "WAST",
+				"name": "Plain Text (WAST)",
 				"scope": "source.wast"
 			}
 		]
@@ -3784,7 +3784,7 @@
 				"extensions": [
 					"wgsl"
 				],
-				"name": "WGSL",
+				"name": "Plain Text (WGSL)",
 				"scope": "source.wgsl"
 			}
 		]
@@ -3950,7 +3950,7 @@
 					"zig",
 					"zon"
 				],
-				"name": "Zig",
+				"name": "Plain Text (Zig)",
 				"scope": "source.zig"
 			}
 		]
