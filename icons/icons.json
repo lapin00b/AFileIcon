@@ -331,7 +331,7 @@
 					"bzl"
 				],
 				"name": "Python (Bazel)",
-				"scope": "source.bazel"
+				"scope": "source.bazel, source.starlark"
 			}
 		]
 	},
