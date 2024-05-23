@@ -213,6 +213,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [MayaSublime](https://packagecontrol.io/packages/MayaSublime)
 
+## MCNP
+
+- [MCNP](https://packagecontrol.io/packages/MCNP)
+
 ## MDX
 
 - [MDX Syntax Highlighting](https://packagecontrol.io/packages/MDX%20Syntax%20Highlighting)

@@ -1925,6 +1925,18 @@
 			}
 		]
 	},
+	"file_type_mcnp": {
+		"color": "blue",
+		"syntaxes": [
+			{
+				"extensions": [
+					"mcnp"
+				],
+				"name": "Plain Text (MCNP)",
+				"scope": "source.mcnp"
+			}
+		]
+	},
 	"file_type_mdx": {
 		"color": "cyan",
 		"syntaxes": [
