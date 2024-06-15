@@ -37,6 +37,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Autolisp](https://github.com/divtiply/autolisp-sublime)
 
+## AWK
+
+- [Awk](https://packagecontrol.io/packages/Awk)
+
 ## Bazel
 
 - [BazelSyntax](https://packagecontrol.io/packages/BazelSyntax)
