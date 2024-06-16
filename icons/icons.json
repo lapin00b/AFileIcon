@@ -292,6 +292,18 @@
 		],
 		"color": "red"
 	},
+	"file_type_awk": {
+		"color": "red",
+		"syntaxes": [
+			{
+				"extensions": [
+					"awk"
+				],
+				"name": "Plain Text (AWK)",
+				"scope": "source.awk"
+			}
+		]
+	},
 	"file_type_azure": {
 		"color": "sky",
 		"syntaxes": [
@@ -331,7 +343,7 @@
 					"bzl"
 				],
 				"name": "Python (Bazel)",
-				"scope": "source.bazel"
+				"scope": "source.bazel, source.starlark"
 			}
 		]
 	},
@@ -343,7 +355,8 @@
 			{
 				"base": "source.json",
 				"extensions": [
-					"biome.json"
+					"biome.json",
+					"biome.jsonc"
 				],
 				"name": "JSON (Biome)",
 				"scope": "source.json.biome"
@@ -725,7 +738,7 @@
 		"color": "green",
 		"syntaxes": [
 			{
-				"name": "Advanced CSV",
+				"name": "Plain Text (Advanced CSV)",
 				"scope": "text.advanced_csv"
 			}
 		]
@@ -1101,15 +1114,15 @@
 				"scope": "source.fortran"
 			},
 			{
-				"name": "Fortran Namelist",
+				"name": "Plain Text (Fortran Namelist)",
 				"scope": "source.fortran-namelist"
 			},
 			{
-				"name": "Fixed Form Fortran",
+				"name": "Plain Text (Fixed Form Fortran)",
 				"scope": "source.fixedform-fortran"
 			},
 			{
-				"name": "Modern Fortran",
+				"name": "Plain Text (Modern Fortran)",
 				"scope": "source.modern-fortran"
 			}
 		]
@@ -1201,7 +1214,7 @@
 				"extensions": [
 					"gleam"
 				],
-				"name": "Gleam",
+				"name": "Plain Text (Gleam)",
 				"scope": "source.gleam"
 			}
 		]
@@ -1925,6 +1938,18 @@
 			}
 		]
 	},
+	"file_type_mcnp": {
+		"color": "blue",
+		"syntaxes": [
+			{
+				"extensions": [
+					"mcnp"
+				],
+				"name": "Plain Text (MCNP)",
+				"scope": "source.mcnp"
+			}
+		]
+	},
 	"file_type_mdx": {
 		"color": "cyan",
 		"syntaxes": [
@@ -2318,6 +2343,19 @@
 				],
 				"name": "Plain Text (PineScript)",
 				"scope": "source.pine"
+			}
+		]
+	},
+	"file_type_pkl": {
+		"color": "green",
+		"syntaxes": [
+			{
+				"extensions": [
+					"pkl",
+					"pcf"
+				],
+				"name": "Plain Text (Pkl)",
+				"scope": "source.pkl"
 			}
 		]
 	},
@@ -3375,6 +3413,18 @@
 			}
 		]
 	},
+	"file_type_toit": {
+		"color": "orange",
+		"syntaxes": [
+			{
+				"extensions": [
+					"toit"
+				],
+				"name": "Plain Text (TOIT)",
+				"scope": "source.toit"
+			}
+		]
+	},
 	"file_type_toml": {
 		"color": "cyan",
 		"syntaxes": [
@@ -3455,7 +3505,7 @@
 				"extensions": [
 					"typ"
 				],
-				"name": "Typst",
+				"name": "Plain Text (Typst)",
 				"scope": "text.typst"
 			}
 		]
@@ -3723,7 +3773,7 @@
 					"wast",
 					"wat"
 				],
-				"name": "WAST",
+				"name": "Plain Text (WAST)",
 				"scope": "source.wast"
 			}
 		]
@@ -3759,7 +3809,7 @@
 				"extensions": [
 					"wgsl"
 				],
-				"name": "WGSL",
+				"name": "Plain Text (WGSL)",
 				"scope": "source.wgsl"
 			}
 		]
@@ -3806,6 +3856,18 @@
 			}
 		],
 		"color": "sky"
+	},
+	"file_type_wit": {
+		"color": "pink",
+		"syntaxes": [
+			{
+				"extensions": [
+					"wit"
+				],
+				"name": "Plain Text (WIT)",
+				"scope": "source.wit"
+			}
+		]
 	},
 	"file_type_word": {
 		"aliases": [
@@ -3925,7 +3987,7 @@
 					"zig",
 					"zon"
 				],
-				"name": "Zig",
+				"name": "Plain Text (Zig)",
 				"scope": "source.zig"
 			}
 		]

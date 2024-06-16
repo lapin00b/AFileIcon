@@ -37,9 +37,14 @@ This file contains a list of possible packages you may need to install to see th
 
 - [Autolisp](https://github.com/divtiply/autolisp-sublime)
 
+## AWK
+
+- [Awk](https://packagecontrol.io/packages/Awk)
+
 ## Bazel
 
 - [BazelSyntax](https://packagecontrol.io/packages/BazelSyntax)
+- [Starlark](https://packagecontrol.io/packages/Starlark)
 
 ## Caddyfile
 
@@ -212,6 +217,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [MayaSublime](https://packagecontrol.io/packages/MayaSublime)
 
+## MCNP
+
+- [MCNP](https://packagecontrol.io/packages/MCNP)
+
 ## MDX
 
 - [MDX Syntax Highlighting](https://packagecontrol.io/packages/MDX%20Syntax%20Highlighting)
@@ -274,6 +283,10 @@ This file contains a list of possible packages you may need to install to see th
 ## Pine
 
 - [Pine](https://packagecontrol.io/packages/Pine)
+
+## Pkl
+
+- [Pkl (Pickle)](https://packagecontrol.io/packages/Pkl%20(Pickle))
 
 ## Playlist
 
@@ -397,6 +410,10 @@ This file contains a list of possible packages you may need to install to see th
 
 - [PlainTasks](https://packagecontrol.io/packages/PlainTasks)
 
+## Toit
+
+- [Toit](https://packagecontrol.io/packages/Toit)
+
 ## TOML
 
 - [TOML](https://packagecontrol.io/packages/TOML)
@@ -456,6 +473,10 @@ This file contains a list of possible packages you may need to install to see th
 ## WGSL
 
 - [WGSL](https://packagecontrol.io/packages/WGSL)
+
+## WIT
+
+- [WASM Interface Type](https://packagecontrol.io/packages/WASM%20Interface%20Type)
 
 ## Wolfram
 
