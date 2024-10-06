@@ -3238,10 +3238,12 @@
 		"syntaxes": [
 			{
 				"extensions": [
-					"tailwind.css"
+					"tailwind.css",
+					"tailwind.pcss",
+					"tailwind.postcss"
 				],
 				"name": "Plain Text (Tailwind CSS)",
-				"scope": "source.css.tailwind"
+				"scope": "source.css.tailwind, source.postcss.tailwind"
 			}
 		]
 	},
