@@ -2,11 +2,11 @@
 <plist version="1.0">
 	<dict>
 		<key>scope</key>
-		<string>source.vhdl</string>
+		<string>source.verilog</string>
 		<key>settings</key>
 		<dict>
 			<key>icon</key>
-			<string>file_type_vhdl</string>
+			<string>file_type_verilog</string>
 		</dict>
 	</dict>
 </plist>
