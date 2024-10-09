@@ -3198,6 +3198,20 @@
 			}
 		]
 	},
+	"file_type_systemverilog": {
+		"color": "blue",
+		"syntaxes": [
+			{
+				"extensions": [
+					"sv",
+					"svh",
+					"vh"
+				],
+				"name": "Plain Text (SystemVerilog)",
+				"scope": "source.systemverilog"
+			}
+		]
+	},
 	"file_type_taskfile": {
 		"aliases": [
 			{
@@ -3554,7 +3568,6 @@
 		"syntaxes": [
 			{
 				"extensions": [
-					"v",
 					"vlang"
 				],
 				"name": "Plain Text (V)",
@@ -3622,6 +3635,18 @@
 		],
 		"color": "sky"
 	},
+	"file_type_verilog": {
+		"color": "blue",
+		"syntaxes": [
+			{
+				"extensions": [
+					"v"
+				],
+				"name": "Plain Text (Verilog)",
+				"scope": "source.verilog"
+			}
+		]
+	},
 	"file_type_vhdl": {
 		"color": "blue",
 		"syntaxes": [
@@ -3634,24 +3659,6 @@
 				],
 				"name": "Plain Text (VHDL)",
 				"scope": "source.vhdl"
-			},
-			{
-				"extensions": [
-					"sv",
-					"v",
-					"svh",
-					"vh"
-				],
-				"name": "Plain Text (SystemVerilog)",
-				"scope": "source.systemverilog"
-			},
-			{
-				"extensions": [
-					"v",
-					"V"
-				],
-				"name": "Plain Text (Verilog)",
-				"scope": "source.verilog"
 			}
 		]
 	},
