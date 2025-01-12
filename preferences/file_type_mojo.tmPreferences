@@ -2,11 +2,11 @@
 <plist version="1.0">
 	<dict>
 		<key>scope</key>
-		<string>source.kdl, text.kdl, text.kdl.1, text.kdl.2</string>
+		<string>source.mojo</string>
 		<key>settings</key>
 		<dict>
 			<key>icon</key>
-			<string>file_type_kdl</string>
+			<string>file_type_mojo</string>
 		</dict>
 	</dict>
 </plist>

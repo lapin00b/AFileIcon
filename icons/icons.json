@@ -1692,7 +1692,7 @@
 					"kdl"
 				],
 				"name": "Plain Text (KDL)",
-				"scope": "source.kdl"
+				"scope": "source.kdl, text.kdl, text.kdl.1, text.kdl.2"
 			}
 		]
 	},
@@ -1984,6 +1984,18 @@
 				],
 				"name": "Plain Text (Mint)",
 				"scope": "source.mint"
+			}
+		]
+	},
+	"file_type_mojo": {
+		"color": "graphite",
+		"syntaxes": [
+			{
+				"extensions": [
+					"mojo"
+				],
+				"name": "Plain Text (Mojo)",
+				"scope": "source.mojo"
 			}
 		]
 	},
