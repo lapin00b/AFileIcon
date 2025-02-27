@@ -899,7 +899,7 @@
 					"ejs"
 				],
 				"name": "Plain Text (EJS)",
-				"scope": "text.ejs"
+				"scope": "text.ejs, text.ejs.percentsign, text.ejs.questionmark, text.html.ejs, text.html.ejs.percentsign, text.html.ejs.questionmark"
 			}
 		]
 	},
