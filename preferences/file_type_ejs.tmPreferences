@@ -2,7 +2,7 @@
 <plist version="1.0">
 	<dict>
 		<key>scope</key>
-		<string>text.ejs, text.ejs.atsign, text.ejs.dollarsign, text.ejs.percentsign, text.ejs.questionmark, text.html.ejs, text.html.ejs.atsign, text.html.ejs.dollarsign, text.html.ejs.percentsign, text.html.ejs.questionmark</string>
+		<string>text.ejs, text.ejs.percentsign, text.ejs.questionmark, text.html.ejs, text.html.ejs.percentsign, text.html.ejs.questionmark</string>
 		<key>settings</key>
 		<dict>
 			<key>icon</key>
