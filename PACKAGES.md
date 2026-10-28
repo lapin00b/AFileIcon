@@ -93,6 +93,10 @@ This file contains a list of possible packages you may need to install to see th
 - [Pascal](https://packagecontrol.io/packages/Pascal)
 - [Object Pascal](https://packagecontrol.io/packages/Object%20Pascal)
 
+## DocG
+
+- DocG syntax highlighter is XML
+
 ## Docker
 
 - [Containerfile](https://packagecontrol.io/packages/Containerfile)
